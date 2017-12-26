@@ -15,6 +15,6 @@
     <span *ngFor="let tab of tabs;let index = index" [ngClass]="{tab: true, active: index==0}" (click)="tabChangeFn($event, index)">
       {{tab}}
     </span>
-    <span class="line" [style.left]="offsetLeft"></span>
+    <!-- <span class="line" [style.left]="offsetLeft"></span> -->
   </div>
 </header>

@@ -16,8 +16,8 @@ export class CustomHeaderComponent implements  OnInit{
     //this.text = 'Hello World';
   }
   ngAfterViewInit() {
-    let tabs = document.querySelectorAll('.tab');
-    console.log(tabs[0]);
+    // let tabs = document.querySelectorAll('.tab');
+    // console.log(tabs[0]);
     //this.lightActive(tabs[0], 0);
   }
   ngOnInit() {
@@ -37,15 +37,15 @@ export class CustomHeaderComponent implements  OnInit{
         activeLine = document.querySelectorAll('.line'),
         offsetLeft = 0;
 
-    for (let i = 0; i <= index; i++) {
-      if (i == index) {
-        offsetLeft += tabs[i].getBoundingClientRect().width / 2;
-      } else {
-        offsetLeft += tabs[i].getBoundingClientRect().width;
-      }
-    }
-    console.log(offsetLeft)
-    this.offsetLeft = offsetLeft + 'px';
+    // for (let i = 0; i <= index; i++) {
+    //   if (i == index) {
+    //     offsetLeft += tabs[i].getBoundingClientRect().width / 2;
+    //   } else {
+    //     offsetLeft += tabs[i].getBoundingClientRect().width;
+    //   }
+    // }
+    // console.log(offsetLeft)
+    // this.offsetLeft = offsetLeft + 'px';
 
     for (let i = 0, len = tabs.length; i < len; i++) {
       tabs[i].classList.remove('active');    
