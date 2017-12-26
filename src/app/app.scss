@@ -125,7 +125,25 @@ html {
 	background-repeat: no-repeat;
 	background-size: .9rem;
 }
+.g-header.h56+.content{
+	.scroll-content,
+	.fixed-content{
+		margin-top: 5.6rem;
+	}
+}
+.g-header.h140+.content{
+	.scroll-content,
+	.fixed-content{
+		margin-top: 14rem;
+	}
+}
 .g-header{
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: 10;
+	display: block;
+	width: 100%;
 	.title{
     position: absolute;
     top: 0;
