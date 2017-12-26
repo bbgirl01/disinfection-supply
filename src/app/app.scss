@@ -15,6 +15,70 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+body{
+	font-family: "pingFangSC", "Helvetica Neue", Helvetica, Arial, sans-serif !important; 
+	-webkit-touch-callout:none;
+	-webkit-user-select:none; 
+	color:#333; 
+	background: #f4f4f4;
+	font-size: 1.4rem;
+	box-sizing: border-box;
+
+}
+input,textarea,button,select{
+  font-family: "pingFangSC", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	outline: none;
+	border: none;
+	-webkit-appearance: none;
+	background-color: #fff;
+}
+ul,
+ol {
+	list-style: none;
+}
+h1,h2,h3,h4,h5,h6,h7,strong{
+	font-weight: normal;
+	margin: 0;
+}
+p{
+	margin: 0;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix:after{
+	display: block;
+	content: '';
+	clear:  both;
+}
+.ios a,
+a{
+	color: #333;
+}
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder { /* WebKit browsers */
+	color:#a5a5a5;
+}
+textarea:-moz-placeholder,
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:#a5a5a5;
+}
+textarea::-moz-placeholder,
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:#a5a5a5;
+}
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color:#a5a5a5;
+}
 html {
   font-size: 10px;
   color: #333;
@@ -47,5 +111,84 @@ html {
 @media only screen and (min-width: 600px) {
 	html {
 			font-size:20.48px!important
+	}
+}
+.text-primary{
+	color: #0080FF;
+}
+.u-select{
+	display: inline-block;
+	color: #666;
+	padding-right: 1.4rem;
+	background-image: url('../assets/imgs/i-down1.png');
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: .9rem;
+}
+.g-header{
+	.title{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: auto;
+    height: 100%;
+		margin: 0;
+		text-align: center;
+		transform: translateX(-50%);
+	}
+	.toolbar-title{
+		padding: 0;
+		span{
+			float: left;
+			padding: 0 1.5rem;
+			opacity: 0.7;
+			&.active{
+				opacity: 1;
+			}
+		}
+		.active:first-child ~ .line{
+			left: 25%;
+			color: #000;
+		}
+		.active:nth-child(2) ~ .line{
+			left: 75%;
+			color: #000;
+		}
+		.line{
+			position: absolute;
+			bottom: 0;
+			width: 2.4rem;
+			height: 4px;
+			padding: 0;
+			background-color: #FFC205;
+			opacity: 1;
+			transform: translateX(-50%);
+			transition: .3s left ease-out;
+		}
+	}
+	&.header-md:after{
+		display: none;
+	}
+}
+
+// 美化-checkebox
+.u-checkbox-box{
+	position: relative;
+	.u-checkbox{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: -0.4rem;
+		width: 2.4rem;
+		height: 2.4rem;
+		border: 1px solid #c7c7c7;
+		border-radius: 2.4rem;
+		&[checked]{
+			border: none;
+			background-image: url('../assets/imgs/i-ok.png');
+			background-size: 100%;
+		}
+	}
+	span{
+		padding-left: 1.2rem;
 	}
 }

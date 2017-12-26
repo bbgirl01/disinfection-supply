@@ -4,25 +4,31 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+
 import { MyApp } from './app.component';
+import { ComponentsModule } from '../components/components.module';
 import { HomePage } from '../pages/home/home';
 import { RecyclePage } from '../pages/recycle/recycle';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RecyclePage
+    RecyclePage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    RecyclePage
+    RecyclePage,
+    LoginPage
   ],
   providers: [
     StatusBar,
