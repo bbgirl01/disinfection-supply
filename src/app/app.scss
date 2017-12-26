@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -15,146 +13,177 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-body{
-	font-family: "pingFangSC", "Helvetica Neue", Helvetica, Arial, sans-serif !important; 
-	-webkit-touch-callout:none;
-	-webkit-user-select:none; 
-	color:#333; 
+body {
+	font-family: "pingFangSC", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	color: #333;
 	background: #f4f4f4;
 	font-size: 1.4rem;
 	box-sizing: border-box;
-
 }
-input,textarea,button,select{
-  font-family: "pingFangSC", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+
+button,
+input,
+select,
+textarea {
+	font-family: "pingFangSC", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	outline: none;
 	border: none;
 	-webkit-appearance: none;
 	background-color: #fff;
 }
-ul,
-ol {
+
+ol,
+ul {
 	list-style: none;
 }
-h1,h2,h3,h4,h5,h6,h7,strong{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+strong {
 	font-weight: normal;
 	margin: 0;
 }
-p{
+
+p {
 	margin: 0;
 }
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
-.fl{
+
+.fl {
 	float: left;
 }
-.fr{
+
+.fr {
 	float: right;
 }
-.clearfix:after{
+
+.clearfix:after {
 	display: block;
 	content: '';
-	clear:  both;
+	clear: both;
 }
+
 .ios a,
-a{
+a {
 	color: #333;
 }
-textarea::-webkit-input-placeholder,
-input::-webkit-input-placeholder { /* WebKit browsers */
-	color:#a5a5a5;
-}
-textarea:-moz-placeholder,
-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	color:#a5a5a5;
-}
-textarea::-moz-placeholder,
-input::-moz-placeholder { /* Mozilla Firefox 19+ */
-	color:#a5a5a5;
-}
-textarea:-ms-input-placeholder,
-input:-ms-input-placeholder { /* Internet Explorer 10+ */
-	color:#a5a5a5;
-}
-html {
-  font-size: 10px;
-  color: #333;
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: #a5a5a5;
 }
 
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #a5a5a5;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #a5a5a5;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #a5a5a5;
+}
+
+html {
+	font-size: 10px;
+	color: #333;
+}
 @media only screen and (min-width: 320px) and (max-width:320px) {
 	html {
-			font-size:8.533px!important
+		font-size: 8.533px!important;
 	}
 }
-
 @media only screen and (min-width: 384px) {
 	html {
-			font-size:10.667px!important
+		font-size: 10.667px!important;
 	}
 }
-
 @media only screen and (min-width: 412px) {
 	html {
-			font-size:11.444px!important
+		font-size: 11.444px!important;
 	}
 }
-
 @media only screen and (min-width: 414px) {
 	html {
-			font-size:11.04px!important
+		font-size: 11.04px!important;
+	}
+}
+@media only screen and (min-width: 600px) {
+	html {
+		font-size: 20.48px!important;
 	}
 }
 
-@media only screen and (min-width: 600px) {
-	html {
-			font-size:20.48px!important
-	}
-}
-.text-primary{
+.text-primary {
 	color: #0080FF;
 }
-.u-select{
+
+.u-select {
 	display: inline-block;
 	color: #666;
 	padding-right: 1.4rem;
-	background-image: url('../assets/imgs/i-down1.png');
+	background-image: url("../assets/imgs/i-down1.png");
 	background-position: right center;
 	background-repeat: no-repeat;
-	background-size: .9rem;
+	background-size: 0.9rem;
 }
-.g-header{
-	.title{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: auto;
-    height: 100%;
+
+.g-header {
+	.title {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: auto;
+		height: 100%;
 		margin: 0;
 		text-align: center;
 		transform: translateX(-50%);
 	}
-	.toolbar-title{
+
+	.toolbar-title {
 		padding: 0;
-		span{
+
+		span {
 			float: left;
 			padding: 0 1.5rem;
 			opacity: 0.7;
-			&.active{
+
+			&.active {
 				opacity: 1;
 			}
 		}
-		.active:first-child ~ .line{
+
+		.active:first-child ~ .line {
 			left: 25%;
 			color: #000;
 		}
-		.active:nth-child(2) ~ .line{
+
+		.active:nth-child(2) ~ .line {
 			left: 75%;
 			color: #000;
 		}
-		.line{
+
+		.line {
 			position: absolute;
 			bottom: 0;
 			width: 2.4rem;
@@ -163,18 +192,19 @@ html {
 			background-color: #FFC205;
 			opacity: 1;
 			transform: translateX(-50%);
-			transition: .3s left ease-out;
+			transition: 0.3s left ease-out;
 		}
 	}
-	&.header-md:after{
+
+	&.header-md:after {
 		display: none;
 	}
 }
-
 // 美化-checkebox
-.u-checkbox-box{
+.u-checkbox-box {
 	position: relative;
-	.u-checkbox{
+
+	.u-checkbox {
 		display: inline-block;
 		vertical-align: middle;
 		margin-right: -0.4rem;
@@ -182,13 +212,45 @@ html {
 		height: 2.4rem;
 		border: 1px solid #c7c7c7;
 		border-radius: 2.4rem;
-		&[checked]{
+
+		&[checked] {
 			border: none;
-			background-image: url('../assets/imgs/i-ok.png');
+			background-image: url("../assets/imgs/i-ok.png");
 			background-size: 100%;
 		}
 	}
-	span{
+
+	span {
 		padding-left: 1.2rem;
+	}
+}
+
+.login-info {
+	height: 3rem;
+	line-height: 3rem;
+	color: #666;
+	text-align: center;
+	background-color: #f3f3f3;
+
+	span {
+		position: relative;
+		padding: 0 1rem;
+		margin-right: -0.4rem;
+
+		&:after {
+			position: absolute;
+			display: block;
+			content: '';
+			left: 0;
+			top: 50%;
+			width: 1px;
+			height: 1rem;
+			background-color: #d2d2d2;
+			transform: translateY(-50%);
+		}
+
+		&:first-child:after {
+			display: none;
+		}
 	}
 }

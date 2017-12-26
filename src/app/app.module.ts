@@ -10,13 +10,16 @@ import { ComponentsModule } from '../components/components.module';
 import { HomePage } from '../pages/home/home';
 import { RecyclePage } from '../pages/recycle/recycle';
 import { LoginPage } from '../pages/login/login';
-
+import { SortingScanPage } from '../pages/sorting/sorting-scan/sorting-scan';
+import { SortingListPage } from '../pages/sorting/sorting-list';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     RecyclePage,
-    LoginPage
+    LoginPage,
+    SortingScanPage,
+    SortingListPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,9 @@ import { LoginPage } from '../pages/login/login';
     MyApp,
     HomePage,
     RecyclePage,
-    LoginPage
+    LoginPage,
+    SortingScanPage,
+    SortingListPage
   ],
   providers: [
     StatusBar,
