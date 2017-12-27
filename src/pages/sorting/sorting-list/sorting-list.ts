@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { SortingDetailPage } from '../sorting-detail';
 /**
  * Generated class for the SortingListPage page.
  *
@@ -14,8 +14,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'sorting-list.html',
 })
 export class SortingListPage {
-
+  sortingDetailPage: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.sortingDetailPage = SortingDetailPage
   }
 
   ionViewDidLoad() {

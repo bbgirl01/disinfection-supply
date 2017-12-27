@@ -1,0 +1,31 @@
+<!--
+  Generated template for the SortingDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>插值针</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-list>
+    <div class="list-block" *ngFor="let item of list;let index=index">
+      <img src="/assets/imgs/item.jpg" alt="">
+      <div class="name">
+        {{item.name}}
+      </div>
+      <div class="opt">
+        <span (click)="reduceNumber(index)"></span><span>{{item.number}}</span><span (click)="addNumber(index)"></span>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>
+<div class="btn">
+  确认
+</div>
