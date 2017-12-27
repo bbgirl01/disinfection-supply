@@ -1,4 +1,4 @@
-<ion-header class="g-header">
+<!-- <ion-header class="g-header">
   <ion-navbar color="primary">
     <ion-title>  
       <span class="active" (click)="tabChange($event)">回收</span>
@@ -22,9 +22,21 @@
       </div>
       <span class="fr text-primary">今日回收(0)</span>
     </div>
-</ion-header>
-<!-- <my-header></my-header> -->
-<!-- <custom-header></custom-header> -->
+</ion-header> -->
+<div class="g-header h117">
+  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+  <div class="login-info">
+    <span>李菲菲</span>
+    <span>002233</span>
+    <span>供应室</span>
+  </div>
+  <div class="top-bar">
+    <div class="u-select">
+      <span>全部状态</span>
+    </div>
+    <span class="fr text-primary">今日回收(0)</span>
+  </div>
+</div>
 
 <ion-content>  
   <ion-list class="custom-list">

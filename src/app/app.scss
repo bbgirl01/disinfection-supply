@@ -145,16 +145,33 @@ html {
 	background-image: url("../assets/imgs/i-down1.png");
 	background-position: right center;
 	background-repeat: no-repeat;
-	background-size: 0.9rem;
+	background-size: .9rem;
 }
-
-.g-header {
-	.title {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		width: auto;
-		height: 100%;
+.g-header.h56+.content{
+	.scroll-content,
+	.fixed-content{
+		margin-top: 5.6rem;
+	}
+}
+.g-header.h117+.content{
+	.scroll-content,
+	.fixed-content{
+		margin-top: 11.7rem;
+	}
+}
+.g-header{
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: 10;
+	display: block;
+	width: 100%;
+	.title{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: auto;
+    height: 100%;
 		margin: 0;
 		text-align: center;
 		transform: translateX(-50%);

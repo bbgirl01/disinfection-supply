@@ -9,7 +9,10 @@
   </ion-navbar>
 
 </ion-header> -->
-<custom-header></custom-header>
+<div class="g-header h56">
+  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+</div>
+
 
 <ion-content padding>
 

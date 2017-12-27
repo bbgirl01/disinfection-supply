@@ -1,10 +1,20 @@
-<ion-header class="g-header">
+<!-- <ion-header class="g-header">
   <ion-navbar color="primary">
     <ion-title>
-      <span class="active" (click)="tabChange($event)">清洗</span>
-      <span (click)="tabChange($event)">清洗质检</span>
-      <span (click)="tabChange($event)">统计</span>
+      <span *ngFor="let tab of tabs;let index = index" [ngClass]="{active: index==0}" (click)="tabChangeFn(index)">
+        {{tab}}
+      </span>
+      
       <span class="line"></span>
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
+<header>
+  <span class="back" (click)="goPrevPage()"></span>
+  <div class="tabs">
+    <span *ngFor="let tab of tabs;let index = index" [ngClass]="{tab: true, active: index==0}" (click)="tabChangeFn($event, index)">
+      {{tab}}
+    </span>
+    <!-- <span class="line" [style.left]="offsetLeft"></span> -->
+  </div>
+</header>
