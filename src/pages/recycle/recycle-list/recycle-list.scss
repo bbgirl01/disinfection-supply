@@ -1,0 +1,63 @@
+page-recycle-list {
+  .g-content{
+    padding-top: 11.7rem;
+    padding-bottom: 9.2rem;
+  }
+  .check-all {
+    display: flex;
+    height: 4rem;
+    padding-left: 1.5rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    align-content: center;
+
+    .u-radio-box {
+      flex: 1;
+      padding-top: 0.8rem;
+    }
+
+    .right-input {
+      width: 5.6rem;
+      height: 100%;
+      border-left: 1px solid #e5e5e5;
+      background-image: url("../assets/imgs/i-keyboad.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 2.4rem;
+    }
+  }
+}
+
+
+.g-footer {
+
+  .info {
+    flex: 1;
+    padding-left: 1.5rem;
+    color: #a5a5a5;
+    font-size: 1.2rem;
+    padding-top: 0.8rem;
+
+    .name {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      color: #333;
+    }
+  }
+  .flex-wrap{
+    display: flex;
+  }
+  .btn {
+    width: 16rem;
+
+    .button-block {
+      margin: 0;
+      height: 5.2rem;
+      line-height: 5.2rem;
+      box-shadow: none;
+      border-radius: 0;
+      border: none;
+      font-size: 1.8rem;
+    }
+  }
+}

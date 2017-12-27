@@ -137,7 +137,12 @@ html {
 .text-primary {
 	color: #0080FF;
 }
-
+.text-warning {
+	color: #FFA613;
+}
+.text-danger {
+	color: #FF6273;
+}
 .u-select {
 	display: inline-block;
 	color: #666;
@@ -147,101 +152,75 @@ html {
 	background-repeat: no-repeat;
 	background-size: .9rem;
 }
-.g-header.h56+.content{
-	.scroll-content,
-	.fixed-content{
-		margin-top: 5.6rem;
-	}
+.m-title,
+.g-header,
+.g-content,
+.g-footer{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
 }
-.g-header.h117+.content{
-	.scroll-content,
-	.fixed-content{
-		margin-top: 11.7rem;
-	}
+.m-title{
+	z-index: 2;
 }
 .g-header{
-	left: 0;
-	top: 0;
-	position: absolute;
-	z-index: 10;
-	display: block;
-	width: 100%;
-	.title{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: auto;
-    height: 100%;
-		margin: 0;
-		text-align: center;
-		transform: translateX(-50%);
-	}
-
-	.toolbar-title {
-		padding: 0;
-
-		span {
-			float: left;
-			padding: 0 1.5rem;
-			opacity: 0.7;
-
-			&.active {
-				opacity: 1;
-			}
-		}
-
-		.active:first-child ~ .line {
-			left: 25%;
-			color: #000;
-		}
-
-		.active:nth-child(2) ~ .line {
-			left: 75%;
-			color: #000;
-		}
-
-		.line {
-			position: absolute;
-			bottom: 0;
-			width: 2.4rem;
-			height: 4px;
-			padding: 0;
-			background-color: #FFC205;
-			opacity: 1;
-			transform: translateX(-50%);
-			transition: 0.3s left ease-out;
-		}
-	}
-
-	&.header-md:after {
-		display: none;
-	}
+	top: 4.7rem;
+	z-index: 1;
 }
+.g-content{
+	height: 100%;
+	background-color: #f3f3f3;
+	overflow-y: scroll;
+}
+.g-footer{
+	bottom: 0;
+  border-top: 1px solid #e5e5e5;
+}
+
 // 美化-checkebox
 .u-checkbox-box {
 	position: relative;
-
-	.u-checkbox {
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: -0.4rem;
-		width: 2.4rem;
-		height: 2.4rem;
-		border: 1px solid #c7c7c7;
-		border-radius: 2.4rem;
-
-		&[checked] {
-			border: none;
-			background-image: url("../assets/imgs/i-ok.png");
-			background-size: 100%;
-		}
-	}
-
 	span {
 		padding-left: 1.2rem;
 	}
 }
-
+.u-checkbox {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -0.4rem;
+	width: 2.4rem;
+	height: 2.4rem;
+	border: 1px solid #c7c7c7;
+	border-radius: 2.4rem;
+	&[checked] {
+		border: none;
+		background-image: url("../assets/imgs/i-ok.png");
+		background-size: 100%;
+	}
+}
+// 美化-checkebox
+.u-radio-box {
+	position: relative;
+	span {
+		padding-left: 1.2rem;
+	}
+}
+.u-radio {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -0.4rem;
+	width: 2.4rem;
+	height: 2.4rem;
+	border: 1px solid #c7c7c7;
+	border-radius: 2.4rem;
+	&[checked] {
+		border: none;
+		background-image: url("../assets/imgs/i-ok.png");
+		background-size: 100%;
+	}
+}
+// header-登录信息
 .login-info {
 	height: 3rem;
 	line-height: 3rem;

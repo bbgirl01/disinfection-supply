@@ -1,35 +1,5 @@
-<!-- <ion-header class="g-header">
-  <ion-navbar color="primary">
-    <ion-title>  
-      <span class="active" (click)="tabChange($event)">回收</span>
-      <span (click)="tabChange($event)">统计</span>
-      <span class="line"></span>
-    </ion-title>
-    <div class="right department">
-      <span>手术室</span>
-      <span class="arrow-down"></span>
-    </div>
-  </ion-navbar>
-
-  <div class="login-info">
-      <span>李菲菲</span>
-      <span>002233</span>
-      <span>供应室</span>
-    </div>
-    <div class="top-bar">
-      <div class="u-select">
-        <span>全部状态</span>
-      </div>
-      <span class="fr text-primary">今日回收(0)</span>
-    </div>
-</ion-header> -->
-<div class="g-header h117">
-  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
-  <div class="login-info">
-    <span>李菲菲</span>
-    <span>002233</span>
-    <span>供应室</span>
-  </div>
+<div class="g-header">
+  <login-info></login-info>
   <div class="top-bar">
     <div class="u-select">
       <span>全部状态</span>
@@ -37,13 +7,12 @@
     <span class="fr text-primary">今日回收(0)</span>
   </div>
 </div>
-
-<ion-content>  
+<div class="g-content">  
   <ion-list class="custom-list">
     <button ion-item>
       <div class="list-item">
         <label>
-          <input type="checkbox" />
+            <input class="u-radio" type="radio"/>
           <img src="assets/imgs/item.jpg"/>
           <div class="info"> 
             <h2>插值针</h2>
@@ -57,7 +26,7 @@
     <button ion-item>
       <div class="list-item">
         <label>
-          <input type="checkbox" />
+            <input class="u-radio" type="radio"  />
           <img src="assets/imgs/item.jpg"/>
           <div class="info"> 
             <h2>区段器械包2</h2>
@@ -71,7 +40,21 @@
     <button ion-item>
       <div class="list-item">
         <label>
-          <input type="checkbox" checked/>
+          <input class="u-radio" type="radio" checked />
+          <img src="assets/imgs/item.jpg"/>
+          <div class="info"> 
+            <h2>洗胃包</h2>
+            <p>16091015487&emsp;器械数量：<span class="text-primary">4</span></p>
+          </div>
+          <span class="status overdue">已过期</span>
+        </label>
+        <a class="right"></a>
+      </div>
+    </button>
+    <button ion-item>
+      <div class="list-item">
+        <label>
+          <input class="u-radio" type="radio" checked />
           <img src="assets/imgs/item.jpg"/>
           <div class="info"> 
             <h2>插值针</h2>
@@ -82,10 +65,12 @@
         <a class="right"></a>
       </div>
     </button>
-    <button ion-item>
+  </ion-list>
+  <ion-list class="custom-list">
+      <button ion-item>
         <div class="list-item">
           <label>
-            <input type="checkbox" />
+              <input class="u-radio" type="radio"/>
             <img src="assets/imgs/item.jpg"/>
             <div class="info"> 
               <h2>插值针</h2>
@@ -99,7 +84,7 @@
       <button ion-item>
         <div class="list-item">
           <label>
-            <input type="checkbox" />
+              <input class="u-radio" type="radio"  />
             <img src="assets/imgs/item.jpg"/>
             <div class="info"> 
               <h2>区段器械包2</h2>
@@ -113,7 +98,21 @@
       <button ion-item>
         <div class="list-item">
           <label>
-            <input type="checkbox" checked/>
+            <input class="u-radio" type="radio" checked />
+            <img src="assets/imgs/item.jpg"/>
+            <div class="info"> 
+              <h2>洗胃包</h2>
+              <p>16091015487&emsp;器械数量：<span class="text-primary">4</span></p>
+            </div>
+            <span class="status overdue">已过期</span>
+          </label>
+          <a class="right"></a>
+        </div>
+      </button>
+      <button ion-item>
+        <div class="list-item">
+          <label>
+            <input class="u-radio" type="radio" checked />
             <img src="assets/imgs/item.jpg"/>
             <div class="info"> 
               <h2>插值针</h2>
@@ -124,58 +123,13 @@
           <a class="right"></a>
         </div>
       </button>
-      <button ion-item>
-          <div class="list-item">
-            <label>
-              <input type="checkbox" />
-              <img src="assets/imgs/item.jpg"/>
-              <div class="info"> 
-                <h2>插值针</h2>
-                <p>16091015487&emsp;器械数量：<span class="text-primary">2</span></p>
-              </div>
-              <span class="status used">已使用</span>
-            </label>
-            <a class="right"></a>
-          </div>
-        </button> 
-        <button ion-item>
-          <div class="list-item">
-            <label>
-              <input type="checkbox" />
-              <img src="assets/imgs/item.jpg"/>
-              <div class="info"> 
-                <h2>区段器械包2</h2>
-                <p>16091015487&emsp;器械数量：<span class="text-primary">4</span></p>
-              </div>
-              <span class="status overdue">已过期</span>
-            </label>
-            <a class="right"></a>
-          </div>
-        </button>
-        <button ion-item>
-          <div class="list-item">
-            <label>
-              <input type="checkbox" checked/>
-              <img src="assets/imgs/item.jpg"/>
-              <div class="info"> 
-                <h2>插值针</h2>
-                <p>16091015487&emsp;器械数量：<span class="text-primary">32</span></p>
-              </div>
-              <span class="status unqualified">不合格</span>
-            </label>
-            <a class="right"></a>
-          </div>
-        </button>
-  </ion-list>
-  <!-- <button ion-button block [navPush]="LoginPage">登录</button> -->
-  
-</ion-content>
-
-
+    </ion-list>
+</div>
+   
 <div class="g-footer">
   <div class="check-all">
-    <div class="u-checkbox-box">
-      <input class="u-checkbox" type="checkbox" checked />
+    <div class="u-radio-box">
+      <input class="u-radio" type="radio" />
       <span>全选(16)</span>
     </div>
     <div class="right-input"></div>
@@ -190,3 +144,4 @@
     </div>
   </div>
 </div>
+  

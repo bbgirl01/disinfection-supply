@@ -8,7 +8,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { ComponentsModule } from '../components/components.module';
 import { HomePage } from '../pages/home/home';
-import { RecyclePage } from '../pages/recycle/recycle';
+import { RecycleIndexPage } from '../pages/recycle/recycle-index/recycle-index';
+import { RecycleListPage } from '../pages/recycle/recycle-list/recycle-list';
+import { RecycleStatisticsPage } from '../pages/recycle/recycle-statistics/recycle-statistics';
 import { LoginPage } from '../pages/login/login';
 import { SortingScanPage } from '../pages/sorting/sorting-scan/sorting-scan';
 import { SortingListPage } from '../pages/sorting/sorting-list';
@@ -17,7 +19,9 @@ import { SortingDetailPage } from '../pages/sorting/sorting-detail';
   declarations: [
     MyApp,
     HomePage,
-    RecyclePage,
+    RecycleIndexPage,
+    RecycleListPage,
+    RecycleStatisticsPage,
     LoginPage,
     SortingScanPage,
     SortingListPage,
@@ -33,7 +37,9 @@ import { SortingDetailPage } from '../pages/sorting/sorting-detail';
   entryComponents: [
     MyApp,
     HomePage,
-    RecyclePage,
+    RecycleIndexPage,
+    RecycleListPage,
+    RecycleStatisticsPage,
     LoginPage,
     SortingScanPage,
     SortingListPage,
