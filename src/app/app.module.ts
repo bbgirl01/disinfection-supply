@@ -12,6 +12,7 @@ import { RecyclePage } from '../pages/recycle/recycle';
 import { LoginPage } from '../pages/login/login';
 import { SortingScanPage } from '../pages/sorting/sorting-scan/sorting-scan';
 import { SortingListPage } from '../pages/sorting/sorting-list';
+import { SortingDetailPage } from '../pages/sorting/sorting-detail';
 @NgModule({
   declarations: [
     MyApp,
@@ -19,7 +20,8 @@ import { SortingListPage } from '../pages/sorting/sorting-list';
     RecyclePage,
     LoginPage,
     SortingScanPage,
-    SortingListPage
+    SortingListPage,
+    SortingDetailPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { SortingListPage } from '../pages/sorting/sorting-list';
     RecyclePage,
     LoginPage,
     SortingScanPage,
-    SortingListPage
+    SortingListPage,
+    SortingDetailPage
   ],
   providers: [
     StatusBar,
