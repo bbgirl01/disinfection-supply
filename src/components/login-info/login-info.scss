@@ -1,0 +1,31 @@
+login-info {
+  .login-info {
+    height: 3rem;
+    line-height: 3rem;
+    color: #666;
+    text-align: center;
+    background-color: #f3f3f3;
+
+    span {
+      position: relative;
+      padding: 0 1rem;
+      margin-right: -0.4rem;
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        left: 0;
+        top: 50%;
+        width: 1px;
+        height: 1rem;
+        background-color: #d2d2d2;
+        transform: translateY(-50%);
+      }
+
+      &:first-child:after {
+        display: none;
+      }
+    }
+  }
+}

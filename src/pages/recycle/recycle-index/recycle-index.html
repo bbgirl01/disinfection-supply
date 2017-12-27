@@ -1,0 +1,6 @@
+<div class="m-title">
+  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+</div>
+
+<page-recycle-list *ngIf="tabIndex==0"></page-recycle-list>
+<page-recycle-statistics *ngIf="tabIndex==1"></page-recycle-statistics>

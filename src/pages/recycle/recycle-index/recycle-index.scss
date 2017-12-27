@@ -1,9 +1,4 @@
-page-recycle {
-  .fixed-content,
-  .scroll-content {
-    margin-bottom: 8.2rem;
-  }
-
+page-recycle-index {
   .header .right {
     position: absolute;
     top: 50%;
@@ -44,17 +39,7 @@ page-recycle {
         position: absolute;
         left: 1.5rem;
         top: 50%;
-        width: 2.4rem;
-        height: 2.4rem;
-        border: 1px solid #c7c7c7;
-        border-radius: 2.4rem;
         transform: translateY(-50%);
-
-        &[checked] {
-          border: none;
-          background-image: url("../assets/imgs/i-ok.png");
-          background-size: 100%;
-        }
       }
 
       img {
@@ -121,7 +106,7 @@ page-recycle {
     border-bottom: 1px solid #e5e5e5;
     align-content: center;
 
-    .u-checkbox-box {
+    .u-radio-box {
       flex: 1;
       padding-top: 0.8rem;
     }
@@ -139,6 +124,7 @@ page-recycle {
 }
 
 .custom-list {
+  margin-top: 0;
   margin-bottom: 0;
 
   .item-inner {
@@ -156,45 +142,3 @@ page-recycle {
   }
 }
 
-.g-footer .flex-wrap {
-  display: flex;
-}
-
-.g-footer {
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-  min-height: 5.2rem;
-  background-color: #fff;
-  border-top: 1px solid #e5e5e5;
-
-  .info {
-    flex: 1;
-    padding-left: 1.5rem;
-    color: #a5a5a5;
-    font-size: 1.2rem;
-    padding-top: 0.8rem;
-
-    .name {
-      font-size: 1.6rem;
-      line-height: 2.2rem;
-      color: #333;
-    }
-  }
-
-  .btn {
-    width: 16rem;
-
-    .button-block {
-      margin: 0;
-      height: 5.2rem;
-      line-height: 5.2rem;
-      box-shadow: none;
-      border-radius: 0;
-      border: none;
-      font-size: 1.8rem;
-    }
-  }
-}
