@@ -1,0 +1,78 @@
+page-package-detail {
+  .g-header{
+    top: 0;
+    h2{
+      height: 4.7rem;
+      line-height: 4.7rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .back{
+      position: absolute;
+      right: .5rem;
+      top: 50%;
+      width: 3.5rem;
+      height: 3.5rem;
+      background-image: url('../assets/imgs/i-close1.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 1.2rem;
+      transform: translateY(-50%);
+    }
+  }
+  .img{
+    position: relative;
+    img{
+      display: block;
+      height: 22rem;
+    }
+    .num{
+      position: absolute;
+      top: 0.8rem;
+      left: 0;
+      padding: 0 1rem;
+      height: 3.2rem;
+      line-height: 3.2rem;
+      font-size: 1.6rem;
+      color: #fff;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 0 .4rem .4rem 0;
+    }
+  }
+  .g-footer{
+    .button{
+      margin: 0;
+      height: 5rem;
+      line-height: 5rem;
+      font-size: 1.8rem;
+      font-size: normal;
+    }
+  }
+  .g-content{
+    padding-top: 4.7rem;
+    padding-bottom: 5rem;
+  }
+  .list .item{
+    display: flex;
+    padding: 0 1.5rem;
+    height: 4.4rem;
+    line-height: 4.4rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    span:first-child{
+      display: block;
+      width: 3rem;
+    }
+    span:nth-child(2){
+      display: block;
+      flex: 1;
+      font-size: 1.6rem;
+    }
+    span:nth-child(3){
+      display: block;
+      width: 3rem;
+      font-size: 1.7rem;
+    }
+  }
+  
+}
