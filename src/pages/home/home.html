@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar color="primary">
     <ion-buttons start>
       <button ion-button icon-only>
@@ -9,11 +9,26 @@
       消供
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 
-<ion-content>
-  <div class="menus">
+<div class="g-content">
+  <div class="top-info">
+    <h2>李菲菲</h2>
+    <p>
+      <span class="no">002233</span>
+      <span class="dapart">供应室</span>
+    </p>
+    <div class="right">
+      <div class="notice">
+        <span>99+</span>
+      </div>
+      <div class="more">
+
+      </div>
+    </div>
+  </div>
+  <div class="menus clearfix">
     <div class="item" [navPush]="recyclePage">
       <img src="assets/imgs/i-recycle.png" alt="">
       <span>回收</span>
@@ -53,5 +68,49 @@
       <span>使用</span>
     </div>
   </div>
-  <!-- <button ion-button block [navPush]="recyclePage">回收</button> -->
-</ion-content>
+  
+  <div class="tit">
+    <span>其他功能</span>
+  </div>
+
+  <div class="menus clearfix">
+    <div class="item" [navPush]="recyclePage">
+      <img src="assets/imgs/i-loss.png" alt="">
+      <span>损耗登记</span>
+    </div>
+    <div class="item" [navPush]="sortingScanPage">
+      <img src="assets/imgs/i-boxsearch.png" alt="">
+      <span>包内容查询</span>
+    </div>
+    <div class="item">
+      <img src="assets/imgs/i-barcode.png" alt="">
+      <span>条码失效</span>
+    </div>
+
+    <div class="item" [navPush]="recyclePage">
+      <img src="assets/imgs/i-Claims.png" alt="">
+      <span>申领</span>
+    </div>
+    <div class="item">
+      <img src="assets/imgs/i-department.png" alt="">
+      <span>科室申领</span>
+    </div>
+    <div class="item">
+      <img src="assets/imgs/i-Outside-packages.png" alt="">
+      <span>外来包</span>
+    </div>
+
+    <div class="item" [navPush]="recyclePage">
+      <img src="assets/imgs/i-Package-borrowed.png" alt="">
+      <span>科室间借还包</span>
+    </div>
+    <div class="item">
+      <img src="assets/imgs/i-creature.png" alt="">
+      <span>生物召回</span>
+    </div>
+    <div class="item">
+      <img src="assets/imgs/i-stock.png" alt="">
+      <span>库存</span>
+    </div>
+  </div>
+</div>

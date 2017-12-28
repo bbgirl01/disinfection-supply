@@ -10,6 +10,8 @@ import { ComponentsModule } from '../components/components.module';
 import { HomePage } from '../pages/home/home';
 import { RecycleIndexPage } from '../pages/recycle/recycle-index/recycle-index';
 import { RecycleListPage } from '../pages/recycle/recycle-list/recycle-list';
+import { TodayRecyclePage } from '../pages/recycle/today-recycle/today-recycle';
+import { PackageDetailPage } from '../pages/recycle/package-detail/package-detail';
 import { RecycleStatisticsPage } from '../pages/recycle/recycle-statistics/recycle-statistics';
 import { LoginPage } from '../pages/login/login';
 import { SortingScanPage } from '../pages/sorting/sorting-scan/sorting-scan';
@@ -25,6 +27,8 @@ import { WashingListPage } from '../pages/washing/washing-list';
     HomePage,
     RecycleIndexPage,
     RecycleListPage,
+    TodayRecyclePage,
+    PackageDetailPage,
     RecycleStatisticsPage,
     LoginPage,
     SortingScanPage,
@@ -45,6 +49,8 @@ import { WashingListPage } from '../pages/washing/washing-list';
     HomePage,
     RecycleIndexPage,
     RecycleListPage,
+    TodayRecyclePage,
+    PackageDetailPage,
     RecycleStatisticsPage,
     LoginPage,
     SortingScanPage,

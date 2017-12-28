@@ -1,5 +1,6 @@
 <div class="m-title">
   <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+  <span class="right department" *ngIf="tabIndex==0">手术室</span>
 </div>
 
 <page-recycle-list *ngIf="tabIndex==0"></page-recycle-list>

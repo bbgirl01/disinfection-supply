@@ -1,14 +1,110 @@
 page-home {
+  .g-content{
+    background-color: #fff;
+  }
+  .top-info{
+    position: relative;
+    margin-bottom: 3.5%;
+    padding: 1.5rem;
+    height: 9rem;
+    color: #fff;
+    background-color: #0080FF;
+    h2{
+      font-size: 2.4rem;
+      height: 3.4rem;
+      line-height: 3.4rem;
+    }
+    p{
+      margin-top: .4rem;
+      height: 2rem;
+      span{
+        padding-left: 2.6rem;
+        display: inline-block;
+        width: 10rem;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 1.6rem;
+      }
+      .no{
+        background-image: url(../assets/imgs/i-number.png);
+      }
+      .dapart{
+        background-image: url(../assets/imgs/i-department1.png);
+      }
+    }
+    .right{
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+    .notice{
+      position: relative;
+      display: inline-block;
+      margin-right: 3rem;
+      width: 1.8rem;
+      height: 2rem;
+      background-image: url(../assets/imgs/i-notice.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      span{
+        position: absolute;
+        top: -.8rem;
+        left: 1rem;
+        display: block;
+        min-width: 1.6rem;
+        padding: 0 .2rem;
+        height: 1.6rem;
+        line-height: 1.6rem;
+        text-align: center;
+        font-size: 1.2rem;
+        border-radius: 1.6rem;
+        background-color: #FF513C;
+      }
+    }
+    .more{
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background-image: url(../assets/imgs/i-more.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+    }
+  }
+  .tit{
+    position: relative;
+    margin: 2.2rem 1.5rem;
+    height: 1px;
+    background-color: #e5e5e5;
+    span{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 0 3.2rem;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      color: #a5a5a5;
+      background-color: #fff;
+      transform: translate(-50%, -50%);
+    }
+  }
   .menus .item{
     float: left;
-    width: 20%;
-    margin: 6.6% 6.6% 0;
+    width: 28%;
+    margin: 3.3% 2.6%;
+    img{
+      display: block;
+      width: 71%;
+      margin: 0 auto;
+    }
     span{
       display: block;
       margin-top: 1.2rem;
       font-size: 1.6rem;
       line-height: 2.2rem;
       text-align: center;
+      white-space: nowrap;
     }
   }
 }

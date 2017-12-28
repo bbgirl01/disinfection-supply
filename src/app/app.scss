@@ -143,6 +143,9 @@ html {
 .text-danger {
 	color: #FF6273;
 }
+.text-muted {
+	color: #a5a5a5;
+}
 .u-select {
 	display: inline-block;
 	color: #666;
@@ -248,5 +251,80 @@ html {
 		&:first-child:after {
 			display: none;
 		}
+	}
+}
+
+// 回收统计
+.list-item {
+	display: flex;
+	padding: 1rem 0;
+	border-bottom: 1px solid #e5e5e5;
+	align-items: stretch;
+
+	label {
+		position: relative;
+		flex: 1;
+		padding-left: 4.9rem;
+
+		input {
+			position: absolute;
+			left: 1.5rem;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		img {
+			display: block;
+			float: left;
+			width: 4.5rem;
+			height: 4.5rem;
+			margin-right: 1rem;
+		}
+
+		h2 {
+			font-size: 1.6rem;
+			line-height: 2.2rem;
+		}
+
+		p {
+			padding-top: 0.4rem;
+			font-size: 1.3rem;
+			line-height: 1.8rem;
+			color: #a5a5a5;
+		}
+
+		.status {
+			position: absolute;
+			top: 0.2rem;
+			right: 0;
+			padding: 0 1rem;
+			font-size: 1.2rem;
+			line-height: 2rem;
+			border-radius: 2rem;
+		}
+
+		.used {
+			color: #a5a5a5;
+			background-color: rgba(165,165,165,.2);
+		}
+
+		.overdue {
+			color: #E48E39;
+			background-color: rgba(228,142,57,.2);
+		}
+
+		.unqualified {
+			color: #F4333C;
+			background-color: rgba(244,51,60,.2);
+		}
+	}
+
+	.right {
+		display: block;
+		width: 3.6rem;
+		background-image: url("../assets/imgs/i-next.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 0.5rem;
 	}
 }
