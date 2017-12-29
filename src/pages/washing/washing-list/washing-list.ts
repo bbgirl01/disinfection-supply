@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { WashingDetailListPage } from '../washing-detail-list';
 /**
  * Generated class for the WashingListPage page.
  *
@@ -16,8 +16,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class WashingListPage {
   times: number = 0;
   dayTime: string = '2017-09-01 12:11:10';
-  washingListPage: any;
+  washingDetailListPage: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.washingDetailListPage = WashingDetailListPage
   }
 
   addTimes() {

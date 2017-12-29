@@ -20,6 +20,7 @@ import { SortingDetailPage } from '../pages/sorting/sorting-detail';
 
 import { WashingFreePage } from '../pages/washing/washing-free';
 import { WashingListPage } from '../pages/washing/washing-list';
+import { WashingDetailListPage } from '../pages/washing/washing-detail-list';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { WashingListPage } from '../pages/washing/washing-list';
     SortingListPage,
     SortingDetailPage,
     WashingFreePage,
-    WashingListPage
+    WashingListPage,
+    WashingDetailListPage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { WashingListPage } from '../pages/washing/washing-list';
     SortingListPage,
     SortingDetailPage,
     WashingFreePage,
-    WashingListPage
+    WashingListPage,
+    WashingDetailListPage
   ],
   providers: [
     StatusBar,
