@@ -255,14 +255,54 @@ html {
 }
 
 // 回收统计
-.list-item {
-	display: flex;
-	padding: 1rem 0;
-	border-bottom: 1px solid #e5e5e5;
-	align-items: stretch;
-
-	label {
+.custom-list{
+	.custom-item{
 		position: relative;
+		display: flex;
+		background-color: #fff;
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 1.5rem;
+			height: 1px;
+			background-color: #e5e5e5;
+		}
+		&:last-child:after{
+			display: none;
+		}
+		.item{
+			flex: 1;
+		}
+		.right{
+			position: relative;
+			display: block;
+			width: 3.6rem;
+		}
+		.arrow-right{
+			position: absolute;
+			top: 50%;
+			right: 1.5rem;
+			display: block;
+			width: .5rem;
+			height: .9rem;
+			background-image: url(../assets/imgs/i-next.png);
+			background-size: 100%;
+			transform: translateY(-50%);
+		}
+	}
+}
+.list-item {
+	position: relative;
+	//display: flex;
+	padding: 1rem 0;
+	
+	align-items: stretch;
+	
+	//label {
+		
 		flex: 1;
 		padding-left: 4.9rem;
 
@@ -295,7 +335,7 @@ html {
 
 		.status {
 			position: absolute;
-			top: 0.2rem;
+			top: 1.2rem;
 			right: 0;
 			padding: 0 1rem;
 			font-size: 1.2rem;
@@ -317,14 +357,9 @@ html {
 			color: #F4333C;
 			background-color: rgba(244,51,60,.2);
 		}
-	}
+	//}
 
 	.right {
-		display: block;
-		width: 3.6rem;
-		background-image: url("../assets/imgs/i-next.png");
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: 0.5rem;
+		
 	}
 }
