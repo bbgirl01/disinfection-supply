@@ -17,6 +17,10 @@ import { LoginPage } from '../pages/login/login';
 import { SortingScanPage } from '../pages/sorting/sorting-scan/sorting-scan';
 import { SortingListPage } from '../pages/sorting/sorting-list';
 import { SortingDetailPage } from '../pages/sorting/sorting-detail';
+
+import { WashingFreePage } from '../pages/washing/washing-free';
+import { WashingListPage } from '../pages/washing/washing-list';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -29,7 +33,9 @@ import { SortingDetailPage } from '../pages/sorting/sorting-detail';
     LoginPage,
     SortingScanPage,
     SortingListPage,
-    SortingDetailPage
+    SortingDetailPage,
+    WashingFreePage,
+    WashingListPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,9 @@ import { SortingDetailPage } from '../pages/sorting/sorting-detail';
     LoginPage,
     SortingScanPage,
     SortingListPage,
-    SortingDetailPage
+    SortingDetailPage,
+    WashingFreePage,
+    WashingListPage
   ],
   providers: [
     StatusBar,
