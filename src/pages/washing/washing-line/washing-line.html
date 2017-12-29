@@ -1,0 +1,64 @@
+<!--
+  Generated template for the WashingLinePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>washingLine</ion-title>
+  </ion-navbar>
+  <div class="login-info">
+    <span>李菲菲</span>
+    <span>002233</span>
+    <span>供应室</span>
+  </div>
+</ion-header>
+
+
+<ion-content no-padding>
+  <div class="" style="background-color:#f3f3f3">
+
+    <div class="up-zoom">
+      <div class="time-line">
+        <div class="">
+          <span>12:10</span>
+          <span>INSTR 40分钟</span>
+        </div>
+        <div class="">
+          <span>23:12</span>
+        </div>
+      </div>
+      <div class="chart-line">
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="down-zoom">
+      <div class="sum-num">
+        <span>包总数:<em>55</em></span>
+        <span>器械总数:<em>88</em></span>
+      </div>
+      <div class="sum-list">
+        <ion-list>
+
+          <div class="list-zoom">
+            <div class="list-block" *ngFor="let item of list ;let index=index">
+              <img src="assets/imgs/item.jpg" alt="">
+              <div class="">
+                <div>{{item.name}}</div>
+                <div><span>{{item.id}}</span><span>机械数量：<em>{{item.sum}}</em></span></div>
+              </div>
+              <span [navPush]="sortingDetailPage"></span>
+            </div>
+
+          </div>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<div class="btn">
+  <span>修改</span>
+  <span>作废</span>
+</div>
