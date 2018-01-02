@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { WashingListPage } from '../washing-list';
 /**
  * Generated class for the WashingLinePage page.
  *
@@ -14,7 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'washing-line.html',
 })
 export class WashingLinePage {
-
+  public washingListPage: any;
+  public pans: Array<any> = [{ name: '清洗机故障', choose: true }, { name: '操作故障', choose: false }, { name: '其他原因', choose: false }]
+  public machs: Array<any> = [{ name: '减压沸腾清洗机', choose: true }, { name: '手工清洗2', choose: false }, { name: '手工清洗4', choose: false }]
+  public modalDoor: boolean = false;
   public list: Array<any> = [{ name: '插值针', id: '19484743484', sum: '99' },
   { name: '小针头', id: '22443743484', sum: '199' },
   { name: '巴蜀', id: '9084743484', sum: '9' },
@@ -42,9 +45,50 @@ export class WashingLinePage {
   ];
   public lineChartLegend: boolean = true;
   public lineChartType: string = 'line';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
+    this.washingListPage = WashingListPage
   }
 
+  public showModal() {
+    this.modalDoor = !this.modalDoor;
+  }
+
+  public showAlert() {
+    let alert = this.alertCtrl.create({
+      title: '确认作废',
+      message: '确定要废除该清洗页面吗?',
+      buttons: [
+        {
+          text: '取消',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: '确定',
+          handler: () => {
+            console.log('Buy clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  public checkedPan(index) {
+    for (let i = 0; i < this.pans.length; i++) {
+      this.pans[i]['choose'] = false;
+    }
+    this.pans[index]['choose'] = true;
+  }
+
+  public checkedMach(index) {
+    for (let i = 0; i < this.machs.length; i++) {
+      this.machs[i]['choose'] = false;
+    }
+    this.machs[index]['choose'] = true;
+  }
 
 
   public randomize(): void {

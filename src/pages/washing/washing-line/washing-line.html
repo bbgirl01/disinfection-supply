@@ -8,6 +8,9 @@
 
   <ion-navbar>
     <ion-title>washingLine</ion-title>
+    <div class="header-zoom" (click)="showModal()">
+      换锅
+    </div>
   </ion-navbar>
   <div class="login-info">
     <span>李菲菲</span>
@@ -59,6 +62,27 @@
   </div>
 </ion-content>
 <div class="btn">
-  <span>修改</span>
-  <span>作废</span>
+  <span [navPush]="washingListPage">修改</span>
+  <span (click)="showAlert()">作废</span>
+</div>
+<div class="modal-zoom" *ngIf="modalDoor">
+  <div class="m-b">
+    <div class="m-til">
+      请选择换锅原因
+    </div>
+    <div class="m-list mb-{{item.choose}}" *ngFor="let item of pans;let index=index" (click)="checkedPan(index)">
+      <span>{{item.name}}</span><span class="m-{{item.choose}}"></span>
+    </div>
+  </div>
+  <div class="m-b">
+    <div class="m-til">
+      请选择清洗机
+    </div>
+    <div class="m-list mb-{{item.choose}}" *ngFor="let item of machs;let index=index" (click)="checkedMach(index)">
+      <span>{{item.name}}</span><span class="m-{{item.choose}}"></span>
+    </div>
+  </div>
+  <div class="sures">
+    <span (click)="showModal()">确定</span>
+  </div>
 </div>
