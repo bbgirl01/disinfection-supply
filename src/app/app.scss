@@ -217,7 +217,7 @@ html {
 	height: 2.4rem;
 	border: 1px solid #c7c7c7;
 	border-radius: 2.4rem;
-	&[checked] {
+	&:checked {
 		border: none;
 		background-image: url("../assets/imgs/i-ok.png");
 		background-size: 100%;
@@ -255,6 +255,9 @@ html {
 }
 
 // 回收统计
+.list{
+	margin-top: 0;
+}
 .custom-list{
 	.custom-item{
 		position: relative;
@@ -324,13 +327,18 @@ html {
 		h2 {
 			font-size: 1.6rem;
 			line-height: 2.2rem;
+			margin: 0;
+			margin-bottom: 0.4rem;
 		}
 
 		p {
-			padding-top: 0.4rem;
+			margin: 0;	
 			font-size: 1.3rem;
 			line-height: 1.8rem;
 			color: #a5a5a5;
+			+p{
+				margin-top: .2rem;
+			}
 		}
 
 		.status {
@@ -361,5 +369,73 @@ html {
 
 	.right {
 		
+	}
+}
+.m-statistics{
+	display: flex;
+	background-color: #fff;
+	margin-bottom: 1rem;
+	.item{
+		flex: 1;
+		padding: 1rem 0 1.6rem;
+		text-align: center;
+		strong{
+			line-height: 5rem;
+			font-size: 4rem;
+		}
+		p{
+			color: #666;
+			line-height: 2rem;
+			margin-top: -.4rem;
+		}
+	}
+}
+.m-filter-bar{
+	display: flex;
+	padding: 0 1.5rem;
+	height: 4rem;
+	line-height: 4rem;
+	background-color: #fff;
+	border-bottom: 1px solid #e5e5e5;
+	.item{
+		flex: 1;
+		text-align: center;
+	}
+	.item:first-child{
+		text-align: left;
+	}
+	.item:nth-child(3){
+		text-align: right;
+	}
+}
+ion-list + .statistics-tit{
+	border-top: 1px solid #e5e5e5;
+}
+.statistics-tit{
+	position: relative;
+	display: flex;
+	padding: 0 1.5rem;
+	height: 4.4rem;
+	line-height: 4.4rem;
+	background-color: #fff;
+	border-bottom: 1px solid #e5e5e5;
+	align-items: center;
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 3px;
+		height: 1.2rem;
+		background-color: #FFC205;
+		transform: translateY(-50%);
+	}
+	h2{
+		flex: 1;
+		font-size: 1.4rem;
+	}
+	.datetime{
+		color: #a5a5a5;
 	}
 }

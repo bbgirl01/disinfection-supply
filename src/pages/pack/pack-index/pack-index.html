@@ -1,0 +1,10 @@
+<div class="m-title">
+  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+</div>
+
+<div class="g-header">
+  <login-info></login-info>
+</div>
+
+<page-pack-list *ngIf="tabIndex===0"></page-pack-list>
+<page-pack-statistics *ngIf="tabIndex===1"></page-pack-statistics>
