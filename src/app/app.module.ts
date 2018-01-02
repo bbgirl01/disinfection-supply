@@ -22,6 +22,9 @@ import { WashingFreePage } from '../pages/washing/washing-free';
 import { WashingListPage } from '../pages/washing/washing-list';
 import { WashingDetailListPage } from '../pages/washing/washing-detail-list';
 import { WashingLinePage } from '../pages/washing/washing-line';
+import { WashingHomePage } from '../pages/washing/washing-home';
+import { WashingCollectPage } from '../pages/washing/washing-collect';
+import { WashingCheckPage } from '../pages/washing/washing-check';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { WashingLinePage } from '../pages/washing/washing-line';
     WashingFreePage,
     WashingListPage,
     WashingDetailListPage,
-    WashingLinePage
+    WashingLinePage,
+    WashingHomePage,
+    WashingCollectPage,
+    WashingCheckPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,10 @@ import { WashingLinePage } from '../pages/washing/washing-line';
     WashingFreePage,
     WashingListPage,
     WashingDetailListPage,
-    WashingLinePage
+    WashingLinePage,
+    WashingHomePage,
+    WashingCollectPage,
+    WashingCheckPage
   ],
   providers: [
     StatusBar,
