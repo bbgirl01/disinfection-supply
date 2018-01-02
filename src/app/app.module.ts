@@ -11,7 +11,7 @@ import { HomePage } from '../pages/home/home';
 import { RecycleIndexPage } from '../pages/recycle/recycle-index/recycle-index';
 import { RecycleListPage } from '../pages/recycle/recycle-list/recycle-list';
 import { TodayRecyclePage } from '../pages/recycle/today-recycle/today-recycle';
-import { PackageDetailPage } from '../pages/recycle/package-detail/package-detail';
+import { PackageDetailPage } from '../pages/package-detail';
 import { RecycleStatisticsPage } from '../pages/recycle/recycle-statistics/recycle-statistics';
 import { LoginPage } from '../pages/login/login';
 import { SortingScanPage } from '../pages/sorting/sorting-scan/sorting-scan';
@@ -25,6 +25,10 @@ import { WashingLinePage } from '../pages/washing/washing-line';
 import { WashingHomePage } from '../pages/washing/washing-home';
 import { WashingCollectPage } from '../pages/washing/washing-collect';
 import { WashingCheckPage } from '../pages/washing/washing-check';
+
+import { PackIndexPage } from '../pages/pack/pack-index';
+import { PackListPage } from '../pages/pack/pack-list';
+import { PackStatisticsPage } from '../pages/pack/pack-statistics';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,9 @@ import { WashingCheckPage } from '../pages/washing/washing-check';
     SortingDetailPage,
     WashingFreePage,
     WashingListPage,
+    PackIndexPage,
+    PackListPage,
+    PackStatisticsPage,
     WashingDetailListPage,
     WashingLinePage,
     WashingHomePage,
@@ -69,6 +76,9 @@ import { WashingCheckPage } from '../pages/washing/washing-check';
     SortingDetailPage,
     WashingFreePage,
     WashingListPage,
+    PackIndexPage,
+    PackListPage,
+    PackStatisticsPage,
     WashingDetailListPage,
     WashingLinePage,
     WashingHomePage,

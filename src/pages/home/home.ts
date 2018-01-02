@@ -3,7 +3,8 @@ import { NavController } from 'ionic-angular';
 
 import { RecycleIndexPage } from '../recycle/recycle-index/recycle-index';
 import { SortingScanPage } from '../sorting/sorting-scan/sorting-scan';
-import { WashingHomePage } from '../washing/washing-home';
+import { WashingFreePage } from '../washing/washing-free';
+import { PackIndexPage } from '../pack/pack-index';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -11,12 +12,13 @@ import { WashingHomePage } from '../washing/washing-home';
 export class HomePage {
   recyclePage: Object;
   sortingScanPage: any;
-  washingHomePage: any;
-  params: object = { test: 'i am is kaka' };
+  washingFreePage: any;
+  packIndexPage: any;
   constructor(public navCtrl: NavController) {
     this.recyclePage = RecycleIndexPage;
     this.sortingScanPage = SortingScanPage;
-    this.washingHomePage = WashingHomePage
+    this.washingFreePage = WashingFreePage;
+    this.packIndexPage = PackIndexPage;
   }
 
 }

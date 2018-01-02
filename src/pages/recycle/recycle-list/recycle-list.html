@@ -9,129 +9,96 @@
 </div>
 <div class="g-content">  
   <ion-list class="custom-list">
-    <div [navPush]="packageDetailPage">
-      <button ion-item>
+    <div class="custom-item" *ngFor="let item of list;let index = index">
+      <button ion-item (click)="toggleCheck(item.id)" >
         <div class="list-item">
-          <label>
-              <input class="u-radio" type="radio"/>
-            <img src="assets/imgs/item.jpg"/>
-            <div class="info"> 
-              <h2>插值针</h2>
-              <p>16091015487&emsp;器械数量：<span class="text-primary">2</span></p>
-            </div>
-            <span class="status used">已使用</span>
-          </label>
-          <span class="right" [navPush]="packageDetailPage"></span>
+          <input type="radio" class="u-radio" [checked]="item.checked"/>
+          <img src="assets/imgs/item.jpg"/>
+          <div class="info"> 
+            <h2>插值针</h2>
+            <p>16091015487&emsp;器械数量：<span class="text-primary">{{item.number}}</span></p>
+          </div>
+          <span class="status used" *ngIf="item.status===1">已使用</span>  
+          <span class="status overdue" *ngIf="item.status===2">已过期</span> 
+          <span class="status unqualified" *ngIf="item.status===3">不合格</span> 
         </div>
       </button> 
-      <button ion-item>
-        <div class="list-item">
-          <label>
-              <input class="u-radio" type="radio"  />
-            <img src="assets/imgs/item.jpg"/>
-            <div class="info"> 
-              <h2>区段器械包2</h2>
-              <p>16091015487&emsp;器械数量：<span class="text-primary">4</span></p>
-            </div>
-            <span class="status overdue">已过期</span>
-          </label>
-          <a class="right"></a>
-        </div>
-      </button>
+      <a class="right" [navPush]="packageDetailPage">
+        <span class="arrow-right"></span>
+      </a>
     </div>
-    <button ion-item>
-      <div class="list-item">
-        <label>
-          <input class="u-radio" type="radio" checked />
+    <!-- <div class="custom-item">
+      <button ion-item (click)="toggleCheck($event)" >
+        <div class="list-item">
+          <input class="u-radio" type="radio"/>
+          <img src="assets/imgs/item.jpg"/>
+          <div class="info"> 
+            <h2>插值针</h2>
+            <p>16091015487&emsp;器械数量：<span class="text-primary">21</span></p>
+          </div>
+          <span class="status used">已使用</span>  
+        </div>
+      </button> 
+      <a class="right" [navPush]="packageDetailPage">
+        <span class="arrow-right"></span>
+      </a>
+    </div>
+    <div class="custom-item">
+      <button ion-item (click)="toggleCheck($event)">
+        <div class="list-item">
+          <input class="u-radio" type="radio"/>
+          <img src="assets/imgs/item.jpg"/>
+          <div class="info"> 
+            <h2>区段器械包2</h2>
+            <p>16091015487&emsp;器械数量：<span class="text-primary">4</span></p>
+          </div>
+          <span class="status overdue">已过期</span>  
+        </div>
+      </button> 
+      <a class="right" [navPush]="packageDetailPage">
+        <span class="arrow-right"></span>
+      </a>
+    </div>
+    
+    <div class="custom-item">
+      <button ion-item (click)="toggleCheck($event)">
+        <div class="list-item">
+          <input class="u-radio" type="radio" checked/>
           <img src="assets/imgs/item.jpg"/>
           <div class="info"> 
             <h2>洗胃包</h2>
             <p>16091015487&emsp;器械数量：<span class="text-primary">4</span></p>
           </div>
-          <span class="status overdue">已过期</span>
-        </label>
-        <a class="right"></a>
-      </div>
-    </button>
-    <button ion-item>
-      <div class="list-item">
-        <label>
-          <input class="u-radio" type="radio" checked />
+          <span class="status overdue">已过期</span>  
+        </div>
+      </button> 
+      <a class="right" [navPush]="packageDetailPage">
+        <span class="arrow-right"></span>
+      </a>
+    </div>
+    <div class="custom-item">
+      <button ion-item (click)="toggleCheck($event, tt1)" #tt1>
+        <div class="list-item">
+          <input class="u-radio" type="radio" checked/>
           <img src="assets/imgs/item.jpg"/>
           <div class="info"> 
             <h2>插值针</h2>
             <p>16091015487&emsp;器械数量：<span class="text-primary">32</span></p>
           </div>
-          <span class="status unqualified">不合格</span>
-        </label>
-        <a class="right"></a>
-      </div>
-    </button>
-  </ion-list>
-  <ion-list class="custom-list">
-      <button ion-item>
-        <div class="list-item">
-          <label>
-              <input class="u-radio" type="radio"/>
-            <img src="assets/imgs/item.jpg"/>
-            <div class="info"> 
-              <h2>插值针</h2>
-              <p>16091015487&emsp;器械数量：<span class="text-primary">2</span></p>
-            </div>
-            <span class="status used">已使用</span>
-          </label>
-          <a class="right"></a>
+          <span class="status unqualified">不合格</span>  
         </div>
       </button> 
-      <button ion-item>
-        <div class="list-item">
-          <label>
-              <input class="u-radio" type="radio"  />
-            <img src="assets/imgs/item.jpg"/>
-            <div class="info"> 
-              <h2>区段器械包2</h2>
-              <p>16091015487&emsp;器械数量：<span class="text-primary">4</span></p>
-            </div>
-            <span class="status overdue">已过期</span>
-          </label>
-          <a class="right"></a>
-        </div>
-      </button>
-      <button ion-item>
-        <div class="list-item">
-          <label>
-            <input class="u-radio" type="radio" checked />
-            <img src="assets/imgs/item.jpg"/>
-            <div class="info"> 
-              <h2>洗胃包</h2>
-              <p>16091015487&emsp;器械数量：<span class="text-primary">4</span></p>
-            </div>
-            <span class="status overdue">已过期</span>
-          </label>
-          <a class="right"></a>
-        </div>
-      </button>
-      <button ion-item>
-        <div class="list-item">
-          <label>
-            <input class="u-radio" type="radio" checked />
-            <img src="assets/imgs/item.jpg"/>
-            <div class="info"> 
-              <h2>插值针</h2>
-              <p>16091015487&emsp;器械数量：<span class="text-primary">32</span></p>
-            </div>
-            <span class="status unqualified">不合格</span>
-          </label>
-          <a class="right"></a>
-        </div>
-      </button>
-    </ion-list>
+      <a class="right" [navPush]="packageDetailPage">
+        <span class="arrow-right"></span>
+      </a>
+    </div> -->
+  </ion-list>
 </div>
    
 <div class="g-footer">
   <div class="check-all">
-    <div class="u-radio-box">
-      <input class="u-radio" type="radio" />
+    <div class="u-radio-box" (click)="toggleCheck($event, tt)" #tt>
+      <input class="u-radio" type="radio" [checked]="checkAll"/>
       <span>全选(16)</span>
     </div>
     <div class="right-input"></div>

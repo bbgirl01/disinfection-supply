@@ -1,0 +1,54 @@
+index-list {
+  .groups{
+    height: 100%;
+    overflow-y: scroll;
+    h2{
+      padding: 0 1.5rem;
+      height: 2.4rem;
+      line-height: 2.4rem;
+      font-size: 1.2rem;
+      color: #a5a5a5;
+      background-color: #f3f3f3;
+    }
+    .group-items{
+      .item{
+        position: relative;
+        padding: 0 1.5rem;
+        height: 4.4rem;
+        line-height: 4.4rem;
+        font-size: 1.6rem;
+        background-color: #fff;
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 1.5rem;
+          height: 1px;
+          background-color: #e5e5e5;
+        }
+        &:last-child:after{
+          display: none;
+        }
+      }
+    }
+  }
+  .scroll-nav{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 100%;
+    background-color: #fff;
+    align-items: center;
+    li{
+      padding-left: .4rem;
+      height: 20px;
+      line-height: 20px;
+      font-size: 1.2rem;
+      color: #0080FF;
+    }
+  }
+}
