@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 import { MyApp } from './app.component';
 import { ComponentsModule } from '../components/components.module';
@@ -20,6 +20,8 @@ import { SortingDetailPage } from '../pages/sorting/sorting-detail';
 
 import { WashingFreePage } from '../pages/washing/washing-free';
 import { WashingListPage } from '../pages/washing/washing-list';
+import { WashingDetailListPage } from '../pages/washing/washing-detail-list';
+import { WashingLinePage } from '../pages/washing/washing-line';
 
 import { PackIndexPage } from '../pages/pack/pack-index';
 import { PackListPage } from '../pages/pack/pack-list';
@@ -42,11 +44,14 @@ import { PackStatisticsPage } from '../pages/pack/pack-statistics';
     WashingListPage,
     PackIndexPage,
     PackListPage,
-    PackStatisticsPage
+    PackStatisticsPage,
+    WashingDetailListPage,
+    WashingLinePage
   ],
   imports: [
     BrowserModule,
     ComponentsModule,
+    ChartsModule,
     IonicModule.forRoot(MyApp)
 
   ],
@@ -67,7 +72,9 @@ import { PackStatisticsPage } from '../pages/pack/pack-statistics';
     WashingListPage,
     PackIndexPage,
     PackListPage,
-    PackStatisticsPage
+    PackStatisticsPage,
+    WashingDetailListPage,
+    WashingLinePage
   ],
   providers: [
     StatusBar,
