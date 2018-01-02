@@ -12,6 +12,7 @@ export class HomePage {
   recyclePage: Object;
   sortingScanPage: any;
   washingFreePage: any;
+  params: object = { test: 'i am is kaka' };
   constructor(public navCtrl: NavController) {
     this.recyclePage = RecycleIndexPage;
     this.sortingScanPage = SortingScanPage;
