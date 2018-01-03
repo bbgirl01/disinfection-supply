@@ -55,6 +55,33 @@
   </div>
 </ion-content>
 <div class="btn">
-  <span [navPush]="checkNow(false)">不合格</span>
+  <span (click)="checkNow(false)">不合格</span>
   <span (click)="checkNow(true)">合格</span>
+</div>
+<div class="modal-zoom" *ngIf="modalDoor">
+  <div class="m-content">
+    <div class="m-header">
+      <span>不合格原因</span>
+      <span (click)="showModal(false)"></span>
+    </div>
+    <div class="m-b">
+      <div class="m-til">
+        原因
+      </div>
+      <div class="m-list mb-{{item.choose}}" *ngFor="let item of pans;let index=index" (click)="checkedPan(index)">
+        <span>{{item.name}}</span><span class="m-{{item.choose}}"></span>
+      </div>
+    </div>
+    <div class="m-b">
+      <div class="m-til">
+        清洗机
+      </div>
+      <div class="m-list mb-{{item.choose}}" *ngFor="let item of machs;let index=index" (click)="checkedMach(index)">
+        <span>{{item.name}}</span><span class="m-{{item.choose}}"></span>
+      </div>
+    </div>
+    <div class="sures">
+      <span (click)="showModal(true)">确定</span>
+    </div>
+  </div>
 </div>

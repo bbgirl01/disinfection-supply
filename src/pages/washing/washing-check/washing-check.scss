@@ -151,4 +151,111 @@ page-washing-check {
       background-color: #FA6865;
     }
   }
+
+  .modal-zoom {
+    position: fixed;
+    // top: px;
+    z-index: 10000000;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: flex-end;
+    min-height: 0;
+
+    .m-content {
+      flex-grow: 1;
+      display: flex;
+      justify-content: end;
+      flex-direction: column;
+
+      .m-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        background-color: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        color: #a5a5a5;
+        font-size: 14px;
+
+        span {
+          display: inline-flex;
+        }
+
+        span:last-child {
+          background: url("../assets/imgs/i-close2.png") 0 2px no-repeat;
+          background-size: 15px auto;
+          width: 15px;
+          height: 20px;
+        }
+      }
+
+      .sures {
+        background-color: white;
+        padding: 10px;
+
+        span {
+          height: 42px;
+          border: 1px solid #E5E5E5;
+          border-radius: 6px;
+          font-size: 18px;
+          color: #333333;
+          width: 100%;
+          display: inline-block;
+          text-align: center;
+          line-height: 42px;
+        }
+      }
+
+      .m-b {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+
+        .m-til {
+          height: 30px;
+          line-height: 30px;
+          padding-left: 16px;
+          background-color: #f3f3f3;
+          color: #666666;
+          font-size: 14px;
+          display: inline-flex;
+        }
+
+        .m-list {
+          display: inline-flex;
+          height: 45px;
+          line-height: 45px;
+          font-size: 16px;
+          color: #333333;
+          margin: 0 0 0 16px;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #e5e5e5;
+        }
+
+        .m-list:last-child {
+          // border-bottom: 0;
+          margin: 0;
+          padding-left: 16px;
+        }
+
+        .mb-true {
+          color: #0080ff;
+
+          .m-true {
+            display: inline-flex;
+            background: url("../assets/imgs/i-Check.png") 0 0 no-repeat;
+            width: 18px;
+            height: 12px;
+            margin-right: 16px;
+            background-size: 18px auto;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
 }

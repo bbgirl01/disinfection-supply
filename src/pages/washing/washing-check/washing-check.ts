@@ -14,6 +14,9 @@ import { WashingFreePage } from '../washing-free';
   templateUrl: 'washing-check.html',
 })
 export class WashingCheckPage {
+  public modalDoor: boolean = false;
+  public pans: Array<any> = [{ name: '清洗时间不足', choose: true }, { name: '清洗操作错误', choose: false }, { name: '清洗机故障', choose: false }, { name: '清洗设置出错', choose: false }]
+  public machs: Array<any> = [{ name: '减压沸腾清洗机', choose: true }, { name: '手工清洗2', choose: false }, { name: '手工清洗4', choose: false }]
   public washingFreePage: any;
   public checking: boolean = false;
   public list: Array<any> = [{ name: '插值针', id: '19484743484', sum: '99' },
@@ -49,7 +52,17 @@ export class WashingCheckPage {
     if (this.checking) return;
     if (flag) {
       this.presentToast()
+    } else {
+      this.modalDoor = !this.modalDoor;
     }
+  }
+  showModal(flag) {
+    this.modalDoor = false;
+
+    if (flag) {
+      this.navCtrl.push(this.washingFreePage)
+    }
+
   }
 
   presentToast() {
@@ -72,6 +85,19 @@ export class WashingCheckPage {
     console.log('ionViewDidLoad WashingCheckPage');
   }
 
+  public checkedPan(index) {
+    for (let i = 0; i < this.pans.length; i++) {
+      this.pans[i]['choose'] = false;
+    }
+    this.pans[index]['choose'] = true;
+  }
+
+  public checkedMach(index) {
+    for (let i = 0; i < this.machs.length; i++) {
+      this.machs[i]['choose'] = false;
+    }
+    this.machs[index]['choose'] = true;
+  }
   public randomize(): void {
     let _lineChartData: Array<any> = new Array(this.lineChartData.length);
     for (let i = 0; i < this.lineChartData.length; i++) {
