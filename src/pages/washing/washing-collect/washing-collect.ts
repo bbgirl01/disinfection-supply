@@ -20,10 +20,10 @@ export class WashingCollectPage {
   washingFreePage: any;
   washingLinePage: any;
   washingCheckPage: any;
-  list: Array<any> = [{ name: '减压沸腾清洗机', dayTime: '3', sum: '34', status: 0 },
-  { name: '手工清洗2', dayTime: '3', sum: '34', status: 1, time: '33:22' },
-  { name: '全自动清洗', dayTime: '3', sum: '34', status: 2 },
-  { name: '全自动清洗2', dayTime: '3', sum: '14', status: 3, time: '12:32:22-13:24:00' }
+  list: Array<any> = [{ name: '减压沸腾清洗机', dayTime: '3', sum: '34', status: 0, opt: '李峰' },
+  { name: '手工清洗2', dayTime: '3', sum: '34', status: 1, time: '33:22', opt: '李艳艳' },
+  { name: '全自动清洗', dayTime: '3', sum: '34', status: 2, opt: '何慧慧' },
+  { name: '全自动清洗2', dayTime: '3', sum: '14', status: 3, time: '12:32:22-13:24:00', opt: '金瑞瑞' }
   ]
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.washingFreePage = WashingFreePage

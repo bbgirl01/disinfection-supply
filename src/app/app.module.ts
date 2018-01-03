@@ -25,6 +25,10 @@ import { WashingLinePage } from '../pages/washing/washing-line';
 import { WashingHomePage } from '../pages/washing/washing-home';
 import { WashingCollectPage } from '../pages/washing/washing-collect';
 import { WashingCheckPage } from '../pages/washing/washing-check';
+import { WashingQualityPage } from '../pages/washing/washing-quality';
+import { WashingPassPage } from '../pages/washing/washing-pass';
+import { WashingNopassPage } from '../pages/washing/washing-nopass';
+import { WashingStatisticsPage } from '../pages/washing/washing-statistics';
 
 import { PackIndexPage } from '../pages/pack/pack-index';
 import { PackListPage } from '../pages/pack/pack-list';
@@ -52,7 +56,11 @@ import { PackStatisticsPage } from '../pages/pack/pack-statistics';
     WashingLinePage,
     WashingHomePage,
     WashingCollectPage,
-    WashingCheckPage
+    WashingCheckPage,
+    WashingQualityPage,
+    WashingPassPage,
+    WashingNopassPage,
+    WashingStatisticsPage
   ],
   imports: [
     BrowserModule,
@@ -83,7 +91,11 @@ import { PackStatisticsPage } from '../pages/pack/pack-statistics';
     WashingLinePage,
     WashingHomePage,
     WashingCollectPage,
-    WashingCheckPage
+    WashingCheckPage,
+    WashingQualityPage,
+    WashingPassPage,
+    WashingNopassPage,
+    WashingStatisticsPage
   ],
   providers: [
     StatusBar,
