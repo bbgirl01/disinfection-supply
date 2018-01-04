@@ -1,0 +1,49 @@
+<!--
+  Generated template for the PutawayChangePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="p-content">
+  <div class="up-zoom">
+    <div class="p-list">
+      <ion-list>
+        <div class="list-zoom" *ngFor="let item of list;let index=index">
+          <button (click)="toggleCheck(item.id)">
+                  <div class="p-list-item">
+                      <input type="radio" class="u-radio" [checked]="item.checked">
+                      <img src="assets/imgs/item.jpg" />
+                      <div class="info">
+                         <h2>插值针</h2>
+                         <p>6091015487 保质期5个月</p>
+                         <p>2017-10-10 11：12：14</p>
+                      </div>
+                        <span class="arrow-right"></span>
+                  </div>
+
+              </button>
+
+
+        </div>
+      </ion-list>
+    </div>
+  </div>
+</div>
+<div class="g-footer">
+  <div class="check-all">
+    <div class="u-radio-box" (click)="toggleCheck($event, tt)" #tt>
+      <input class="u-radio" type="radio" [checked]="checkAll" />
+      <span>全选(16)</span>
+    </div>
+    <div class="right-input"></div>
+  </div>
+  <div class="flex-wrap">
+    <div class="info">
+      <p class="name">存储架</p>
+      <p>E88830</p>
+    </div>
+    <div class="btn">
+      <button ion-button block [navPush]="loginPage">{{showInfo == 0?'上架':'换架'}}</button>
+    </div>
+  </div>
+</div>

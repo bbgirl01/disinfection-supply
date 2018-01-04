@@ -1,0 +1,17 @@
+page-putaway-up {
+  background-color: white;
+
+  .p-content {
+    background-color: white;
+    height: 100%;
+    padding-top: 92px;
+
+    .p-scan {
+      display: flex;
+      background-color: #a5a5a5;
+      justify-content: center;
+      height: 200px;
+      flex-grow: 1;
+    }
+  }
+}

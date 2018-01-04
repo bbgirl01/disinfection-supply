@@ -34,6 +34,11 @@ import { PackIndexPage } from '../pages/pack/pack-index';
 import { PackListPage } from '../pages/pack/pack-list';
 import { PackStatisticsPage } from '../pages/pack/pack-statistics';
 
+import { PutawayHomePage } from '../pages/putaway/putaway-home';
+import { PutawayUpPage } from '../pages/putaway/putaway-up';
+import { PutawayChangePage } from '../pages/putaway/putaway-change';
+import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -60,7 +65,11 @@ import { PackStatisticsPage } from '../pages/pack/pack-statistics';
     WashingQualityPage,
     WashingPassPage,
     WashingNopassPage,
-    WashingStatisticsPage
+    WashingStatisticsPage,
+    PutawayHomePage,
+    PutawayUpPage,
+    PutawayChangePage,
+    PutawayStatisticsPage
   ],
   imports: [
     BrowserModule,
@@ -95,7 +104,11 @@ import { PackStatisticsPage } from '../pages/pack/pack-statistics';
     WashingQualityPage,
     WashingPassPage,
     WashingNopassPage,
-    WashingStatisticsPage
+    WashingStatisticsPage,
+    PutawayHomePage,
+    PutawayUpPage,
+    PutawayChangePage,
+    PutawayStatisticsPage
   ],
   providers: [
     StatusBar,
