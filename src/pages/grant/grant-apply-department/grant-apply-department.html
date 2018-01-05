@@ -1,0 +1,105 @@
+<div class="m-title">
+  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+  <login-info></login-info>
+</div>
+<div class="g-content">
+  <!-- <div class="statistics-tit">
+    <h2>申领单1 </h2>
+    <span class="datetime">09/08&ensp;15:14:41</span>
+  </div> -->
+  <h2 class="tit">申领单 (09/08 12:11:14)</h2>
+
+  <ion-list class="custom-list">
+    <div class="scaned"><!--有此样式，border-bottom为none-->
+      <div class="custom-item">
+        <button ion-item>
+          <div class="list-item">
+            <img src="assets/imgs/item.jpg"/>
+            <div class="info"> 
+              <h2>插值针</h2>
+              <p>
+                申领：<span class="text-primary">2</span>&emsp;
+                已发：<span class="text-primary">0</span>
+              </p>
+            </div>
+            <span class="status urgent">加急包</span>   
+          </div>
+          <a class="right">
+            <span class="arrow-right"></span>
+          </a>  
+        </button> 
+            
+      </div>
+      <div class="pack-list">
+        <p>
+          <span>15478965412</span><span>13:44:14</span></p>
+        <p>
+          <span>15477897456</span><span>13:50:14</span></p>
+      </div>
+    </div>
+    <div><!--有此样式，border-bottom为none-->
+      <div class="custom-item">
+        <button ion-item>
+          <div class="list-item">
+            <img src="assets/imgs/item.jpg"/>
+            <div class="info"> 
+              <h2>区段器械包2</h2>
+              <p>
+                申领：<span class="text-primary">8</span>&emsp;
+                已发：<span class="text-primary">0</span>
+              </p>
+            </div>
+            <span class="status normal">基数包</span>   
+          </div>
+          <a class="right">
+            <span class="arrow-right"></span>
+          </a>  
+        </button> 
+            
+      </div>
+    </div>
+    
+    <div><!--有此样式，border-bottom为none-->
+      <div class="custom-item">
+        <button ion-item>
+          <div class="list-item">
+            <img src="assets/imgs/item.jpg"/>
+            <div class="info"> 
+              <h2>插值针</h2>
+              <p>
+                申领：<span class="text-primary">8</span>&emsp;
+                已发：<span class="text-primary">0</span>
+              </p>
+            </div>
+            <span class="status normal">基数包</span>   
+          </div>
+          <a class="right">
+            <span class="arrow-right"></span>
+          </a>  
+        </button> 
+            
+      </div>
+    </div>
+    <div><!--有此样式，border-bottom为none-->
+      <div class="custom-item">
+        <button ion-item>
+          <div class="list-item">
+            <img src="assets/imgs/item.jpg"/>
+            <div class="info"> 
+              <h2>插值针</h2>
+              <p>
+                申领：<span class="text-primary">2</span>&emsp;
+                已发：<span class="text-primary">0</span>
+              </p>
+            </div>
+            <span class="status borrow">借包</span>   
+          </div>
+          <a class="right">
+            <span class="arrow-right"></span>
+          </a>  
+        </button> 
+            
+      </div>
+    </div>
+  </ion-list>
+</div>

@@ -1,0 +1,128 @@
+<div class="g-content" [ngClass]="{show: popShow}">
+  <div class="mask"></div>
+  <div class="top-filter">
+    <div class="m-filter-bar">
+      <div class="item" [ngClass]="{active: filterType===0}">
+        <div class="u-select" (click)="chooseFilter(0)">
+          <span>全部科室</span>
+        </div>
+      </div>
+      <div class="item" [ngClass]="{active: filterType===1}">
+        <div class="u-select" (click)="chooseFilter(1)">
+          <span>全部状态</span>
+        </div>
+      </div>
+      <div class="item"  [ngClass]="{active: filterType===2}">
+        <div class="u-select"  (click)="chooseFilter(2)">
+          <span>当天(09/08)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="filter-content">
+    <!--科室过滤-->
+    <div *ngIf="filterType === 0">
+      <index-list></index-list>
+    </div>
+
+    <!--状态过滤-->
+    <div *ngIf="filterType === 1">
+      <ul class="status-list clearfix">
+        <li *ngFor="let item of statusList" 
+          [ngClass]="{active: item===choosedStatus}"
+          (click)="chooseStatus(item)">{{item}}</li>
+      </ul>
+    </div>
+    <!--日期过滤-->
+    <div *ngIf="filterType === 2">
+      <div class="choose-date-tabs">
+        <span [ngClass]="{'active': dayType === 1}" (click)="chooseDate(1, $event)">当天</span>
+        <span [ngClass]="{'active': dayType === 7}" (click)="chooseDate(7, $event)">本周</span>
+        <span [ngClass]="{'active': dayType === 30}" (click)="chooseDate(30, $event)">本月</span>
+      </div>
+      <!--选择当天-->
+      <div *ngIf="dayType === 1">
+        <div class="choose-date">
+          <span class="text-muted"></span>
+          <div class="date" [ngClass]="{'up': editDate === 'choosedDate'}">
+            <p (click)="showCalendarFn('choosedDate')">
+              {{choosedDate | date: 'yyyy/MM/dd'}}&ensp;{{choosedDate | weekdayCN}}
+              <span class="arrow"></span>
+            </p>           
+          </div>
+          <span class="minus" (click)="minusDay(choosedDate)"></span>
+          <span class="plus" (click)="plusDay(choosedDate)"></span>
+        </div>
+      </div>
+      <!--选择当月-->
+      <div *ngIf="dayType === 7">
+        <div class="choose-date">
+          <span class="text-muted">始&emsp;</span>
+          <div class="date" [ngClass]="{'up': editDate === 'choosedStartDate'}">
+            <p (click)="showCalendarFn('choosedStartDate')">
+              {{choosedStartDate | date: 'yyyy/MM/dd'}}&ensp;{{choosedStartDate | weekdayCN}}
+              <span class="arrow"></span>
+            </p>       
+          </div>
+          <span class="minus" (click)="minusDay(choosedStartDate, 'start')"></span>
+          <span class="plus" (click)="plusDay(choosedStartDate, 'start')"></span>
+        </div>
+        <div class="choose-date">
+          <span class="text-muted">终&emsp;</span>
+          <div class="date" [ngClass]="{'up': editDate === 'choosedEndDate'}"> 
+            <p (click)="showCalendarFn('choosedEndDate')">
+              {{choosedEndDate | date: 'yyyy/MM/dd'}}&ensp;{{choosedEndDate | weekdayCN}}
+              <span class="arrow"></span>
+            </p>      
+          </div>
+          <span class="minus" (click)="minusDay(choosedEndDate, 'end')"></span>
+          <span class="plus" (click)="plusDay(choosedEndDate, 'end')"></span>
+        </div>
+      </div>
+      <!--选择当月-->
+      <div *ngIf="dayType === 30">
+        <div class="choose-date">
+          <span class="text-muted"></span>
+          <div class="date up">
+            <span>2017/09</span>       
+          </div>
+          <span class="minus"></span>
+          <span class="plus"></span>
+        </div>
+      </div>
+
+      <div class="m-calendar" *ngIf="showCalendar">
+        <div class="top">
+          <span class="prev" (click)="getMonthData(monthData.year, monthData.month-1, choosedEndDate)"></span>
+          <span class="center">{{monthData.year}}-{{monthData.month}}</span>
+          <span class="next" (click)="getMonthData(monthData.year, monthData.month+1, choosedEndDate)"></span>
+        </div>
+        <div class="hd">
+          <ul class="clearfix">
+            <li><span>S</span></li>
+            <li><span>M</span></li>
+            <li><span>T</span></li>
+            <li><span>W</span></li>
+            <li><span>T</span></li>
+            <li><span>F</span></li>
+            <li><span>S</span></li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ul class="clearfix">
+            <li *ngFor="let item of monthData.data" 
+              [ngClass]="{'choosed': item.choosed, 'is-today': item.isToday}">
+              <span>{{item.date}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="btn-wrap">
+        <button ion-button outline full>确定</button>
+      </div>
+    </div>
+  </div>
+</div>

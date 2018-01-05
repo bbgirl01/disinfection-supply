@@ -9,12 +9,14 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner'
 
 import { MyApp } from './app.component';
 import { ComponentsModule } from '../components/components.module';
+import { PipesModule } from '../pipes/pipes.module';
 import { HomePage } from '../pages/home/home';
 import { RecycleIndexPage } from '../pages/recycle/recycle-index/recycle-index';
 import { RecycleListPage } from '../pages/recycle/recycle-list/recycle-list';
 import { TodayRecyclePage } from '../pages/recycle/today-recycle/today-recycle';
 import { PackageDetailPage } from '../pages/package-detail';
 import { RecycleStatisticsPage } from '../pages/recycle/recycle-statistics/recycle-statistics';
+import { RecyclePopupPage } from '../pages/recycle/recycle-popup';
 import { LoginPage } from '../pages/login/login';
 import { SortingScanPage } from '../pages/sorting/sorting-scan/sorting-scan';
 import { SortingListPage } from '../pages/sorting/sorting-list';
@@ -41,6 +43,10 @@ import { PutawayUpPage } from '../pages/putaway/putaway-up';
 import { PutawayChangePage } from '../pages/putaway/putaway-change';
 import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
 
+import { GrantIndexPage } from '../pages/grant/grant-index';
+import { GrantApplyPage } from '../pages/grant/grant-apply';
+import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -50,6 +56,7 @@ import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
     TodayRecyclePage,
     PackageDetailPage,
     RecycleStatisticsPage,
+    RecyclePopupPage,
     LoginPage,
     SortingScanPage,
     SortingListPage,
@@ -71,11 +78,15 @@ import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
     PutawayHomePage,
     PutawayUpPage,
     PutawayChangePage,
-    PutawayStatisticsPage
+    PutawayStatisticsPage,
+    GrantIndexPage,
+    GrantApplyPage,
+    GrantApplyDepartmentPage
   ],
   imports: [
     BrowserModule,
     ComponentsModule,
+    PipesModule,
     ChartsModule,
     IonicModule.forRoot(MyApp),
     NgxQRCodeModule
@@ -90,6 +101,7 @@ import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
     TodayRecyclePage,
     PackageDetailPage,
     RecycleStatisticsPage,
+    RecyclePopupPage,
     LoginPage,
     SortingScanPage,
     SortingListPage,
@@ -111,7 +123,10 @@ import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
     PutawayHomePage,
     PutawayUpPage,
     PutawayChangePage,
-    PutawayStatisticsPage
+    PutawayStatisticsPage,
+    GrantIndexPage,
+    GrantApplyPage,
+    GrantApplyDepartmentPage
   ],
   providers: [
     StatusBar,

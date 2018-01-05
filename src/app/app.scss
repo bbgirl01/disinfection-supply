@@ -297,6 +297,9 @@ html {
 		}
 	}
 }
+button.item-ios:not([detail-none]) .item-inner{
+	background-image: none;
+}
 .list-item {
 	position: relative;
 	//display: flex;
@@ -345,8 +348,11 @@ html {
 			position: absolute;
 			top: 1.2rem;
 			right: 0;
+			width: 5.6rem;
 			padding: 0 1rem;
 			font-size: 1.2rem;
+			text-align: center;
+			height: 2rem;
 			line-height: 2rem;
 			border-radius: 2rem;
 		}
@@ -364,6 +370,21 @@ html {
 		.unqualified {
 			color: #F4333C;
 			background-color: rgba(244,51,60,.2);
+		}
+		
+		.borrow{
+			color: #41B862;
+			background-color: #D7F6E0;
+		}
+
+		.normal{
+			color: #0080FF;
+			background-color: #DAEDFF;
+		}
+
+		.urgent{
+			color: #fff;
+			background-color: #F4333C;
 		}
 	//}
 
@@ -398,7 +419,9 @@ html {
 	background-color: #fff;
 	border-bottom: 1px solid #e5e5e5;
 	.item{
-		flex: 1;
+		float: left;
+		width: 33.33%;
+		//flex: 1;
 		text-align: center;
 	}
 	.item:first-child{
