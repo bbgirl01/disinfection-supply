@@ -1,0 +1,55 @@
+page-grant-apply {
+  .list{
+    .item{
+      display: flex;
+      position: relative;
+      height: 4.4rem;
+      line-height: 4.4rem;
+      padding: 0 1.5rem;
+      align-items: center;
+      span{
+        display: block;
+      }
+      .name{
+        flex: 1;
+      }
+      .datetime{
+        font-size: 1.3rem;
+        color: #a5a5a5;
+      }
+      span:nth-child(2){
+        width: 10.2rem;
+      }
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;  
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        left: 1.5rem;
+        background-color: #e5e5e5;
+      }
+      &:last-child:after{
+        left: 0;
+      }
+      &.urgent{
+        background-color: #F5A623;
+        span{
+          color: #fff;
+        }           
+        .arrow{
+          background-image: url(../assets/imgs/i-next2.png);
+        }
+      }
+      .arrow{
+        width: 1.8rem;
+        height: 1.8rem;
+        background-image: url(../assets/imgs/i-next.png);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: .5rem;
+      }
+    }
+  }
+}

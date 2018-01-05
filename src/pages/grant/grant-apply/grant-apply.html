@@ -1,0 +1,44 @@
+<div class="m-filter-bar">
+  <div class="item">
+    <div class="u-select" (click)="showPopup()">
+      <span>全部科室</span>
+    </div>
+  </div>
+  <div class="item">
+    <div class="u-select" (click)="showPopup()">
+      <span>当天(09/08)</span>
+    </div>
+  </div>
+</div>
+<div class="list">
+  <div class="item urgent" [navPush]="grantApplyDepartmentPage">
+    <span class="name">骨科</span>
+    <span>申领单1</span>
+    <span class="datetime">12:23:39</span>
+    <span class="arrow"></span>
+  </div>
+  <div class="item" [navPush]="grantApplyDepartmentPage">
+    <span class="name">骨科</span>
+    <span>申领单2</span>
+    <span class="datetime">12:23:39</span>
+    <span class="arrow"></span>
+  </div>
+  <div class="item" [navPush]="grantApplyDepartmentPage">
+    <span class="name">消化内科</span>
+    <span>申领单1</span>
+    <span class="datetime">12:23:39</span>
+    <span class="arrow"></span>
+  </div>
+  <div class="item" [navPush]="grantApplyDepartmentPage">
+    <span class="name">消化内科</span>
+    <span>申领单2</span>
+    <span class="datetime">12:23:39</span>
+    <span class="arrow"></span>
+  </div>
+  <div class="item" [navPush]="grantApplyDepartmentPage">
+    <span class="name">骨科</span>
+    <span>申领单1</span>
+    <span class="datetime">12:23:39</span>
+    <span class="arrow"></span>
+  </div>
+</div>

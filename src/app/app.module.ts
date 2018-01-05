@@ -41,6 +41,10 @@ import { PutawayUpPage } from '../pages/putaway/putaway-up';
 import { PutawayChangePage } from '../pages/putaway/putaway-change';
 import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
 
+import { GrantIndexPage } from '../pages/grant/grant-index';
+import { GrantApplyPage } from '../pages/grant/grant-apply';
+import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -72,7 +76,10 @@ import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
     PutawayHomePage,
     PutawayUpPage,
     PutawayChangePage,
-    PutawayStatisticsPage
+    PutawayStatisticsPage,
+    GrantIndexPage,
+    GrantApplyPage,
+    GrantApplyDepartmentPage
   ],
   imports: [
     BrowserModule,
@@ -113,7 +120,10 @@ import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
     PutawayHomePage,
     PutawayUpPage,
     PutawayChangePage,
-    PutawayStatisticsPage
+    PutawayStatisticsPage,
+    GrantIndexPage,
+    GrantApplyPage,
+    GrantApplyDepartmentPage
   ],
   providers: [
     StatusBar,
