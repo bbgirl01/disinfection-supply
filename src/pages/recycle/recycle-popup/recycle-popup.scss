@@ -1,0 +1,204 @@
+page-recycle-popup {
+  .g-content{
+    top: 4.7rem;
+    bottom: 5rem;
+    height: auto;
+    transform: translateY(-100%);
+    transition: .3s all ease-out;
+    background-color: rgba(0,0,0,0);
+    &.show{
+      transform: translateY(0);
+    }
+    z-index: 1;
+  }
+  .m-filter-bar{
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .top-filter .active .u-select{
+    color: #0080FF;
+  }
+  .filter-content{
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+  }
+  .status-list{
+    padding: 0 1.5rem;
+    li{
+      float: left;
+      width: 20.5%;
+      margin: 6% 0 6% 6%;
+      height: 4rem;
+      line-height: 4rem;
+      color: #666;
+      text-align: center;
+      border: 1px solid #d2d2d2;
+      border-radius: .4rem;
+      &.active{
+        color: #0080FF;
+        border-color: #0080FF;
+      }
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+  }
+  .btn-wrap{
+    padding: 2rem 1.5rem;
+    .button{
+      height: 4.4rem;
+      line-height: 4.4rem;
+      color: #333;
+      font-size: 1.8rem;
+      font-weight: normal;
+      border-width: 1px;
+      border-color: #E5E5E5;
+      border-radius: .6rem;
+    }
+    .button-effect{
+      background-color: #a5a5a5;
+    }
+  }
+  .choose-date-tabs{
+    display: flex;
+    height: 4rem;
+    line-height: 4rem;
+    justify-content: center;
+    border-bottom: 1px solid #e5e5e5;
+    span{
+      display: block;
+      width: 9rem;
+      text-align: center;
+      &.active{
+        color: #0080FF;
+      }
+    }
+  }
+  .choose-date{
+    display: flex;
+    padding-left: 1.5rem;
+    height: 4.4rem;
+    line-height: 4.4rem;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #e5e5e5;
+    >span{
+      display: block;
+    }
+    .date{
+      flex: 1;
+      &.up{
+        color: #0080FF;
+        .arrow{
+          transform: rotate(-180deg);
+        }
+      }
+      p{
+        display: inline-block;
+        
+      }
+      .arrow{  
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -.2rem;
+        margin-left: .8rem;
+        width: .9rem;
+        height: 1.5rem;
+        background-image: url(../assets/imgs/i-down1.png);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: .9rem;
+        transition: .3s transform ease-out;
+      }
+    }
+    .minus{
+      width: 4.4rem;
+      background-image: url(../assets/imgs/i-reduce.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 1.6rem;
+      border-left: 1px solid #e5e5e5;
+    }
+    .plus{
+      width: 4.4rem;
+      background-image: url(../assets/imgs/i-plus.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 1.6rem;
+      border-left: 1px solid #e5e5e5;
+    }
+  }
+  .m-calendar{
+    .top{
+      display: flex;
+      //padding: 0 1.5rem;
+      height: 5rem;
+      line-height: 5rem;
+      color: #000;
+      align-items: center;
+      .prev,
+      .next{
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: .7rem;
+      }
+      .prev{
+        background-image: url(../assets/imgs/i-prev.png);
+      }
+      .next{
+        background-image: url(../assets/imgs/i-next.png);
+      }
+      .center{
+        flex: 1;
+        display: block;
+        text-align: center;
+      }
+    }
+    .hd{
+      margin-top: -1rem;
+      color: #a5a5a5;
+    }
+    .bd{
+      color: #000;
+    }
+    ul{
+      li{
+        position: relative;
+        float: left;
+        width: 14.28%;
+        padding-top: 14.28%;
+        margin-top: -.5rem;
+        font-size: 1.2rem;
+        text-align: center;
+        &.choosed{
+          color: #0080FF;
+        }
+        &.is-today{
+          background-color: #FFC205;
+          color: #fff;
+          border-radius: 10rem;
+        }
+        
+        span{
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 3rem;
+          height: 3rem;
+          line-height: 3rem;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}

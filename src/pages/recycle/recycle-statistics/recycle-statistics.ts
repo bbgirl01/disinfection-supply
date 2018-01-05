@@ -11,10 +11,11 @@ import { PackageDetailPage } from '../../package-detail';
 export class RecycleStatisticsPage {
   packageDetailPage: any;
   tabs: Object = ['回收', '统计'];
+  showPopupFlag: any = false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.packageDetailPage = PackageDetailPage;
   }
-
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecyclePage');
     
@@ -24,4 +25,11 @@ export class RecycleStatisticsPage {
     console.log(index);
   }
 
+  showPopup() {
+    this.showPopupFlag = true;
+  }
+
+  hidePop() {
+    this.showPopupFlag = false;
+  }
 }

@@ -297,6 +297,9 @@ html {
 		}
 	}
 }
+button.item-ios:not([detail-none]) .item-inner{
+	background-image: none;
+}
 .list-item {
 	position: relative;
 	//display: flex;
