@@ -1,0 +1,13 @@
+<!--
+  Generated template for the PutawayHomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="m-title">
+  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+  <login-info></login-info>
+</div>
+<page-putaway-up *ngIf="tabsIndex == 0" (onFired)="getScanInfo($event)"></page-putaway-up>
+<page-putaway-change *ngIf="tabsIndex == 1" [showInfo]="[info]"></page-putaway-change>
+<page-putaway-statistics *ngIf="tabsIndex == 2"></page-putaway-statistics>

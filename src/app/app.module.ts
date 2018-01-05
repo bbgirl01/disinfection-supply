@@ -24,10 +24,22 @@ import { WashingFreePage } from '../pages/washing/washing-free';
 import { WashingListPage } from '../pages/washing/washing-list';
 import { WashingDetailListPage } from '../pages/washing/washing-detail-list';
 import { WashingLinePage } from '../pages/washing/washing-line';
+import { WashingHomePage } from '../pages/washing/washing-home';
+import { WashingCollectPage } from '../pages/washing/washing-collect';
+import { WashingCheckPage } from '../pages/washing/washing-check';
+import { WashingQualityPage } from '../pages/washing/washing-quality';
+import { WashingPassPage } from '../pages/washing/washing-pass';
+import { WashingNopassPage } from '../pages/washing/washing-nopass';
+import { WashingStatisticsPage } from '../pages/washing/washing-statistics';
 
 import { PackIndexPage } from '../pages/pack/pack-index';
 import { PackListPage } from '../pages/pack/pack-list';
 import { PackStatisticsPage } from '../pages/pack/pack-statistics';
+
+import { PutawayHomePage } from '../pages/putaway/putaway-home';
+import { PutawayUpPage } from '../pages/putaway/putaway-up';
+import { PutawayChangePage } from '../pages/putaway/putaway-change';
+import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
 
 @NgModule({
   declarations: [
@@ -49,7 +61,18 @@ import { PackStatisticsPage } from '../pages/pack/pack-statistics';
     PackListPage,
     PackStatisticsPage,
     WashingDetailListPage,
-    WashingLinePage
+    WashingLinePage,
+    WashingHomePage,
+    WashingCollectPage,
+    WashingCheckPage,
+    WashingQualityPage,
+    WashingPassPage,
+    WashingNopassPage,
+    WashingStatisticsPage,
+    PutawayHomePage,
+    PutawayUpPage,
+    PutawayChangePage,
+    PutawayStatisticsPage
   ],
   imports: [
     BrowserModule,
@@ -79,7 +102,18 @@ import { PackStatisticsPage } from '../pages/pack/pack-statistics';
     PackListPage,
     PackStatisticsPage,
     WashingDetailListPage,
-    WashingLinePage
+    WashingLinePage,
+    WashingHomePage,
+    WashingCollectPage,
+    WashingCheckPage,
+    WashingQualityPage,
+    WashingPassPage,
+    WashingNopassPage,
+    WashingStatisticsPage,
+    PutawayHomePage,
+    PutawayUpPage,
+    PutawayChangePage,
+    PutawayStatisticsPage
   ],
   providers: [
     StatusBar,

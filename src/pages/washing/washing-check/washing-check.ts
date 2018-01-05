@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { WashingListPage } from '../washing-list';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { WashingFreePage } from '../washing-free';
 /**
- * Generated class for the WashingLinePage page.
+ * Generated class for the WashingCheckPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,21 +10,21 @@ import { WashingListPage } from '../washing-list';
 
 @IonicPage()
 @Component({
-  selector: 'page-washing-line',
-  templateUrl: 'washing-line.html',
+  selector: 'page-washing-check',
+  templateUrl: 'washing-check.html',
 })
-export class WashingLinePage {
-  public washingListPage: any;
-  public pans: Array<any> = [{ name: '清洗机故障', choose: true }, { name: '操作故障', choose: false }, { name: '其他原因', choose: false }]
-  public machs: Array<any> = [{ name: '减压沸腾清洗机', choose: true }, { name: '手工清洗2', choose: false }, { name: '手工清洗4', choose: false }]
+export class WashingCheckPage {
   public modalDoor: boolean = false;
+  public pans: Array<any> = [{ name: '清洗时间不足', choose: true }, { name: '清洗操作错误', choose: false }, { name: '清洗机故障', choose: false }, { name: '清洗设置出错', choose: false }]
+  public machs: Array<any> = [{ name: '减压沸腾清洗机', choose: true }, { name: '手工清洗2', choose: false }, { name: '手工清洗4', choose: false }]
+  public washingFreePage: any;
+  public checking: boolean = false;
   public list: Array<any> = [{ name: '插值针', id: '19484743484', sum: '99' },
   { name: '小针头', id: '22443743484', sum: '199' },
   { name: '巴蜀', id: '9084743484', sum: '9' },
   { name: '投蜜', id: '9048484', sum: '39' },
   { name: '云盘', id: '89344009', sum: '3' },
-  { name: '针线', id: '98744244', sum: '12' }]
-  // lineChart
+  { name: '针线', id: '98744244', sum: '12' }];
   public lineChartData: Array<any> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: '摄氏度' }
   ];
@@ -45,35 +45,44 @@ export class WashingLinePage {
   ];
   public lineChartLegend: boolean = true;
   public lineChartType: string = 'line';
-  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
-    this.washingListPage = WashingListPage
+  constructor(private toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams) {
+    this.washingFreePage = WashingFreePage
+  }
+  checkNow(flag) {
+    if (this.checking) return;
+    if (flag) {
+      this.presentToast()
+    } else {
+      this.modalDoor = !this.modalDoor;
+    }
+  }
+  showModal(flag) {
+    this.modalDoor = false;
+
+    if (flag) {
+      this.navCtrl.push(this.washingFreePage)
+    }
+
   }
 
-  public showModal() {
-    this.modalDoor = !this.modalDoor;
-  }
-
-  public showAlert() {
-    let alert = this.alertCtrl.create({
-      title: '确认作废',
-      message: '确定要废除该清洗页面吗?',
-      buttons: [
-        {
-          text: '取消',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        },
-        {
-          text: '确定',
-          handler: () => {
-            console.log('Buy clicked');
-          }
-        }
-      ]
+  presentToast() {
+    this.checking = true;
+    let toast = this.toastCtrl.create({
+      message: '产品检定合格',
+      duration: 2000,
+      position: 'top'
     });
-    alert.present();
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+      this.navCtrl.push(this.washingFreePage)
+    });
+
+    toast.present();
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad WashingCheckPage');
   }
 
   public checkedPan(index) {
@@ -89,8 +98,6 @@ export class WashingLinePage {
     }
     this.machs[index]['choose'] = true;
   }
-
-
   public randomize(): void {
     let _lineChartData: Array<any> = new Array(this.lineChartData.length);
     for (let i = 0; i < this.lineChartData.length; i++) {
@@ -109,10 +116,6 @@ export class WashingLinePage {
 
   public chartHovered(e: any): void {
     console.log(e);
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad WashingLinePage');
   }
 
 }

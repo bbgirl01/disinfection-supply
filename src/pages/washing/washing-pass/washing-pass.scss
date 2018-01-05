@@ -1,0 +1,128 @@
+page-washing-pass {
+  .p-zoom {
+    background-color: #f3f3f3;
+
+    .up-zoom {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+
+      .p-result {
+        display: inline-flex;
+        height: 60px;
+        flex-grow: 1;
+        margin: 16px;
+        background: #FFFFFF;
+        box-shadow: 0 4px 12px 0 rgba(0,0,0,0.10);
+        border-radius: 4px;
+        justify-content: center;
+
+        span {
+          display: inline-flex;
+          color: #0080ff;
+          font-size: 20px;
+          background: url("../assets/imgs/image-qualified.png") 0 0 no-repeat;
+          background-size: 70px auto;
+          padding-left: 100px;
+          align-items: center;
+        }
+      }
+
+      .p-lines {
+        display: inline-flex;
+        height: 200px;
+        flex-grow: 1;
+      }
+    }
+
+    .down-zoom {
+      margin-top: 10px;
+      background-color: white;
+
+      .sum-num {
+        display: flex;
+        height: 40px;
+        color: #a5a5a5;
+        font-size: 14px;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10px;
+        border-bottom: 1px solid #e5e5e5;
+
+        span {
+          min-width: 100px;
+          display: inline-flex;
+
+          em {
+            color: #0080ff;
+            display: inline-flex;
+            align-items: center;
+            padding-left: 8px;
+          }
+        }
+      }
+
+      .sum-list {
+        .list-zoom {
+          .list-block:last-child {
+            margin-left: 0;
+            padding-left: 10px;
+            background-position: 94.5% 26px;
+            margin-bottom: 80px;
+          }
+
+          .list-block {
+            display: flex;
+            justify-content: flex-start;
+            height: 65px;
+            align-items: center;
+            margin-left: 10px;
+            border-bottom: 1px solid #E5E5E5;
+
+            & > img {
+              width: 45px;
+              height: 45px;
+              display: inline-flex;
+              flex-grow: 0;
+            }
+
+            & > div {
+              display: inline-flex;
+              flex-grow: 1;
+              flex-direction: column;
+              padding-left: 10px;
+              color: #333333;
+
+              span {
+                display: inline-flex;
+                color: #a5a5a5;
+                font-size: 13px;
+
+                em {
+                  font-size: 14px;
+                  color: #0080ff;
+                  display: inline-flex;
+                  align-items: center;
+                }
+              }
+
+              span:first-child {
+                padding-right: 25px;
+              }
+            }
+
+            & > span {
+              background: url("../assets/imgs/i-next.png") 0 0 no-repeat;
+              background-size: 8px auto;
+              background-position: 0 26px;
+              display: inline-flex;
+              width: 30px;
+              flex-grow: 0;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

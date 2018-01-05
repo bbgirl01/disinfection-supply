@@ -1,10 +1,4 @@
-page-washing-line {
-  .header-zoom {
-    float: right;
-    font-size: 14px;
-    margin: 0 20px;
-  }
-
+page-washing-check {
   .up-zoom {
     background-color: white;
 
@@ -12,11 +6,10 @@ page-washing-line {
       font-size: 16px;
       display: flex;
       background: #FFFFFF;
-      box-shadow: 0 4px 12px 0 rgba(0,0,0,0.10);
+      border-bottom: 1px solid #e5e5e5;
       border-radius: 4px;
       flex-grow: 1;
-      margin: 10px;
-      height: 60px;
+      height: 45px;
       color: #666666;
       justify-content: space-between;
       align-items: center;
@@ -24,26 +17,15 @@ page-washing-line {
 
       & > div {
         display: inline-flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
       }
 
       & > div:first-child {
         & > span:last-child {
           color: #a5a5a5;
           font-size: 14px;
-        }
-      }
-
-      & > div:last-child {
-        height: 36px;
-        background: url("../assets/imgs/i-time1.png") 0 4px no-repeat;
-        background-size: 28px auto;
-        padding-left: 35px;
-
-        span {
-          font-size: 28px;
-          color: #f5a623;
+          padding-left: 15px;
         }
       }
     }
@@ -153,7 +135,7 @@ page-washing-line {
     border-top: 1px solid #e5e5e5;
     text-align: center;
     z-index: 1000;
-    background-color: white;
+    background-color: #0080ff;
 
     span {
       float: left;
@@ -161,83 +143,117 @@ page-washing-line {
       line-height: 53px;
       height: 53px;
       color: #333333;
+      color: white;
       font-size: 18px;
     }
 
     span:first-child {
-      border-right: 1px solid #e5e5e5;
+      background-color: #FA6865;
     }
   }
 
   .modal-zoom {
     position: fixed;
-    top: 46px;
+    // top: px;
     z-index: 10000000;
     background: rgba(0,0,0,.5);
     width: 100%;
     height: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: flex-end;
+    min-height: 0;
 
-    .sures {
-      background-color: white;
-      padding: 10px;
-
-      span {
-        height: 42px;
-        border: 1px solid #E5E5E5;
-        border-radius: 6px;
-        font-size: 18px;
-        color: #333333;
-        width: 100%;
-        display: inline-block;
-        text-align: center;
-        line-height: 42px;
-      }
-    }
-
-    .m-b {
-      background-color: white;
+    .m-content {
+      flex-grow: 1;
       display: flex;
+      justify-content: end;
       flex-direction: column;
 
-      .m-til {
-        height: 30px;
-        line-height: 30px;
-        padding-left: 16px;
-        background-color: #f3f3f3;
-        color: #666666;
-        font-size: 14px;
-        display: inline-flex;
-      }
-
-      .m-list {
-        display: inline-flex;
-        height: 45px;
-        line-height: 45px;
-        font-size: 16px;
-        color: #333333;
-        margin: 0 0 0 16px;
+      .m-header {
+        display: flex;
         justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #e5e5e5;
-      }
+        padding: 10px 15px;
+        background-color: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        color: #a5a5a5;
+        font-size: 14px;
 
-      .m-list:last-child {
-        // border-bottom: 0;
-        margin: 0;
-        padding-left: 16px;
-      }
-
-      .mb-true {
-        color: #0080ff;
-
-        .m-true {
+        span {
           display: inline-flex;
-          background: url("../assets/imgs/i-Check.png") 0 0 no-repeat;
-          width: 18px;
-          height: 12px;
-          margin-right: 16px;
-          background-size: 18px auto;
+        }
+
+        span:last-child {
+          background: url("../assets/imgs/i-close2.png") 0 2px no-repeat;
+          background-size: 15px auto;
+          width: 15px;
+          height: 20px;
+        }
+      }
+
+      .sures {
+        background-color: white;
+        padding: 10px;
+
+        span {
+          height: 42px;
+          border: 1px solid #E5E5E5;
+          border-radius: 6px;
+          font-size: 18px;
+          color: #333333;
+          width: 100%;
           display: inline-block;
+          text-align: center;
+          line-height: 42px;
+        }
+      }
+
+      .m-b {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+
+        .m-til {
+          height: 30px;
+          line-height: 30px;
+          padding-left: 16px;
+          background-color: #f3f3f3;
+          color: #666666;
+          font-size: 14px;
+          display: inline-flex;
+        }
+
+        .m-list {
+          display: inline-flex;
+          height: 45px;
+          line-height: 45px;
+          font-size: 16px;
+          color: #333333;
+          margin: 0 0 0 16px;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #e5e5e5;
+        }
+
+        .m-list:last-child {
+          // border-bottom: 0;
+          margin: 0;
+          padding-left: 16px;
+        }
+
+        .mb-true {
+          color: #0080ff;
+
+          .m-true {
+            display: inline-flex;
+            background: url("../assets/imgs/i-Check.png") 0 0 no-repeat;
+            width: 18px;
+            height: 12px;
+            margin-right: 16px;
+            background-size: 18px auto;
+            display: inline-block;
+          }
         }
       }
     }

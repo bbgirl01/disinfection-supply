@@ -33,11 +33,11 @@
       <img src="assets/imgs/i-recycle.png" alt="">
       <span>回收</span>
     </div>
-    <div class="item" [navPush]="sortingScanPage">
+    <div class="item" [navPush]="sortingScanPage" [navParams]="params">
       <img src="assets/imgs/i-sorting.png" alt="">
       <span>分拣</span>
     </div>
-    <div class="item" [navPush]="washingFreePage">
+    <div class="item" [navPush]="washingHomePage">
       <img src="assets/imgs/i-purging.png" alt="">
       <span>清洗</span>
     </div>
@@ -51,7 +51,7 @@
       <span>灭菌</span>
     </div>
     <div class="item">
-      <img src="assets/imgs/i-shelves.png" alt="">
+      <img src="assets/imgs/i-shelves.png" [navPush]="putawayHomePage">
       <span>上架</span>
     </div>
 
@@ -68,7 +68,7 @@
       <span>使用</span>
     </div>
   </div>
-  
+
   <div class="tit">
     <span>其他功能</span>
   </div>

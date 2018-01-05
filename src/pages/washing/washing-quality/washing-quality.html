@@ -1,0 +1,47 @@
+<!--
+  Generated template for the WashingQualityPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<div class="w-quality">
+  <div class="w-header">
+    <div class="w-sel">
+      <ion-select interface="popover" [(ngModel)]="dayZoom">
+        <ion-option value="0">当天</ion-option>
+        <ion-option value="1">上一周</ion-option>
+        <ion-option value="2">当月</ion-option>
+        <ion-option value="3">当年</ion-option>
+      </ion-select>
+    </div>
+    <div class="w-sel">
+      <ion-select interface="popover" [(ngModel)]="statusZoom">
+        <ion-option value="0">全部状态</ion-option>
+        <ion-option value="1">未质检</ion-option>
+        <ion-option value="2">合格</ion-option>
+        <ion-option value="3">不合格</ion-option>
+      </ion-select>
+    </div>
+  </div>
+  <div class="c-zoom">
+    <div class="c-list" *ngFor="let item of list;let index = index" (click)="changePage(index)">
+      <div class="l-zoom">
+        <div class="l-name">
+          <span>{{item.name}}<em>({{item.finish}}/{{item.sum}})</em></span>
+        </div>
+        <div class="l-times">
+          <span>{{item.time}}<em>{{item.opt}}</em></span>
+        </div>
+      </div>
+      <div class="r-zoom">
+        <span class="r-tips r-{{item.status}}">
+            <ng-container *ngIf="item.status==0">未质检</ng-container>
+            <ng-container *ngIf="item.status==1">不合格</ng-container>
+            <ng-container *ngIf="item.status==2">合格</ng-container>
+          </span>
+
+      </div>
+    </div>
+  </div>
+</div>
