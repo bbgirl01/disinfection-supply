@@ -4,6 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner'
 
 import { MyApp } from './app.component';
 import { ComponentsModule } from '../components/components.module';
@@ -75,7 +77,8 @@ import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
     BrowserModule,
     ComponentsModule,
     ChartsModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    NgxQRCodeModule
 
   ],
   bootstrap: [IonicApp],
@@ -113,6 +116,7 @@ import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
