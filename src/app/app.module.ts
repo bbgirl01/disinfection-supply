@@ -47,6 +47,16 @@ import { GrantIndexPage } from '../pages/grant/grant-index';
 import { GrantApplyPage } from '../pages/grant/grant-apply';
 import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department';
 
+import { SterilizationHomePage } from '../pages/sterilization/sterilization-home';
+import { SterilizationStatisticsPage } from '../pages/sterilization/sterilization-statistics';
+import { SterilizationListPage } from '../pages/sterilization/sterilization-list';
+import { SterilizationFreePage } from '../pages/sterilization/sterilization-free';
+import { SterilizationStartPage } from "../pages/sterilization/sterilization-start";
+import { SterilizationLinePage } from "../pages/sterilization/sterilization-line";
+import { SterilizationCheckPage } from "../pages/sterilization/sterilization-check";
+import { SterilizationDetailListPage } from "../pages/sterilization/sterilization-detail-list";
+import { SterilizationPassPage } from '../pages/sterilization/sterilization-pass';
+import { SterilizationNopassPage } from '../pages/sterilization/sterilization-nopass';
 @NgModule({
   declarations: [
     MyApp,
@@ -81,7 +91,17 @@ import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department'
     PutawayStatisticsPage,
     GrantIndexPage,
     GrantApplyPage,
-    GrantApplyDepartmentPage
+    GrantApplyDepartmentPage,
+    SterilizationHomePage,
+    SterilizationStatisticsPage,
+    SterilizationListPage,
+    SterilizationFreePage,
+    SterilizationStartPage,
+    SterilizationLinePage,
+    SterilizationCheckPage,
+    SterilizationDetailListPage,
+    SterilizationPassPage,
+    SterilizationNopassPage
   ],
   imports: [
     BrowserModule,
@@ -126,7 +146,17 @@ import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department'
     PutawayStatisticsPage,
     GrantIndexPage,
     GrantApplyPage,
-    GrantApplyDepartmentPage
+    GrantApplyDepartmentPage,
+    SterilizationHomePage,
+    SterilizationStatisticsPage,
+    SterilizationListPage,
+    SterilizationFreePage,
+    SterilizationStartPage,
+    SterilizationLinePage,
+    SterilizationCheckPage,
+    SterilizationDetailListPage,
+    SterilizationPassPage,
+    SterilizationNopassPage
   ],
   providers: [
     StatusBar,

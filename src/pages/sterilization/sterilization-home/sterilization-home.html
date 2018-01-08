@@ -1,0 +1,14 @@
+<!--
+  Generated template for the SterilizationHomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="m-title">
+  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+  <login-info></login-info>
+</div>
+
+
+<page-sterilization-list *ngIf="choosePage==0"></page-sterilization-list>
+<page-sterilization-statistics *ngIf="choosePage==1"></page-sterilization-statistics>

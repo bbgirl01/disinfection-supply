@@ -1,0 +1,88 @@
+<!--
+  Generated template for the SterilizationLinePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>灭菌中</ion-title>
+    <div class="header-zoom" (click)="showModal()">
+      换锅
+    </div>
+  </ion-navbar>
+  <div class="login-info">
+    <span>李菲菲</span>
+    <span>002233</span>
+    <span>供应室</span>
+  </div>
+</ion-header>
+
+
+<ion-content no-padding>
+  <div class="" style="background-color:#f3f3f3">
+
+    <div class="up-zoom">
+      <div class="time-line">
+        <div class="">
+          <span>12:10</span>
+          <span>INSTR 40分钟</span>
+        </div>
+        <div class="">
+          <span>23:12</span>
+        </div>
+      </div>
+      <div class="chart-line">
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="down-zoom">
+      <div class="sum-num">
+        <span>包总数:<em>55</em></span>
+        <span>器械总数:<em>88</em></span>
+      </div>
+      <div class="sum-list">
+        <ion-list>
+
+          <div class="list-zoom">
+            <div class="list-block" *ngFor="let item of list ;let index=index">
+              <img src="assets/imgs/item.jpg" alt="">
+              <div class="">
+                <div>{{item.name}}</div>
+                <div><span>{{item.id}}</span><span>机械数量：<em>{{item.sum}}</em></span></div>
+              </div>
+              <span [navPush]="sortingDetailPage"></span>
+            </div>
+
+          </div>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<div class="btn">
+  <span [navPush]="sterilizationStartPage">修改</span>
+  <span (click)="showAlert()">作废</span>
+</div>
+<div class="modal-zoom" *ngIf="modalDoor">
+  <div class="m-b">
+    <div class="m-til">
+      请选择换锅原因
+    </div>
+    <div class="m-list mb-{{item.choose}}" *ngFor="let item of pans;let index=index" (click)="checkedPan(index)">
+      <span>{{item.name}}</span><span class="m-{{item.choose}}"></span>
+    </div>
+  </div>
+  <div class="m-b">
+    <div class="m-til">
+      请选择灭菌机
+    </div>
+    <div class="m-list mb-{{item.choose}}" *ngFor="let item of machs;let index=index" (click)="checkedMach(index)">
+      <span>{{item.name}}</span><span class="m-{{item.choose}}"></span>
+    </div>
+  </div>
+  <div class="sures">
+    <span (click)="showModal()">确定</span>
+  </div>
+</div>
