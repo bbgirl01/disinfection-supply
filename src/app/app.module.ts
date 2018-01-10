@@ -4,6 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner'
 
 import { MyApp } from './app.component';
 import { ComponentsModule } from '../components/components.module';
@@ -45,6 +47,16 @@ import { GrantIndexPage } from '../pages/grant/grant-index';
 import { GrantApplyPage } from '../pages/grant/grant-apply';
 import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department';
 
+import { SterilizationHomePage } from '../pages/sterilization/sterilization-home';
+import { SterilizationStatisticsPage } from '../pages/sterilization/sterilization-statistics';
+import { SterilizationListPage } from '../pages/sterilization/sterilization-list';
+import { SterilizationFreePage } from '../pages/sterilization/sterilization-free';
+import { SterilizationStartPage } from "../pages/sterilization/sterilization-start";
+import { SterilizationLinePage } from "../pages/sterilization/sterilization-line";
+import { SterilizationCheckPage } from "../pages/sterilization/sterilization-check";
+import { SterilizationDetailListPage } from "../pages/sterilization/sterilization-detail-list";
+import { SterilizationPassPage } from '../pages/sterilization/sterilization-pass';
+import { SterilizationNopassPage } from '../pages/sterilization/sterilization-nopass';
 @NgModule({
   declarations: [
     MyApp,
@@ -79,14 +91,25 @@ import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department'
     PutawayStatisticsPage,
     GrantIndexPage,
     GrantApplyPage,
-    GrantApplyDepartmentPage
+    GrantApplyDepartmentPage,
+    SterilizationHomePage,
+    SterilizationStatisticsPage,
+    SterilizationListPage,
+    SterilizationFreePage,
+    SterilizationStartPage,
+    SterilizationLinePage,
+    SterilizationCheckPage,
+    SterilizationDetailListPage,
+    SterilizationPassPage,
+    SterilizationNopassPage
   ],
   imports: [
     BrowserModule,
     ComponentsModule,
     PipesModule,
     ChartsModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    NgxQRCodeModule
 
   ],
   bootstrap: [IonicApp],
@@ -123,11 +146,22 @@ import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department'
     PutawayStatisticsPage,
     GrantIndexPage,
     GrantApplyPage,
-    GrantApplyDepartmentPage
+    GrantApplyDepartmentPage,
+    SterilizationHomePage,
+    SterilizationStatisticsPage,
+    SterilizationListPage,
+    SterilizationFreePage,
+    SterilizationStartPage,
+    SterilizationLinePage,
+    SterilizationCheckPage,
+    SterilizationDetailListPage,
+    SterilizationPassPage,
+    SterilizationNopassPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
