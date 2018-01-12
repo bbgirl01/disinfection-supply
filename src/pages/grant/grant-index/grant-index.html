@@ -2,6 +2,7 @@
   <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
   <login-info></login-info>
 </div>
-<div class="g-content">
-  <page-grant-apply *ngIf="tabIndex===0"></page-grant-apply>
-</div>
+
+<page-grant-apply *ngIf="tabIndex===0"></page-grant-apply>
+<page-grant-direct *ngIf="tabIndex===1"></page-grant-direct>
+<page-grant-statistics *ngIf="tabIndex===2"></page-grant-statistics>

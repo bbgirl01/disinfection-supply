@@ -1,0 +1,20 @@
+page-grant-statistics {
+  h2.tit{
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 1.5rem;
+    font-size: 1.4rem;
+    color: #666;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .custom-item{
+    display: block !important;
+  }
+  .list-item{
+    padding-left: 1.5rem;
+  }
+  .label{
+    display: flex;
+  }
+}

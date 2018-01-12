@@ -44,6 +44,8 @@ import { PutawayStatisticsPage } from '../pages/putaway/putaway-statistics';
 import { GrantIndexPage } from '../pages/grant/grant-index';
 import { GrantApplyPage } from '../pages/grant/grant-apply';
 import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department';
+import { GrantDirectPage } from '../pages/grant/grant-direct';
+import { GrantStatisticsPage } from '../pages/grant/grant-statistics';
 
 @NgModule({
   declarations: [
@@ -79,7 +81,9 @@ import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department'
     PutawayStatisticsPage,
     GrantIndexPage,
     GrantApplyPage,
-    GrantApplyDepartmentPage
+    GrantApplyDepartmentPage,
+    GrantDirectPage,
+    GrantStatisticsPage
   ],
   imports: [
     BrowserModule,
@@ -123,7 +127,9 @@ import { GrantApplyDepartmentPage } from '../pages/grant/grant-apply-department'
     PutawayStatisticsPage,
     GrantIndexPage,
     GrantApplyPage,
-    GrantApplyDepartmentPage
+    GrantApplyDepartmentPage,
+    GrantDirectPage,
+    GrantStatisticsPage
   ],
   providers: [
     StatusBar,
