@@ -1,0 +1,245 @@
+page-sterilization-line {
+  .header-zoom {
+    float: right;
+    font-size: 14px;
+    margin: 0 20px;
+  }
+
+  .up-zoom {
+    background-color: white;
+
+    .time-line {
+      font-size: 16px;
+      display: flex;
+      background: #FFFFFF;
+      box-shadow: 0 4px 12px 0 rgba(0,0,0,0.10);
+      border-radius: 4px;
+      flex-grow: 1;
+      margin: 10px;
+      height: 60px;
+      color: #666666;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+
+      & > div {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      & > div:first-child {
+        & > span:last-child {
+          color: #a5a5a5;
+          font-size: 14px;
+        }
+      }
+
+      & > div:last-child {
+        height: 36px;
+        background: url("../assets/imgs/i-time1.png") 0 4px no-repeat;
+        background-size: 28px auto;
+        padding-left: 35px;
+
+        span {
+          font-size: 28px;
+          color: #f5a623;
+        }
+      }
+    }
+
+    .chart-line {
+      display: flex;
+      height: 200px;
+      flex-grow: 1;
+    }
+  }
+
+  .down-zoom {
+    margin-top: 10px;
+    background-color: white;
+
+    .sum-num {
+      display: flex;
+      height: 40px;
+      color: #a5a5a5;
+      font-size: 14px;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 10px;
+      border-bottom: 1px solid #e5e5e5;
+
+      span {
+        min-width: 100px;
+        display: inline-flex;
+
+        em {
+          color: #0080ff;
+          display: inline-flex;
+          align-items: center;
+          padding-left: 8px;
+        }
+      }
+    }
+
+    .sum-list {
+      .list-zoom {
+        .list-block:last-child {
+          margin-left: 0;
+          padding-left: 10px;
+          background-position: 94.5% 26px;
+          margin-bottom: 80px;
+        }
+
+        .list-block {
+          display: flex;
+          justify-content: flex-start;
+          height: 65px;
+          align-items: center;
+          margin-left: 10px;
+          border-bottom: 1px solid #E5E5E5;
+
+          & > img {
+            width: 45px;
+            height: 45px;
+            display: inline-flex;
+            flex-grow: 0;
+          }
+
+          & > div {
+            display: inline-flex;
+            flex-grow: 1;
+            flex-direction: column;
+            padding-left: 10px;
+            color: #333333;
+
+            span {
+              display: inline-flex;
+              color: #a5a5a5;
+              font-size: 13px;
+
+              em {
+                font-size: 14px;
+                color: #0080ff;
+                display: inline-flex;
+                align-items: center;
+              }
+            }
+
+            span:first-child {
+              padding-right: 25px;
+            }
+          }
+
+          & > span {
+            background: url("../assets/imgs/i-next.png") 0 0 no-repeat;
+            background-size: 8px auto;
+            background-position: 0 26px;
+            display: inline-flex;
+            width: 30px;
+            flex-grow: 0;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    position: fixed;
+    bottom: 0;
+    height: 53px;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    z-index: 1000;
+    background-color: white;
+
+    span {
+      float: left;
+      width: 50%;
+      line-height: 53px;
+      height: 53px;
+      color: #333333;
+      font-size: 18px;
+    }
+
+    span:first-child {
+      border-right: 1px solid #e5e5e5;
+    }
+  }
+
+  .modal-zoom {
+    position: fixed;
+    top: 46px;
+    z-index: 10000000;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+
+    .sures {
+      background-color: white;
+      padding: 10px;
+
+      span {
+        height: 42px;
+        border: 1px solid #E5E5E5;
+        border-radius: 6px;
+        font-size: 18px;
+        color: #333333;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        line-height: 42px;
+      }
+    }
+
+    .m-b {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+
+      .m-til {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 16px;
+        background-color: #f3f3f3;
+        color: #666666;
+        font-size: 14px;
+        display: inline-flex;
+      }
+
+      .m-list {
+        display: inline-flex;
+        height: 45px;
+        line-height: 45px;
+        font-size: 16px;
+        color: #333333;
+        margin: 0 0 0 16px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .m-list:last-child {
+        // border-bottom: 0;
+        margin: 0;
+        padding-left: 16px;
+      }
+
+      .mb-true {
+        color: #0080ff;
+
+        .m-true {
+          display: inline-flex;
+          background: url("../assets/imgs/i-Check.png") 0 0 no-repeat;
+          width: 18px;
+          height: 12px;
+          margin-right: 16px;
+          background-size: 18px auto;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

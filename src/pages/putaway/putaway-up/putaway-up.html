@@ -5,7 +5,29 @@
   Ionic pages and navigation.
 -->
 <div class="p-content">
-  <div class="p-scan" (click)="goPages()">
+  <!-- <div class="p-scan" (click)="goPages()">
 
   </div>
+  <div class="p-camera">
+
+  </div> -->
+  <!-- <div class="">
+    <ion-item>
+      <ion-input type="text" placeholder="My QR data" [(ngModel)]="qrData"></ion-input>
+    </ion-item>
+    <button ion-button full icon-left (click)="createCode()" type="button" name="button"><ion-icon name="barcode"></ion-icon>Create Code</button>
+    <button ion-button full icon-left (click)="scanCode()" type="button" name="button"><ion-icon name="qr-scanner">Scan Code</ion-icon></button>
+    <ion-card *ngIf="createdCode">
+      <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+      <ion-card-content>
+        <p>Value:{{createdCode}}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="scannedCode">
+      <ion-card-content>
+        Result from Scan: {{scannedCode}}
+      </ion-card-content>
+    </ion-card>
+  </div> -->
 </div>

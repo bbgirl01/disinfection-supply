@@ -1,0 +1,58 @@
+<!--
+  Generated template for the SterilizationStatisticsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="w-statistics">
+  <div class="w-sum">
+    <span>今日清洗总是<em>33</em></span>
+    <span>今日锅次<em>6</em></span>
+  </div>
+  <div class="w-header">
+    <div class="w-sel">
+      <ion-select interface="popover" [(ngModel)]="machs">
+        <ion-option value="0">全部清洗机</ion-option>
+        <ion-option value="1">手工清洗机</ion-option>
+        <ion-option value="2">全自动清洗机</ion-option>
+      </ion-select>
+    </div>
+    <div class="w-sel">
+      <ion-select interface="popover" [(ngModel)]="statusZoom">
+        <ion-option value="0">全部质检状态</ion-option>
+        <ion-option value="2">合格</ion-option>
+        <ion-option value="3">不合格</ion-option>
+      </ion-select>
+    </div>
+    <div class="w-sel">
+      <ion-select interface="popover" [(ngModel)]="dayZoom">
+        <ion-option value="0">当前</ion-option>
+        <ion-option value="2">这一周</ion-option>
+        <ion-option value="3">这一月</ion-option>
+      </ion-select>
+    </div>
+  </div>
+  <div class="down-zoom">
+    <div class="sum-list">
+      <ion-list>
+
+        <div class="list-zoom">
+          <div class="list-block" *ngFor="let item of list ;let index=index">
+            <img src="assets/imgs/item.jpg" alt="">
+            <div class="names">
+              <div>{{item.name}}<em>({{item.finish}}/{{item.sum}})</em></div>
+              <div>{{item.time}}</div>
+            </div>
+            <div class="qua">
+              质检： <span class="dot-{{item.status}}"><ng-container *ngIf="item.status==0">合格</ng-container>
+              <ng-container *ngIf="item.status==1">不合格</ng-container></span>
+
+            </div>
+            <span (click)="goAhead(index)"></span>
+          </div>
+
+        </div>
+      </ion-list>
+    </div>
+  </div>
+</div>
