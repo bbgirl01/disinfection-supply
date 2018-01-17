@@ -8,6 +8,7 @@ import { PackIndexPage } from '../pack/pack-index';
 import { PutawayHomePage } from "../putaway/putaway-home";
 import { GrantIndexPage } from '../grant/grant-index';
 import { SterilizationHomePage } from '../sterilization/sterilization-home';
+import { UseIndexPage } from '../use/use-index';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -20,6 +21,7 @@ export class HomePage {
   putawayHomePage: any;
   grantIndexPage: any;
   sterilizationHomePage: any;
+  useIndexPage: any;
   constructor(public navCtrl: NavController) {
     this.recyclePage = RecycleIndexPage;
     this.sortingScanPage = SortingScanPage;
@@ -28,6 +30,7 @@ export class HomePage {
     this.putawayHomePage = PutawayHomePage;
     this.grantIndexPage = GrantIndexPage;
     this.sterilizationHomePage = SterilizationHomePage;
+    this.useIndexPage = UseIndexPage;
   }
 
 }

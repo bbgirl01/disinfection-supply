@@ -1,0 +1,8 @@
+<div class="m-title">
+  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+  <login-info></login-info>
+  <div class="right-input" *ngIf="tabIndex===0"></div>
+</div>
+
+<page-use-list *ngIf="tabIndex===0"></page-use-list>
+<page-use-statistics *ngIf="tabIndex===1"></page-use-statistics>

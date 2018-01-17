@@ -1,0 +1,101 @@
+<div class="g-content">
+  <div class="m-statistics">
+    <div class="item">
+      <strong class="text-warning">20</strong>
+      <p>今日使用总数</p>
+    </div>
+  </div>
+  <div class="space-line h10"></div>
+  <div class="m-filter-bar">
+    <div class="item">
+      <div class="u-select" (click)="showPopup()">
+        <span>当天(09/08)</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="statistics-tit">
+    <h2>09-08</h2>
+    <!-- <span class="datetime">15:14:41</span> -->
+  </div>
+  <ion-list class="custom-list">
+    <div class="custom-item" [navPush]="packageDetailPage">
+      <button ion-item>
+        <div class="list-item">
+          <img src="assets/imgs/item.jpg"/>
+          <div class="info"> 
+            <h2>插值针</h2>
+            <p>10床&emsp;李逵&emsp;2017-09-08 11:14:47</p>
+          </div>
+        </div>
+      </button> 
+      <div class="right">
+        <span class="arrow-right"></span>
+      </div>
+    </div>
+    <div class="custom-item" [navPush]="packageDetailPage">
+      <button ion-item>
+        <div class="list-item">
+          <img src="assets/imgs/item.jpg"/>
+          <div class="info"> 
+            <h2>区段器械包2</h2>
+            <p>10床&emsp;李逵&emsp;2017-09-08 11:14:47</p>
+          </div>
+        </div>
+      </button> 
+      <div class="right">
+        <span class="arrow-right"></span>
+      </div>
+    </div>
+    
+    <div class="custom-item" [navPush]="packageDetailPage">
+      <button ion-item>
+        <div class="list-item">
+          <img src="assets/imgs/item.jpg"/>
+          <div class="info"> 
+            <h2>洗胃包</h2>
+            <p>10床&emsp;李逵&emsp;2017-09-08 11:14:47</p>
+          </div> 
+        </div>
+      </button> 
+      <div class="right">
+        <span class="arrow-right"></span>
+      </div>
+    </div>
+    <div class="custom-item" [navPush]="packageDetailPage">
+      <button ion-item>
+        <div class="list-item">
+          <img src="assets/imgs/item.jpg"/>
+          <div class="info"> 
+            <h2>插值针</h2>
+            <p>10床&emsp;李逵&emsp;2017-09-08 11:14:47</p>
+          </div> 
+        </div>
+      </button> 
+      <div class="right">
+        <span class="arrow-right"></span>
+      </div>
+    </div>
+  </ion-list>
+</div>
+  
+<div class="right-search" (click)="showSearchPopup($event)"></div>
+<div class="popup-search" [ngClass]="{show: popupShow}">
+  <div class="search-wrap">
+    <div class="search-input">
+      <input type="text" placeholder="输入科室简拼搜索">
+      <button [navPush]="packageDetailPage">搜索</button>
+    </div>
+    <div class="search-clear" (click)="hideSearchPopup($event)"></div>
+  </div>
+  <div class="serach-history-wrap">
+    <h2>历史搜索</h2>
+    <ul class="list">
+      <li>10</li>
+      <li>张荣</li>
+      <li>李子博</li>
+      <li>戴梓敏</li>
+      <li>郝瑶</li>
+    </ul>
+  </div>
+</div>

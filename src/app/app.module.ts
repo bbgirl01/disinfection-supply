@@ -59,6 +59,10 @@ import { SterilizationCheckPage } from "../pages/sterilization/sterilization-che
 import { SterilizationDetailListPage } from "../pages/sterilization/sterilization-detail-list";
 import { SterilizationPassPage } from '../pages/sterilization/sterilization-pass';
 import { SterilizationNopassPage } from '../pages/sterilization/sterilization-nopass';
+
+import { UseIndexPage } from '../pages/use/use-index';
+import { UseListPage } from '../pages/use/use-list';
+import { UseStatisticsPage } from '../pages/use/use-statistics';
 @NgModule({
   declarations: [
     MyApp,
@@ -105,7 +109,10 @@ import { SterilizationNopassPage } from '../pages/sterilization/sterilization-no
     SterilizationCheckPage,
     SterilizationDetailListPage,
     SterilizationPassPage,
-    SterilizationNopassPage
+    SterilizationNopassPage,
+    UseIndexPage,
+    UseListPage,
+    UseStatisticsPage
   ],
   imports: [
     BrowserModule,
@@ -162,7 +169,10 @@ import { SterilizationNopassPage } from '../pages/sterilization/sterilization-no
     SterilizationCheckPage,
     SterilizationDetailListPage,
     SterilizationPassPage,
-    SterilizationNopassPage
+    SterilizationNopassPage,
+    UseIndexPage,
+    UseListPage,
+    UseStatisticsPage
   ],
   providers: [
     StatusBar,
