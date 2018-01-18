@@ -50,8 +50,8 @@
       <img src="assets/imgs/i-sterilization.png" alt="">
       <span>灭菌</span>
     </div>
-    <div class="item">
-      <img src="assets/imgs/i-shelves.png" [navPush]="putawayHomePage">
+    <div class="item" [navPush]="putawayHomePage">
+      <img src="assets/imgs/i-shelves.png">
       <span>上架</span>
     </div>
 
@@ -59,12 +59,12 @@
       <img src="assets/imgs/i-issue.png" alt="">
       <span>发放</span>
     </div>
-    <div class="item">
+    <div class="item" [navPush]="receiveIndexPage">
       <img src="assets/imgs/i-reception.png" alt="">
       <span>接收</span>
     </div>
-    <div class="item">
-      <img src="assets/imgs/i-use.png" alt="" [navPush]="useIndexPage">
+    <div class="item" [navPush]="useIndexPage">
+      <img src="assets/imgs/i-use.png" alt="">
       <span>使用</span>
     </div>
   </div>

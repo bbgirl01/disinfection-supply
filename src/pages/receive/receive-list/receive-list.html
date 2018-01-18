@@ -1,0 +1,90 @@
+<div class="g-content">
+  <div class="main-list">
+    <ion-list class="custom-list">
+      <div class="custom-item">
+        <button ion-item>
+          <div class="list-item">
+            <input type="radio" class="u-radio"/>
+            <img src="assets/imgs/item.jpg"/>
+            <div class="info"> 
+              <h2>插值针</h2>
+              <p>16091015487&emsp;保质期6个月</p>
+              <p>2017-09-18 11:12:14</p>
+            </div>
+          </div>
+        </button> 
+        <a class="right" [navPush]="packageDetailPage">
+          <span class="arrow-right"></span>
+        </a>
+      </div>
+      <div class="custom-item">
+        <button ion-item>
+          <div class="list-item">
+            <input type="radio" class="u-radio"/>
+            <img src="assets/imgs/item.jpg"/>
+            <div class="info"> 
+              <h2>插值针</h2>
+              <p>16091015487&emsp;保质期6个月</p>
+              <p>2017-09-18 11:12:14</p>
+            </div>
+          </div>
+        </button> 
+        <a class="right" [navPush]="packageDetailPage">
+          <span class="arrow-right"></span>
+        </a>
+      </div>
+      <div class="custom-item">
+        <button ion-item>
+          <div class="list-item">
+            <input type="radio" class="u-radio"/>
+            <img src="assets/imgs/item.jpg"/>
+            <div class="info"> 
+              <h2>插值针</h2>
+              <p>16091015487&emsp;保质期6个月</p>
+              <p>2017-09-18 11:12:14</p>
+            </div>
+          </div>
+        </button> 
+        <a class="right" [navPush]="packageDetailPage">
+          <span class="arrow-right"></span>
+        </a>
+      </div>
+    </ion-list>
+
+    <div class="check-all flex-wrap">
+      <div class="u-radio-box">
+        <input class="u-radio" type="radio" [checked]="checkAll"/>
+        <span>全选(16)</span>
+      </div>
+      <div class="right-input"></div>
+    </div>
+  </div>
+</div>
+
+<div class="g-footer">
+  <div class="btns-wrap">
+    <div class="btn">
+      <button ion-button block color="danger" [navPush]="loginPage" (click)="showPopup($event)">拒收</button>
+    </div>
+    <div class="btn">
+      <button ion-button block [navPush]="loginPage">接收</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup" [ngClass]="{show: popupShow}">
+  <div class="mask"></div>
+  <div class="popup-content">
+    <h2>不合格原因</h2>
+    <span class="close" (click)="hidePopup($event)"></span>
+    <div class="group">
+      <div class="group-name">原因</div>
+      <ul class="group-items">
+        <li class="checked">脏包</li>
+        <li>湿包</li>
+        <li>破损</li>
+      </ul>
+    </div>
+    <button ion-button block color="light" (click)="hidePopup($event)">确定</button>
+  </div>
+</div>

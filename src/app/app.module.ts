@@ -63,6 +63,10 @@ import { SterilizationNopassPage } from '../pages/sterilization/sterilization-no
 import { UseIndexPage } from '../pages/use/use-index';
 import { UseListPage } from '../pages/use/use-list';
 import { UseStatisticsPage } from '../pages/use/use-statistics';
+
+import { ReceiveIndexPage } from '../pages/receive/receive-index';
+import { ReceiveListPage } from '../pages/receive/receive-list';
+import { ReceiveStatisticsPage } from '../pages/receive/receive-statistics';
 @NgModule({
   declarations: [
     MyApp,
@@ -112,7 +116,10 @@ import { UseStatisticsPage } from '../pages/use/use-statistics';
     SterilizationNopassPage,
     UseIndexPage,
     UseListPage,
-    UseStatisticsPage
+    UseStatisticsPage,
+    ReceiveIndexPage,
+    ReceiveListPage,
+    ReceiveStatisticsPage
   ],
   imports: [
     BrowserModule,
@@ -172,7 +179,10 @@ import { UseStatisticsPage } from '../pages/use/use-statistics';
     SterilizationNopassPage,
     UseIndexPage,
     UseListPage,
-    UseStatisticsPage
+    UseStatisticsPage,
+    ReceiveIndexPage,
+    ReceiveListPage,
+    ReceiveStatisticsPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,7 @@
+<div class="m-title">
+  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+  <login-info></login-info>
+</div>
+
+<page-receive-list *ngIf="tabIndex===0"></page-receive-list>
+<page-receive-statistics *ngIf="tabIndex===1"></page-receive-statistics>
