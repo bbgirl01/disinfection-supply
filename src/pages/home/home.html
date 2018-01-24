@@ -23,9 +23,23 @@
       <div class="notice">
         <span>99+</span>
       </div>
-      <div class="more">
+      <div class="more" (click)="toggleMoreMenus($event)">
 
       </div>
+      <ul class="list" [ngClass]="{show: moreMenusShow}">
+        <li [navPush]="personalIndexPage">
+          <i class="icon icon-personal"></i>
+          个人信息
+        </li>
+        <li>
+          <i class="icon icon-mobile-nursing"></i>
+          移动护理
+        </li>
+        <li>
+          <i class="icon icon-logout"></i>
+          退出帐号
+        </li>
+      </ul>
     </div>
   </div>
   <div class="menus clearfix">

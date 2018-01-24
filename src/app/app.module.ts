@@ -67,6 +67,8 @@ import { UseStatisticsPage } from '../pages/use/use-statistics';
 import { ReceiveIndexPage } from '../pages/receive/receive-index';
 import { ReceiveListPage } from '../pages/receive/receive-list';
 import { ReceiveStatisticsPage } from '../pages/receive/receive-statistics';
+
+import { PersonalIndexPage } from '../pages/personal/personal-index';
 @NgModule({
   declarations: [
     MyApp,
@@ -119,7 +121,8 @@ import { ReceiveStatisticsPage } from '../pages/receive/receive-statistics';
     UseStatisticsPage,
     ReceiveIndexPage,
     ReceiveListPage,
-    ReceiveStatisticsPage
+    ReceiveStatisticsPage,
+    PersonalIndexPage
   ],
   imports: [
     BrowserModule,
@@ -182,7 +185,8 @@ import { ReceiveStatisticsPage } from '../pages/receive/receive-statistics';
     UseStatisticsPage,
     ReceiveIndexPage,
     ReceiveListPage,
-    ReceiveStatisticsPage
+    ReceiveStatisticsPage,
+    PersonalIndexPage
   ],
   providers: [
     StatusBar,

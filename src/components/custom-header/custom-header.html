@@ -12,7 +12,7 @@
 <header>
   <span class="back" (click)="goPrevPage()"></span>
   <div class="tabs">
-    <span *ngFor="let tab of tabs;let index = index" [ngClass]="{tab: true, active: index==0}" (click)="tabChangeFn($event, index)">
+    <span *ngFor="let tab of tabs;let index = index" [ngClass]="{tab: true, active: index==0&&tabs.length>1}" (click)="tabChangeFn($event, index)">
       {{tab}}
     </span>
     <!-- <span class="line" [style.left]="offsetLeft"></span> -->

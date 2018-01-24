@@ -1,0 +1,85 @@
+page-personal-index {
+  .g-content{
+    padding-top: 4.7rem;
+    background-color: #fff;
+  }
+  .blue-bg{
+    height: 3rem;
+    background-color: #0080FF;
+  }
+  .p-info{
+    margin: -3rem 1.5rem 0;
+    padding: 0 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.10);
+    border-radius: 4px;
+    .flex-wrap{
+      display: flex;
+      height: 4.2rem;
+      line-height: 4.2rem;
+      border-bottom: 1px solid #e5e5e5;
+      &:last-child{
+        border-bottom: none;
+      }
+      >div{
+        flex: 1;
+      }
+    }
+    .job-number,
+    .department{
+      padding-left: 2.5rem;
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 1.6rem;
+    }
+    .job-number{
+      background-image: url(../assets/imgs/i-number1.png);
+    }
+    .department{
+      background-image: url(../assets/imgs/i-department2.png);
+    }
+  }
+  .list{
+    margin-top: 2.4rem;
+    border-bottom: 1px solid #e5e5e5;
+    .item{
+      display: flex;
+      padding: 0 1.5rem;
+      height: 4.4rem;
+      line-height: 4.4rem;
+      border-top: 1px solid #e5e5e5;
+      align-items: center;
+      span{
+        display: block;
+        &:nth-child(2){
+          flex: 1;
+          padding-left: 1.2rem;
+        }
+      }
+      .icon{
+        width: 2.4rem;
+        height: 2.4rem;
+        background-size: 100%;
+        &.icon-pwd{
+          background-image: url(../assets/imgs/i-password.png);
+        }
+        &.icon-contact{
+          background-image: url(../assets/imgs/i-contact.png);
+        }
+      }
+      .arrow-right{
+        width: .5rem;
+        height: 1rem;
+        background-image: url(../assets/imgs/i-next.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  .g-footer{
+    .u-button{
+      color: #F4333C;
+    }
+  }
+}
