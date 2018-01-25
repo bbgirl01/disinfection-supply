@@ -1,0 +1,5 @@
+<div class="u-segment">
+  <span [ngClass]="{active: index==segmentIndex}" *ngFor="let item of segments;let index = index" (click)="segmentChangeFn(index)">
+    {{item}}
+  </span>
+</div>

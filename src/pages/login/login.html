@@ -1,7 +1,51 @@
-<div class="g-header">
-  <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
+<div class="g-content">
+  <div class="top-bg">
+    <h2>消毒供应中心质量追溯系统</h2>
+  </div>
+  <!-- 扫码登录 -->
+  <div class="login-form" *ngIf="loginType==0">
+    <img src="assets/imgs/login-scan.png" alt="">
+    <p class="tip">请扫描登录</p>
+  </div>
+  <!-- 账号登录 -->
+  <div class="login-form" *ngIf="loginType==1">
+    <div class="item">
+      <input type="text" placeholder="用户名" value="MissJoy叶" />
+      <span class="clear"></span>
+    </div>
+    <div class="item">
+      <input type="password" placeholder="密码" value="123456" />
+      <span class="clear"></span>
+    </div>
+    <p class="error-msg">密码错误!</p>
+    <div class="login-btn">
+      <button class="u-button blue">登录</button>
+    </div>
+  </div>
+
+  <div class="other-way">
+    <p>或</p>
+    <span *ngIf="loginType==1" (click)="changeLoginWay(0)">扫码登录</span>
+    <span *ngIf="loginType==0" (click)="changeLoginWay(1)">账号登录</span>
+  </div>
+
+  <div class="copyright">医惠科技有限公司&ensp;
+    <span class="text-primary" (click)="showPopup($event)">设置</span>
+  </div>
 </div>
 
-
-<div class="g-content"></div>
-<!-- <div class="g-footer"></div> -->
+<div class="m-popup" [ngClass]="{show: popShow}">
+  <div class="mask"></div>
+  <div class="popup-box">
+    <h2>设置 ： V3.1.0_88</h2>
+    <div class="item">
+      <span>IP</span>
+      <input type="text" value="192 . 168 . 30 . 10" />
+    </div>
+    <div class="item">
+      <span>端口号</span>
+      <input type="text" value="8080" />
+    </div>
+    <button class="u-button white" (click)="hidePopup($event)">确定</button>
+  </div>
+</div>

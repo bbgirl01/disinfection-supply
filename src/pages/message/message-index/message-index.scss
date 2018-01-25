@@ -1,0 +1,75 @@
+page-message-index {
+  .send-msg{
+    position: absolute;  
+    top: 1.8rem;
+    right: 1.5rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    color: #fff;
+  }
+  .g-content{
+    padding-top: 5.6rem;
+    background-color: #fff;
+    .msg-list .item{
+      display: flex;
+      position: relative;
+      padding: 1.1rem 1.5rem 1.2rem 4.8rem;
+      align-items: center;
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 1.5rem;
+        height: 1px;
+        background-color: #e5e5e5;
+      }
+      &:last-child:after{
+        left: 0;
+      }
+      &.new:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: #F4333C;
+        border-radius: 1.2rem;
+      }
+      .info{
+        flex: 1;
+      }
+      .arrow-right{
+        display: block;
+        margin-left: 1rem;
+        width: .5rem;
+        height: 1rem;
+        background-image: url(../assets/imgs/i-next.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      h2{
+        padding-bottom: .4rem;
+        height: 2.2rem;
+        line-height: 2.2rem;
+        font-size: 1.6rem;
+        span{
+          font-size: 1.4rem;
+        }
+      }
+      p{
+        line-height: 1.8rem;
+        font-size: 1.3rem;  
+        color: #a5a5a5;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
+  }
+}

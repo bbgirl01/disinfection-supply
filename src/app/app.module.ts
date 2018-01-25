@@ -69,6 +69,11 @@ import { ReceiveListPage } from '../pages/receive/receive-list';
 import { ReceiveStatisticsPage } from '../pages/receive/receive-statistics';
 
 import { PersonalIndexPage } from '../pages/personal/personal-index';
+import { UpdatePasswordPage } from '../pages/personal/update-password';
+
+import { MessageIndexPage } from '../pages/message/message-index';
+import { SendMessagePage } from '../pages/message/send-message';
+import { MessageDetailPage } from '../pages/message/message-detail';
 @NgModule({
   declarations: [
     MyApp,
@@ -122,7 +127,11 @@ import { PersonalIndexPage } from '../pages/personal/personal-index';
     ReceiveIndexPage,
     ReceiveListPage,
     ReceiveStatisticsPage,
-    PersonalIndexPage
+    PersonalIndexPage,
+    UpdatePasswordPage,
+    MessageIndexPage,
+    SendMessagePage,
+    MessageDetailPage
   ],
   imports: [
     BrowserModule,
@@ -186,7 +195,11 @@ import { PersonalIndexPage } from '../pages/personal/personal-index';
     ReceiveIndexPage,
     ReceiveListPage,
     ReceiveStatisticsPage,
-    PersonalIndexPage
+    PersonalIndexPage,
+    UpdatePasswordPage,
+    MessageIndexPage,
+    SendMessagePage,
+    MessageDetailPage
   ],
   providers: [
     StatusBar,

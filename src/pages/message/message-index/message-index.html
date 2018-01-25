@@ -1,0 +1,65 @@
+<div class="m-title">
+  <custom-header [tabs]="['消息', '重要消息']" (tabChange)="tabChange($event)"></custom-header>
+  <div class="send-msg" [navPush]="sendMessagePage">发消息</div>
+</div>
+
+<div class="g-content">
+  <div class="msg-list" *ngIf="tabIndex===0">
+    <div class="item new" [navPush]="messageDetailPage">
+      <div class="info">
+        <h2>医院例会通知
+          <span class="fr">今天</span>
+        </h2>
+        <p>本周五（9.20）在3号楼5五多媒体会议中心召开会议，希望各位员工准时参加，如有特殊情况本周五（9.20）在3号楼5五多媒体会议中心召开会议，希望各位员工准时参加，如有特殊情况......</p>
+      </div>
+      <div class="arrow-right"></div>
+    </div>
+    <div class="item" [navPush]="messageDetailPage">
+      <div class="info">
+        <h2>医院例会通知
+          <span class="fr">2018/01/24</span>
+        </h2>
+        <p>本周五（9.20）在3号楼5五多媒体会议中心召开会议，希望各位员工准时参加，如有特殊情况...</p>
+      </div>
+      <div class="arrow-right"></div>
+    </div>
+    <div class="item" [navPush]="messageDetailPage">
+      <div class="info">
+        <h2>医院例会通知
+          <span class="fr">2018/01/08</span>
+        </h2>
+        <p>本周五（9.20）在3号楼5五多媒体会议中心召开会议，希望各位员工准时参加，如有特殊情况...</p>
+      </div>
+      <div class="arrow-right"></div>
+    </div>
+    <div class="item" [navPush]="messageDetailPage">
+      <div class="info">
+        <h2>医院例会通知
+          <span class="fr">2017/12/31</span>
+        </h2>
+        <p>本周五（9.20）在3号楼5五多媒体会议中心召开会议，希望各位员工准时参加，如有特殊情况...</p>
+      </div>
+      <div class="arrow-right"></div>
+    </div>
+  </div>
+  <div class="msg-list" *ngIf="tabIndex===1">
+    <div class="item new" [navPush]="messageDetailPage">
+      <div class="info">
+        <h2>医院例会通知
+          <span class="fr">今天</span>
+        </h2>
+        <p>本周五（9.20）在3号楼5五多媒体会议中心召开会议，希望各位员工准时参加，如有特殊情况本周五（9.20）在3号楼5五多媒体会议中心召开会议，希望各位员工准时参加，如有特殊情况......</p>
+      </div>
+      <div class="arrow-right"></div>
+    </div>
+    <div class="item" [navPush]="messageDetailPage">
+      <div class="info">
+        <h2>医院例会通知
+          <span class="fr">2018/01/24</span>
+        </h2>
+        <p>本周五（9.20）在3号楼5五多媒体会议中心召开会议，希望各位员工准时参加，如有特殊情况...</p>
+      </div>
+      <div class="arrow-right"></div>
+    </div>
+  </div>
+</div>

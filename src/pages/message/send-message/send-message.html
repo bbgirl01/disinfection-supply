@@ -1,0 +1,34 @@
+<div class="m-title">
+  <custom-header [tabs]="['发送消息']"></custom-header>
+</div>
+
+<div class="g-content">
+  <div class="input input-recipient">
+    <span>收件人</span>
+    <div>
+      <!-- <span>本科室</span>
+      <span>全院</span> -->
+      <segment [segments]="['本科室', '全院']" segmentIndex="1" (segmentChange)="segmentChange($event)"></segment>
+    </div>
+  </div>
+
+  <div class="input input-title">
+    <input type="text" placeholder="编辑标题" />
+  </div>
+  <div class="input-content">
+    <textarea name="" placeholder="编辑内容"></textarea>
+  </div>
+</div>
+
+<div class="g-footer">
+  <div class="flex-wrap">
+    <div class="flex-item">
+      <ion-toggle [(ngModel)]="remind"></ion-toggle>
+      <span>重要程度</span>
+    </div>
+    <div class="right-button">
+      <button class="u-button blue">发送</button>
+    </div>
+  </div>
+
+</div>

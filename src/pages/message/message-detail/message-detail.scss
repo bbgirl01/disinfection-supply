@@ -1,0 +1,35 @@
+page-message-detail {
+  .g-content{
+    background-color: #fff;
+    .title{
+      position: relative;
+      height: 5.6rem;
+      line-height: 5.6rem;
+      font-size: 2rem;
+      text-align: center;
+      .close{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-image: url(../assets/imgs/i-close1.png);
+        background-size: 100%;
+        transform: translateY(-50%);
+      }
+    }
+    .datetime{
+      height: 3rem;
+      line-height: 3rem;
+      text-align: center;
+      color: #666;
+      background-color: #f3f3f3;
+    }
+    .msg-content{
+      padding: 1.5rem;
+      line-height: 2.2rem;
+      font-size: 1.6rem;
+    }
+  }
+}

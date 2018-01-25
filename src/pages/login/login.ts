@@ -15,6 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
   tabs: Object = ['清洗', '清洗质检', '统计'];
+  loginType: Number = 0; // 默认扫码登录
+  popShow: Boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -26,4 +28,14 @@ export class LoginPage {
     console.log(index);
   }
 
+  changeLoginWay(type) {
+    this.loginType = type;
+  }
+
+  showPopup() {
+    this.popShow = true;
+  }
+  hidePopup() {
+    this.popShow = false;
+  }
 }

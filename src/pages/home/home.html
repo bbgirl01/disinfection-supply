@@ -20,7 +20,7 @@
       <span class="dapart">供应室</span>
     </p>
     <div class="right">
-      <div class="notice">
+      <div class="notice" [navPush]="messageIndexPage">
         <span>99+</span>
       </div>
       <div class="more" (click)="toggleMoreMenus($event)">
@@ -35,7 +35,7 @@
           <i class="icon icon-mobile-nursing"></i>
           移动护理
         </li>
-        <li>
+        <li [navPush]="loginPage">
           <i class="icon icon-logout"></i>
           退出帐号
         </li>

@@ -1,0 +1,21 @@
+segment {
+  .u-segment{
+    display: flex;
+    height: 3rem;
+    line-height: 3rem;
+    border: 1px solid #d2d2d2;
+    border-radius: 3rem;
+    overflow: hidden;
+    span{
+      display: block;
+      width: 6rem;
+      text-align: center;
+      color: #666 !important;
+      border-radius: 3rem;
+      &.active{
+        color: #fff !important;
+        background-color: #0080ff;
+      }
+    }
+  }
+}

@@ -156,9 +156,19 @@ html {
 	font-size: 1.8rem;
 	border-radius: .6rem;
 	&.blue{
+		color: #fff;
 		background-color: #0080FF;
 		&:active{
 			background-color: #0066CC;
+		}
+	}
+	&.white{
+		color: #333;
+		background-color: #fff;
+		border: 1px solid #e5e5e5;
+		&:active{
+			background: #F3F3F3;
+			box-shadow: 0 0 0 0 #E5E5E5;
 		}
 	}
 }
@@ -166,13 +176,10 @@ html {
 	.u-button{
 		height: 5.2rem;
 		line-height: 5.2rem;
-		&.white{
-			background-color: #fff;
-			&:active{
-				background: #F3F3F3;
-				box-shadow: 0 0 0 0 #E5E5E5;
-			}
-		}
+		border-radius: 0;
+	}
+	.right-button{
+		width: 44.5%;
 	}
 }
 .u-select {
@@ -489,5 +496,12 @@ ion-list + .statistics-tit{
 	}
 	.datetime{
 		color: #a5a5a5;
+	}
+}
+
+.flex-wrap{
+	display: flex;
+	.flex-item{
+		flex: 1;
 	}
 }

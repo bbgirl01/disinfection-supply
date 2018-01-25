@@ -1,21 +1,16 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the PersonalIndexPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import { UpdatePasswordPage } from '../update-password';
 @IonicPage()
 @Component({
   selector: 'page-personal-index',
   templateUrl: 'personal-index.html',
 })
 export class PersonalIndexPage {
-
+  updatePasswordPage: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.updatePasswordPage = UpdatePasswordPage;
   }
 
   ionViewDidLoad() {

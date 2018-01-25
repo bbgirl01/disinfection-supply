@@ -40,7 +40,8 @@
     "ng2-charts": "^1.6.0",
     "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.18"
+    "zone.js": "0.8.18",
+    "phonegap-plugin-barcodescanner": "^7.0.1"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.6",
@@ -53,7 +54,11 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {}
-    }
+      "cordova-plugin-ionic-webview": {},
+      "phonegap-plugin-barcodescanner": {}
+    },
+    "platforms": [
+      "android"
+    ]
   }
 }

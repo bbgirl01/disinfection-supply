@@ -11,6 +11,9 @@ import { SterilizationHomePage } from '../sterilization/sterilization-home';
 import { UseIndexPage } from '../use/use-index';
 import { ReceiveIndexPage } from '../receive/receive-index';
 import { PersonalIndexPage } from '../personal/personal-index';
+import { MessageIndexPage } from '../message/message-index';
+import { LoginPage } from '../login/login'
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -26,6 +29,8 @@ export class HomePage {
   useIndexPage: any;
   receiveIndexPage: any;
   personalIndexPage: any;
+  messageIndexPage: any;
+  loginPage: any;
 
   moreMenusShow: Boolean = false; // 右上角显示更多
   constructor(public navCtrl: NavController) {
@@ -39,6 +44,8 @@ export class HomePage {
     this.useIndexPage = UseIndexPage;
     this.receiveIndexPage = ReceiveIndexPage;
     this.personalIndexPage = PersonalIndexPage;
+    this.messageIndexPage = MessageIndexPage;
+    this.loginPage = LoginPage;
   }
 
   toggleMoreMenus() {
