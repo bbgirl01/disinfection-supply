@@ -1,14 +1,28 @@
 page-recycle-list {
   .g-content{
-    padding-top: 11.7rem;
-    padding-bottom: 9.2rem;
+    
+    .scroll-list{
+      position: absolute;
+      top: 0;
+      bottom: 6.2rem;
+      left: 0;
+      padding-top: 12.6rem;
+      padding-bottom: 3.96rem;
+      width: 100%;
+      overflow-y: scroll;
+      background-color: #fff;
+    }
   }
   .check-all {
+    position: absolute;
+    bottom: 6.2rem;
+    left: 0;
     display: flex;
+    width: 100%;
     height: 4rem;
     padding-left: 1.5rem;
     background-color: #fff;
-    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
     align-content: center;
 
     .u-radio-box {
@@ -30,9 +44,8 @@ page-recycle-list {
 
 
 .g-footer {
-
+  border-top: none;
   .info {
-    flex: 1;
     padding-left: 1.5rem;
     color: #a5a5a5;
     font-size: 1.2rem;
@@ -42,22 +55,6 @@ page-recycle-list {
       font-size: 1.6rem;
       line-height: 2.2rem;
       color: #333;
-    }
-  }
-  .flex-wrap{
-    display: flex;
-  }
-  .btn {
-    width: 16rem;
-
-    .button-block {
-      margin: 0;
-      height: 5.2rem;
-      line-height: 5.2rem;
-      box-shadow: none;
-      border-radius: 0;
-      border: none;
-      font-size: 1.8rem;
     }
   }
 }

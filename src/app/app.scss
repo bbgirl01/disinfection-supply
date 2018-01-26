@@ -105,7 +105,7 @@ textarea:-ms-input-placeholder {
 }
 
 html {
-	font-size: 10px;
+	font-size: 10px !important;
 	color: #333;
 }
 @media only screen and (min-width: 320px) and (max-width:320px) {
@@ -146,7 +146,9 @@ html {
 .text-muted {
 	color: #a5a5a5;
 }
-
+.fw700{
+	font-weight: bold;
+}
 /* button */
 .u-button{
 	display: block;
@@ -204,7 +206,7 @@ html {
 	z-index: 2;
 }
 .g-header{
-	top: 4.7rem;
+	top: 5.6rem;
 	z-index: 1;
 }
 .g-content{
@@ -310,7 +312,8 @@ html {
 			background-color: #e5e5e5;
 		}
 		&:last-child:after{
-			display: none;
+			// display: none;
+			left: 0;
 		}
 		.item{
 			flex: 1;
@@ -361,6 +364,7 @@ button.item-ios:not([detail-none]) .item-inner{
 			width: 4.5rem;
 			height: 4.5rem;
 			margin-right: 1rem;
+			border-radius: .4rem;
 		}
 
 		h2 {
@@ -439,6 +443,7 @@ button.item-ios:not([detail-none]) .item-inner{
 		strong{
 			line-height: 5rem;
 			font-size: 4rem;
+			font-weight: bold;
 		}
 		p{
 			color: #666;
@@ -467,9 +472,6 @@ button.item-ios:not([detail-none]) .item-inner{
 		text-align: right;
 	}
 }
-ion-list + .statistics-tit{
-	border-top: 1px solid #e5e5e5;
-}
 .statistics-tit{
 	position: relative;
 	display: flex;
@@ -487,6 +489,7 @@ ion-list + .statistics-tit{
 		top: 50%;
 		width: 3px;
 		height: 1.2rem;
+		border-radius: 100px;
 		background-color: #FFC205;
 		transform: translateY(-50%);
 	}

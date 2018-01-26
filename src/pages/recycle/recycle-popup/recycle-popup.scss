@@ -1,6 +1,6 @@
 page-recycle-popup {
   .g-content{
-    top: 4.7rem;
+    top: 5.6rem;
     bottom: 5rem;
     height: auto;
     transform: translateY(-100%);
@@ -20,6 +20,32 @@ page-recycle-popup {
   .top-filter .active .u-select{
     color: #0080FF;
   }
+  .date-select{
+    background-image: none;
+    .arrow{
+      position: absolute;
+      right: 0;
+      top: 1.2rem;
+      margin-top: 0;
+    }
+  }
+  .arrow{  
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -.2rem;
+    margin-left: .8rem;
+    width: .9rem;
+    height: 1.5rem;
+    background-image: url(../assets/imgs/i-down1.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: .9rem;
+    transition: .3s transform ease-out;
+  }
+  .active .arrow{
+    transform: rotate(-180deg);
+  }
+
   .filter-content{
     position: absolute;
     top: 4rem;
@@ -103,19 +129,7 @@ page-recycle-popup {
         display: inline-block;
         
       }
-      .arrow{  
-        display: inline-block;
-        vertical-align: middle;
-        margin-top: -.2rem;
-        margin-left: .8rem;
-        width: .9rem;
-        height: 1.5rem;
-        background-image: url(../assets/imgs/i-down1.png);
-        background-position: right center;
-        background-repeat: no-repeat;
-        background-size: .9rem;
-        transition: .3s transform ease-out;
-      }
+      
     }
     .minus{
       width: 4.4rem;

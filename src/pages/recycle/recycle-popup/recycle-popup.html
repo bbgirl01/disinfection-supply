@@ -12,27 +12,26 @@
           <span>全部状态</span>
         </div>
       </div>
-      <div class="item"  [ngClass]="{active: filterType===2}">
-        <div class="u-select"  (click)="chooseFilter(2)">
+      <div class="item" [ngClass]="{active: filterType===2}">
+        <div class="u-select date-select" (click)="chooseFilter(2)">
           <span>当天(09/08)</span>
+          <span class="arrow"></span>
         </div>
       </div>
     </div>
   </div>
 
-  
+
   <div class="filter-content">
     <!--科室过滤-->
-    <div *ngIf="filterType === 0">
+    <div *ngIf="filterType === 0" style="height:100%">
       <index-list></index-list>
     </div>
 
     <!--状态过滤-->
     <div *ngIf="filterType === 1">
       <ul class="status-list clearfix">
-        <li *ngFor="let item of statusList" 
-          [ngClass]="{active: item===choosedStatus}"
-          (click)="chooseStatus(item)">{{item}}</li>
+        <li *ngFor="let item of statusList" [ngClass]="{active: item===choosedStatus}" (click)="chooseStatus(item)">{{item}}</li>
       </ul>
     </div>
     <!--日期过滤-->
@@ -50,7 +49,7 @@
             <p (click)="showCalendarFn('choosedDate')">
               {{choosedDate | date: 'yyyy/MM/dd'}}&ensp;{{choosedDate | weekdayCN}}
               <span class="arrow"></span>
-            </p>           
+            </p>
           </div>
           <span class="minus" (click)="minusDay(choosedDate)"></span>
           <span class="plus" (click)="plusDay(choosedDate)"></span>
@@ -64,18 +63,18 @@
             <p (click)="showCalendarFn('choosedStartDate')">
               {{choosedStartDate | date: 'yyyy/MM/dd'}}&ensp;{{choosedStartDate | weekdayCN}}
               <span class="arrow"></span>
-            </p>       
+            </p>
           </div>
           <span class="minus" (click)="minusDay(choosedStartDate, 'start')"></span>
           <span class="plus" (click)="plusDay(choosedStartDate, 'start')"></span>
         </div>
         <div class="choose-date">
           <span class="text-muted">终&emsp;</span>
-          <div class="date" [ngClass]="{'up': editDate === 'choosedEndDate'}"> 
+          <div class="date" [ngClass]="{'up': editDate === 'choosedEndDate'}">
             <p (click)="showCalendarFn('choosedEndDate')">
               {{choosedEndDate | date: 'yyyy/MM/dd'}}&ensp;{{choosedEndDate | weekdayCN}}
               <span class="arrow"></span>
-            </p>      
+            </p>
           </div>
           <span class="minus" (click)="minusDay(choosedEndDate, 'end')"></span>
           <span class="plus" (click)="plusDay(choosedEndDate, 'end')"></span>
@@ -86,7 +85,7 @@
         <div class="choose-date">
           <span class="text-muted"></span>
           <div class="date up">
-            <span>2017/09</span>       
+            <span>2017/09</span>
           </div>
           <span class="minus"></span>
           <span class="plus"></span>
@@ -101,27 +100,40 @@
         </div>
         <div class="hd">
           <ul class="clearfix">
-            <li><span>S</span></li>
-            <li><span>M</span></li>
-            <li><span>T</span></li>
-            <li><span>W</span></li>
-            <li><span>T</span></li>
-            <li><span>F</span></li>
-            <li><span>S</span></li>
+            <li>
+              <span>S</span>
+            </li>
+            <li>
+              <span>M</span>
+            </li>
+            <li>
+              <span>T</span>
+            </li>
+            <li>
+              <span>W</span>
+            </li>
+            <li>
+              <span>T</span>
+            </li>
+            <li>
+              <span>F</span>
+            </li>
+            <li>
+              <span>S</span>
+            </li>
           </ul>
         </div>
         <div class="bd">
           <ul class="clearfix">
-            <li *ngFor="let item of monthData.data" 
-              [ngClass]="{'choosed': item.choosed, 'is-today': item.isToday}">
+            <li *ngFor="let item of monthData.data" [ngClass]="{'choosed': item.choosed, 'is-today': item.isToday}">
               <span>{{item.date}}</span>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="btn-wrap">
-        <button ion-button outline full>确定</button>
+      <div class="btn-wrap" *ngIf="!showCalendar">
+        <button class="u-button white">确定</button>
       </div>
     </div>
   </div>

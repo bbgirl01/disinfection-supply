@@ -23,32 +23,6 @@ page-recycle-index {
     color: #666;
     border-bottom: 1px solid #e5e5e5;
   }
-
-  
-
-  .check-all {
-    display: flex;
-    height: 4rem;
-    padding-left: 1.5rem;
-    background-color: #fff;
-    border-bottom: 1px solid #e5e5e5;
-    align-content: center;
-
-    .u-radio-box {
-      flex: 1;
-      padding-top: 0.8rem;
-    }
-
-    .right-input {
-      width: 5.6rem;
-      height: 100%;
-      border-left: 1px solid #e5e5e5;
-      background-image: url("../assets/imgs/i-keyboad.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 2.4rem;
-    }
-  }
 }
 
 .custom-list {
