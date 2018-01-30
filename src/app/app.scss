@@ -177,6 +177,14 @@ html {
 			box-shadow: 0 0 0 0 #E5E5E5;
 		}
 	}
+	&.red{
+		color: #fff;
+		background-color: #FA6865;
+		&:active{
+			background: #D63431;
+			box-shadow: 0 0 0 0 #E5E5E5;
+		}
+	}
 }
 .g-footer{
 	.u-button{

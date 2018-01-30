@@ -1,7 +1,10 @@
 page-receive-list {
   .g-content{
     padding-top: 8.6rem;
-    padding-bottom: 5.2rem;
+    padding-bottom: 6.2rem;
+  }
+  .g-footer{
+    border-top: none;
   }
   .list-item img{
     width: 5.5rem;
@@ -15,7 +18,7 @@ page-receive-list {
     position: relative;
     height: 100%;
     background-color: #fff;
-    padding-bottom: 4rem;
+    padding-bottom: 3.9rem;
     
   }
   .custom-list{
@@ -139,13 +142,9 @@ page-receive-list {
         }
       }
     }
-    .button{
-      margin: 0;
-      height: 5rem;
-      line-height: 5rem;
-      font-size: 1.8rem;
-      background-color: #fff;
-      border-top: 1px solid #e5e5e5;
+    .u-button{
+      height: 5.2rem;
+      line-height: 5.2rem;
 
     }
   }
