@@ -163,6 +163,10 @@ html {
 		&:active{
 			background-color: #0066CC;
 		}
+		&[disabled]{
+			opacity: 1;
+			background-color: #ccc;
+		}
 	}
 	&.white{
 		color: #333;
@@ -179,6 +183,7 @@ html {
 		height: 5.2rem;
 		line-height: 5.2rem;
 		border-radius: 0;
+		border: none;
 	}
 	.right-button{
 		width: 44.5%;
@@ -506,5 +511,67 @@ button.item-ios:not([detail-none]) .item-inner{
 	display: flex;
 	.flex-item{
 		flex: 1;
+	}
+}
+
+// 自定义confirm
+.custom-confirm{
+	.alert-wrapper{
+		width: 78%;
+		min-width: 78%;
+		max-width: 78%;
+	}
+	.alert-head{
+		display: none;
+	}
+	.alert-message{
+		padding: 2.5rem;
+		p{
+			height: 2.8rem;
+			line-height: 2.8rem;
+			font-size: 1.6rem;
+			font-weight: normal;
+			color: #999;		
+		}
+		.fw{
+			font-weight: bold;
+		}
+		.ft20{
+			font-size: 2rem;
+			color: #000;				
+		}
+	}
+	.alert-button-group{
+		padding: .8rem;
+		border-top: 1px solid #e5e5e5;
+	}
+	.alert-button{
+		width: 26.8%;
+		height: 3.6rem;
+		line-height: 3.6rem;	
+		border-radius: .4rem;
+		.button-effect{
+			display: none;
+		}
+		.button-inner{
+			justify-content: center;
+		}
+		&+.alert-button{
+			margin-left: .8rem;
+		}
+		&:first-child{
+			color: #333;
+			background-color: #f3f3f3;
+			&:active{
+				background-color:#e5e5e5;
+			}
+		}
+		&:last-child{
+			color: #fff;
+			background-color: #0080FF;
+			&:active{
+				background-color:#0066CC;
+			}
+		}
 	}
 }

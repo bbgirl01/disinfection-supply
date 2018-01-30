@@ -15,6 +15,7 @@ import { SortingListPage } from '../sorting-list';
 })
 export class SortingScanPage {
   sortingListPage: any;
+  showPage: Boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.sortingListPage = SortingListPage;
   }
@@ -23,4 +24,7 @@ export class SortingScanPage {
     console.log('ionViewDidLoad SortingScanPage');
   }
 
+  showIndexPage() {
+    this.showPage = true;
+  }
 }

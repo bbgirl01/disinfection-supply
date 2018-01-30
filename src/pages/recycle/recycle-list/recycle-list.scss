@@ -40,21 +40,22 @@ page-recycle-list {
       background-size: 2.4rem;
     }
   }
-}
-
-
-.g-footer {
-  border-top: none;
-  .info {
-    padding-left: 1.5rem;
-    color: #a5a5a5;
-    font-size: 1.2rem;
-    padding-top: 0.8rem;
-
-    .name {
-      font-size: 1.6rem;
-      line-height: 2.2rem;
-      color: #333;
+  .g-footer {
+    border-top: none;
+    .info {
+      padding-left: 1.5rem;
+      color: #a5a5a5;
+      font-size: 1.2rem;
+      padding-top: 0.8rem;
+  
+      .name {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #333;
+      }
     }
   }
 }
+
+
+

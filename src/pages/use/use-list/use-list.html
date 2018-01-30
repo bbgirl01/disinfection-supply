@@ -3,14 +3,14 @@
     <div class="custom-item" [navPush]="packageDetailPage">
       <button ion-item>
         <div class="list-item clearfix">
-          <img src="assets/imgs/item.jpg"/>
-          <div class="info"> 
+          <img src="assets/imgs/item.jpg" />
+          <div class="info">
             <h2>插值针</h2>
             <p>16091015487&emsp;保质期6个月</p>
             <p>2017-09-18 11:12:14</p>
-          </div>  
+          </div>
         </div>
-      </button> 
+      </button>
       <div class="right">
         <span class="arrow-right"></span>
       </div>
@@ -18,30 +18,30 @@
     <div class="custom-item" [navPush]="packageDetailPage">
       <button ion-item>
         <div class="list-item clearfix">
-          <img src="assets/imgs/item.jpg"/>
-          <div class="info"> 
+          <img src="assets/imgs/item.jpg" />
+          <div class="info">
             <h2>区段器械包2</h2>
             <p>16091015487&emsp;保质期6个月</p>
             <p>2017-09-18 11:12:14</p>
           </div>
         </div>
-      </button> 
+      </button>
       <div class="right">
         <span class="arrow-right"></span>
       </div>
     </div>
-    
+
     <div class="custom-item" [navPush]="packageDetailPage">
       <button ion-item>
         <div class="list-item clearfix">
-          <img src="assets/imgs/item.jpg"/>
-          <div class="info"> 
+          <img src="assets/imgs/item.jpg" />
+          <div class="info">
             <h2>洗胃包</h2>
             <p>16091015487&emsp;保质期6个月</p>
             <p>2017-09-18 11:12:14</p>
           </div>
         </div>
-      </button> 
+      </button>
       <div class="right">
         <span class="arrow-right"></span>
       </div>
@@ -49,14 +49,14 @@
     <div class="custom-item" [navPush]="packageDetailPage">
       <button ion-item>
         <div class="list-item clearfix">
-          <img src="assets/imgs/item.jpg"/>
-          <div class="info"> 
+          <img src="assets/imgs/item.jpg" />
+          <div class="info">
             <h2>插值针</h2>
             <p>16091015487&emsp;保质期6个月</p>
             <p>2017-09-18 11:12:14</p>
-          </div> 
+          </div>
         </div>
-      </button> 
+      </button>
       <div class="right">
         <span class="arrow-right"></span>
       </div>
@@ -65,19 +65,19 @@
 </div>
 
 <div class="g-footer">
-  <div class="flex-item">
-    <div class="info" (click)="showModal($event)">
-        <p>10床&emsp;李达</p>
-        <p>男&ensp;|&ensp;53岁</p>
+  <div class="flex-wrap">
+    <div class="flex-item info" (click)="showModalFn($event)">
+      <p>10床&emsp;李达</p>
+      <p>男&ensp;|&ensp;53岁</p>
     </div>
-    <div class="btn-wrap">
-      <button ion-button primary block>确认使用(3)</button>
+    <div class="right-button">
+      <button class="u-button blue">确认使用(3)</button>
     </div>
   </div>
 </div>
 
-<div class="modal-info" [ngClass]="{show: modalShow}">
-  <div class="item top" >
+<!-- <div class="modal-info" [ngClass]="{show: modalShow}">
+  <div class="item top">
     <span class="bed-no">10床</span>
     &emsp;李达&emsp;男&emsp;53岁
     <span class="arrow-down" (click)="hideModal($event)"></span>
@@ -96,6 +96,6 @@
   </div>
   <div class="item clearfix">
     <span>使用时间</span>
-    <span>2017-11-24  10:34:49</span>
+    <span>2017-11-24 10:34:49</span>
   </div>
-</div>
+</div> -->

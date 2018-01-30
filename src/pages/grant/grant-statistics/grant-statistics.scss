@@ -17,4 +17,11 @@ page-grant-statistics {
   .label{
     display: flex;
   }
+  h2.tit,
+  .statistics-tit{
+    border-bottom: none; 
+  }
+  .custom-item:last-child:after{
+    display: none;
+  }
 }

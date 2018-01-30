@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PackageDetailPage } from '../../package-detail/package-detail';
 
@@ -17,19 +17,21 @@ import { PackageDetailPage } from '../../package-detail/package-detail';
 export class UseListPage {
   packageDetailPage: any;
   modalShow: Boolean = false;
+  @Output() showModal = new EventEmitter<any>();
+  // @Output() hideModal = new EventEmitter<any>();
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.packageDetailPage = PackageDetailPage;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UseListPage');
-    
+
   }
 
-  showModal() {
-    this.modalShow = true;
+  showModalFn() {
+    this.showModal.emit();
   }
-  hideModal() {
-    this.modalShow = false;
-  }
+  // hideModalFn() {
+  //   this.hideModal.emit();
+  // }
 }

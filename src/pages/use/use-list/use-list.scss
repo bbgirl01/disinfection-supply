@@ -1,6 +1,6 @@
 page-use-list {
   .g-content{
-    padding-top: 7.7rem;
+    padding-top: 8.6rem;
     background-color: #fff;
   }
   
@@ -15,95 +15,6 @@ page-use-list {
     display: block;
     left: 0;
   }
-  .flex-item{
-    display: flex;
-    .btn-wrap{
-      width: 44.5%;
-      .button{
-        margin: 0;
-        height: 4.4rem;
-        line-height: 4.4rem;
-        font-size: 1.8rem;
-        border-radius: 0;
-      }
-    }
-    .info{
-      flex: 1;
-      padding-top: .6rem;
-      padding-left: 1.5rem;
-      line-height: 2.2rem;
-      font-size: 1.4rem;
-      color: #333;
-      background-image: url(../assets/imgs/i-down1.png);
-      background-position: 95% center;
-      background-repeat: no-repeat;
-      background-size: .9rem;
-      p:last-child{
-        margin-top: -.4rem;
-        line-height: 1.8rem;
-        color: #a5a5a5;
-        font-size: 1.2rem;
-      }
-    }
-  }
   
-  .modal-info{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.4);
-    border-radius: 1rem 1rem 0 0;
-    transform: translateY(100%);
-    transition: transform .3s ease-in-out;
-    &.show{
-      transform: translateY(0);
-    }
-    .item{
-      padding: 0 1.5rem;
-      height: 4.4rem;
-      line-height: 4.4rem;
-      font-size: 1.6rem;
-      border-bottom: 1px solid #e5e5e5;
-      &:last-child{
-        border-bottom: none;
-      }
-      &.top{
-        padding-right: 0;
-        height: 5rem;
-        line-height: 5rem;
-        font-size: 1.8rem;
-        .arrow-down{
-          float: right;
-          margin-top: .5rem;
-          display: inline-block;
-          width: 4rem;
-          height: 4rem;
-          background-image: url(../assets/imgs/i-down1.png);
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: .9rem;
-        }
-        
-      }
-      .bed-no{
-        display: inline-block;
-        padding: 0 1.5rem;
-        line-height: 3rem;
-        color: #fff;
-        background-color: #0080FF;
-        border-radius: 3rem;
-      }
-      &:not(.top){
-        span:first-child{
-          color: #a5a5a5;
-          font-size: 1.4rem;
-        }
-        span:last-child{
-          float: right;
-        }
-      }
-    }
-  }
+  
 }

@@ -1,10 +1,4 @@
-<!--
-  Generated template for the SortingScanPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar>
     <ion-title>分拣</ion-title>
@@ -24,4 +18,13 @@
   <div class="word-zoom">
     请扫描科室
   </div>
-</ion-content>
+</ion-content> -->
+
+<div class="m-title">
+  <custom-header tabIndex="0" [tabs]="['分拣']"></custom-header>
+  <login-info *ngIf="showPage"></login-info>
+</div>
+
+<scan scanType="6" (click)="showIndexPage($event)"></scan>
+
+<page-sorting-list *ngIf="showPage"></page-sorting-list>

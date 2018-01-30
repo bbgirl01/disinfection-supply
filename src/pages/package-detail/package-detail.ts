@@ -9,10 +9,10 @@ import { IonicPage, NavController, NavParams, App, AlertController } from 'ionic
 export class PackageDetailPage {
 
   constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams, 
+    public navCtrl: NavController,
+    public navParams: NavParams,
     public appCtrl: App,
-    public alertCtrl: AlertController ) {
+    public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -32,8 +32,8 @@ export class PackageDetailPage {
   confirmCancel() {
     let confirm = this.alertCtrl.create({
       title: '',
-      message: '<p>包条码：457896621</p><p>已回收，是否撤销！</p>',
-      cssClass: 'custom-alert',
+      message: '<p class="ft20">包条码：<span class="text-primary fw">457896621</span></p><p>已回收，是否撤销！</p>',
+      cssClass: 'custom-confirm',
       buttons: [
         {
           text: '否',

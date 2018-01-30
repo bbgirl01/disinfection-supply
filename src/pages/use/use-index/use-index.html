@@ -1,8 +1,49 @@
 <div class="m-title">
   <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
   <login-info></login-info>
-  <div class="right-input" *ngIf="tabIndex===0"></div>
+  <div class="right-input" *ngIf="scanStep==2&&tabIndex===0"></div>
 </div>
+<!-- 扫描病人条码 -->
+<scan scanType="5" *ngIf="!showPage&&scanStep==1" (click)="changeScanStep($event)"></scan>
+<!-- 扫描包条码 -->
+<div *ngIf="!showPage&&scanStep==2">
+  <scan scanType="3" (click)="showIndexPage($event)"></scan>
+  <div class="g-footer">
+    <div class="flex-wrap">
+      <div class="flex-item info" (click)="showModal($event)">
+        <p>10床&emsp;李达</p>
+        <p>男&ensp;|&ensp;53岁</p>
+      </div>
+      <div class="right-button">
+        <button class="u-button blue" disabled>确认使用(3)</button>
+      </div>
+    </div>
+  </div>
+</div>
+<page-use-list *ngIf="showPage&&tabIndex===0" (showModal)="showModal($event)"></page-use-list>
+<page-use-statistics *ngIf="showPage&&tabIndex===1"></page-use-statistics>
 
-<page-use-list *ngIf="tabIndex===0"></page-use-list>
-<page-use-statistics *ngIf="tabIndex===1"></page-use-statistics>
+
+<div class="modal-info" [ngClass]="{show: modalShow}">
+  <div class="item top">
+    <span class="bed-no">10床</span>
+    &emsp;李达&emsp;男&emsp;53岁
+    <span class="arrow-down" (click)="hideModal($event)"></span>
+  </div>
+  <div class="item clearfix">
+    <span>执行医生</span>
+    <span>黄恒逸&emsp;021478</span>
+  </div>
+  <div class="item clearfix">
+    <span>病区</span>
+    <span>外科病区&emsp;578945410</span>
+  </div>
+  <div class="item clearfix">
+    <span>诊断</span>
+    <span>右腿骨折</span>
+  </div>
+  <div class="item clearfix">
+    <span>使用时间</span>
+    <span>2017-11-24 10:34:49</span>
+  </div>
+</div>

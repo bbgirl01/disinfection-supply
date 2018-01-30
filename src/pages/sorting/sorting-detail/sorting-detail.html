@@ -1,19 +1,15 @@
-<!--
-  Generated template for the SortingDetailPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar>
     <ion-title>插值针</ion-title>
   </ion-navbar>
 
-</ion-header>
+</ion-header> -->
 
-
-<ion-content no-padding>
+<div class="m-title">
+  <custom-header [tabs]="['插值针']" tabIndex="0"></custom-header>
+</div>
+<div class="g-content">
   <ion-list>
     <div class="list-block" *ngFor="let item of list;let index=index">
       <img src="assets/imgs/item.jpg" alt="">
@@ -21,11 +17,17 @@
         {{item.name}}
       </div>
       <div class="opt">
-        <span (click)="reduceNumber(index)"></span><span>{{item.number}}</span><span (click)="addNumber(index)"></span>
+        <span (click)="reduceNumber(index)"></span>
+        <span>{{item.number}}</span>
+        <span (click)="addNumber(index)"></span>
       </div>
     </div>
   </ion-list>
-</ion-content>
-<div class="btn">
+</div>
+<!-- <div class="btn">
   确认
+</div> -->
+
+<div class="g-footer">
+  <button class="u-button white">确认</button>
 </div>

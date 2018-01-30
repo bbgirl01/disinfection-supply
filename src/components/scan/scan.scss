@@ -1,0 +1,21 @@
+scan {
+  .m-scan{
+    padding-top: 8rem;
+    .img{
+      width: 62%;
+      margin: 0 auto;
+      img{
+        display: block;
+        width: 100%;
+      }
+    }
+    p{
+      margin-top: 2rem;
+      height: 2.2rem;
+      line-height: 2.2rem;
+      font-size: 1.6rem;
+      color: #a5a5a5;
+      text-align: center;
+    }
+  }
+}
