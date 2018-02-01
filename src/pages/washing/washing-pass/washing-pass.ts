@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { WashingDetailListPage } from '../washing-detail-list';
 /**
  * Generated class for the WashingPassPage page.
  *
@@ -14,34 +14,70 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'washing-pass.html',
 })
 export class WashingPassPage {
-  public list: Array<any> = [{ name: '插值针', id: '19484743484', sum: '99' },
-  { name: '小针头', id: '22443743484', sum: '199' },
-  { name: '巴蜀', id: '9084743484', sum: '9' },
-  { name: '投蜜', id: '9048484', sum: '39' },
-  { name: '云盘', id: '89344009', sum: '3' },
-  { name: '针线', id: '98744244', sum: '12' }]
+  public list: Array<any> = [{ name: '清洗盘', id: '19484743484', psum: '5', sum: '21' },
+  { name: '清洗盘', id: '22443743484', psum: '5', sum: '21' },
+  { name: '清洗盘', id: '22443743485', psum: '2', sum: '17' },
+  { name: '清洗盘', id: '22443743486', psum: '4', sum: '35' },
+  { name: '清洗盘', id: '22443743487', psum: '7', sum: '13' },
+  { name: '清洗盘', id: '22443743488', psum: '9', sum: '70' }]
   // lineChart
   public lineChartData: Array<any> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: '摄氏度' }
   ];
   public lineChartLabels: Array<any> = ['12:52:12', '12:54:20', '12:55:01', '12:55:25', '12:56:20', '12:58:01', '12:59:09'];
   public lineChartOptions: any = {
-    responsive: true
+    responsive: true,
+    layout: {
+      padding: {
+        left: 12,
+        right: 0,
+        top: 15,
+        bottom: 10
+      }
+    },
+    scales: {
+      xAxes: [{
+        ticks: {
+          fontSize: 12,
+          fontColor: '#a5a5a5'
+        },
+
+      }],
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 100,
+          fontSize: 12,
+          fontColor: '#a5a5a5',
+          callback: function (value, index, values) {
+            return value + '℃';
+          }
+        },
+        gridLines: {
+          color: '#e5e5e5',
+          zeroLineColor: '#e5e5e5' // 线条颜色
+        }
+      }]
+
+    }
   };
   public lineChartColors: Array<any> = [
     { // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
+      backgroundColor: 'rgba(148,159,177,0)',
+      borderColor: '#FA6865',
+      pointWidth: 10,
+      pointBackgroundColor: '#FA6865',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      pointHoverBorderColor: '#FA6865'
     }
 
   ];
-  public lineChartLegend: boolean = true;
+  public lineChartLegend: boolean = false;
   public lineChartType: string = 'line';
+  public washingDetailListPage: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.washingDetailListPage = WashingDetailListPage;
   }
   public randomize(): void {
     let _lineChartData: Array<any> = new Array(this.lineChartData.length);

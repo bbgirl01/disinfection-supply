@@ -31,8 +31,8 @@ export class PackageDetailPage {
    */
   confirmCancel() {
     let confirm = this.alertCtrl.create({
-      title: '',
-      message: '<p class="ft20">包条码：<span class="text-primary fw">457896621</span></p><p>已回收，是否撤销！</p>',
+      title: '包条码：<span class="text-primary">457896621</span>',
+      message: '已回收，是否撤销！',
       cssClass: 'custom-confirm',
       buttons: [
         {

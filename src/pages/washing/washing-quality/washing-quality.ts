@@ -54,7 +54,6 @@ export class WashingQualityPage {
       case 2:
         this.navCtrl.push(this.washingPassPage);
         break;
-
     }
   }
 

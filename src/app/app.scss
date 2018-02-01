@@ -14,7 +14,7 @@
 // automatically applied to the <body> element in the app.
 
 body {
-	font-family: "pingFangSC", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-family: "pingFangSC-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	color: #333;
@@ -22,12 +22,14 @@ body {
 	font-size: 1.4rem;
 	box-sizing: border-box;
 }
-
+.app-root{
+	font-family: "pingFangSC-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
 button,
 input,
 select,
 textarea {
-	font-family: "pingFangSC", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-family: "pingFangSC-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	outline: none;
 	border: none;
 	-webkit-appearance: none;
@@ -401,13 +403,13 @@ button.item-ios:not([detail-none]) .item-inner{
 			position: absolute;
 			top: 1.2rem;
 			right: 0;
-			width: 5.6rem;
+			width: 6rem;
 			padding: 0 1rem;
 			font-size: 1.2rem;
 			text-align: center;
-			height: 2rem;
-			line-height: 2rem;
-			border-radius: 2rem;
+			height: 2.4rem;
+			line-height: 2.4rem;
+			border-radius: 2.4rem;
 		}
 
 		.used {
@@ -464,6 +466,13 @@ button.item-ios:not([detail-none]) .item-inner{
 			margin-top: -.4rem;
 		}
 	}
+	&+.u-space-line{
+		margin-top: -1rem;
+	}
+}
+.u-space-line{
+	height: 1rem;
+	background-color: #f3f3f3;	
 }
 .m-filter-bar{
 	display: flex;
@@ -530,23 +539,22 @@ button.item-ios:not([detail-none]) .item-inner{
 		max-width: 78%;
 	}
 	.alert-head{
-		display: none;
-	}
-	.alert-message{
-		padding: 2.5rem;
-		p{
-			height: 2.8rem;
+		display: block;
+		padding: 2.5rem 2.5rem 0;
+		.alert-title{
+			color: #333;
+			font-size: 2rem;
 			line-height: 2.8rem;
-			font-size: 1.6rem;
-			font-weight: normal;
-			color: #999;		
-		}
-		.fw{
 			font-weight: bold;
 		}
-		.ft20{
-			font-size: 2rem;
-			color: #000;				
+	}
+	.alert-message{
+		padding: 0 2.5rem 2.5rem;
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+		color: #999;
+		.fw{
+			font-weight: bold;
 		}
 	}
 	.alert-button-group{
@@ -580,6 +588,44 @@ button.item-ios:not([detail-none]) .item-inner{
 			&:active{
 				background-color:#0066CC;
 			}
+		}
+	}
+}
+
+// 清洗slect
+.w-header {
+	border-bottom: 1px solid #e5e5e5;
+	padding: 0 1.5rem;
+	div.w-sel {
+		float: left;
+		width: 33.33%;
+		position: relative;
+		overflow: hidden;
+		height: 4rem;
+		&:nth-child(2){
+			text-align: center;
+		}
+		&:nth-child(3){
+			text-align: right;
+		}
+		.select{
+			display: inline-block;
+			padding: 0;
+			padding-right: 1.5rem;
+			background-image: url(../assets/imgs/i-down1.png);
+			background-position: right center;
+			background-repeat: no-repeat;
+			background-size: .9rem;
+			max-width: 100%;
+		}
+		.select-text{
+			height: 4rem;
+			line-height: 4rem;
+			font-size: 1.4rem;
+			color: #666;
+		}
+		.select-icon{
+			display: none;
 		}
 	}
 }

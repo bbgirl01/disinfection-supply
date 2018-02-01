@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PackageDetailPage } from '../../package-detail';
 
 /**
  * Generated class for the WashingDetailListPage page.
@@ -14,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'washing-detail-list.html',
 })
 export class WashingDetailListPage {
-
+  packageDetailPage: any;
   list: Array<any> = [{ name: '车指针', id: '1948575564', sum: '22' },
   { name: '小转盘', id: '7868575564', sum: '112' },
   { name: '铜轴', id: '2448575564', sum: '2' },
@@ -25,6 +26,7 @@ export class WashingDetailListPage {
   { name: '箭头', id: '248575564', sum: '92' },
   { name: '铜臭', id: '908575564', sum: '221' }]
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.packageDetailPage = PackageDetailPage;
   }
 
   ionViewDidLoad() {
