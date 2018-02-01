@@ -4,23 +4,39 @@ page-sterilization-line {
     font-size: 14px;
     margin: 0 20px;
   }
-
+  .g-footer{
+    z-index: 1;
+    .u-button:last-child{
+      border-left: 1px solid #e5e5e5;
+    }
+  }
+  .scroll-content{
+    padding-top: 8.6rem !important;
+    padding-bottom: 5.2rem !important;
+  }
+  .list-item{
+    padding-left: 1.5rem;
+  }
+  .custom-item .label{
+    display: flex;
+  }
   .up-zoom {
     background-color: white;
-
+   
     .time-line {
-      font-size: 16px;
+      font-size: 1.6rem;
       display: flex;
       background: #FFFFFF;
-      box-shadow: 0 4px 12px 0 rgba(0,0,0,0.10);
-      border-radius: 4px;
+      border: 1px solid #f9f9f9;
+      box-shadow: 0 .4rem 1.2rem 0 rgba(0,0,0,0.10);
+      border-radius: .4rem;
       flex-grow: 1;
-      margin: 10px;
-      height: 60px;
+      margin: 1.5rem;
+      height: 6rem;
       color: #666666;
       justify-content: space-between;
       align-items: center;
-      padding: 10px;
+      padding: 0 1rem;
 
       & > div {
         display: inline-flex;
@@ -29,20 +45,25 @@ page-sterilization-line {
       }
 
       & > div:first-child {
+        font-size: 1.6rem;
+        color: #666;
+        line-height: 2rem;
         & > span:last-child {
           color: #a5a5a5;
-          font-size: 14px;
+          font-size: 1.4rem;
         }
       }
 
       & > div:last-child {
-        height: 36px;
-        background: url("../assets/imgs/i-time1.png") 0 4px no-repeat;
-        background-size: 28px auto;
-        padding-left: 35px;
+        height: 3.6rem;
+        line-height: 3.6rem;
+        background: url("../assets/imgs/i-time1.png") 0 center no-repeat;
+        background-size: 2.8rem auto;
+        padding-left: 4rem;
 
         span {
-          font-size: 28px;
+          font-size: 2.8rem;
+          font-weight: bold;
           color: #f5a623;
         }
       }
@@ -56,17 +77,18 @@ page-sterilization-line {
   }
 
   .down-zoom {
-    margin-top: 10px;
+    margin-top: 1rem;
     background-color: white;
 
     .sum-num {
       display: flex;
-      height: 40px;
+      height: 4rem;
+      line-height: 4rem;
       color: #a5a5a5;
-      font-size: 14px;
+      font-size: 1.4rem;
       justify-content: flex-start;
       align-items: center;
-      padding-left: 10px;
+      padding-left: 1.5rem;
       border-bottom: 1px solid #e5e5e5;
 
       span {
@@ -77,97 +99,99 @@ page-sterilization-line {
           color: #0080ff;
           display: inline-flex;
           align-items: center;
-          padding-left: 8px;
+          padding-left: .8rem;
+          font-style: normal;
+          font-weight: bold;
         }
       }
     }
 
-    .sum-list {
-      .list-zoom {
-        .list-block:last-child {
-          margin-left: 0;
-          padding-left: 10px;
-          background-position: 94.5% 26px;
-          margin-bottom: 80px;
-        }
+    // .sum-list {
+    //   .list-zoom {
+    //     .list-block:last-child {
+    //       margin-left: 0;
+    //       padding-left: 10px;
+    //       background-position: 94.5% 26px;
+    //       margin-bottom: 80px;
+    //     }
 
-        .list-block {
-          display: flex;
-          justify-content: flex-start;
-          height: 65px;
-          align-items: center;
-          margin-left: 10px;
-          border-bottom: 1px solid #E5E5E5;
+    //     .list-block {
+    //       display: flex;
+    //       justify-content: flex-start;
+    //       height: 65px;
+    //       align-items: center;
+    //       margin-left: 10px;
+    //       border-bottom: 1px solid #E5E5E5;
 
-          & > img {
-            width: 45px;
-            height: 45px;
-            display: inline-flex;
-            flex-grow: 0;
-          }
+    //       & > img {
+    //         width: 45px;
+    //         height: 45px;
+    //         display: inline-flex;
+    //         flex-grow: 0;
+    //       }
 
-          & > div {
-            display: inline-flex;
-            flex-grow: 1;
-            flex-direction: column;
-            padding-left: 10px;
-            color: #333333;
+    //       & > div {
+    //         display: inline-flex;
+    //         flex-grow: 1;
+    //         flex-direction: column;
+    //         padding-left: 10px;
+    //         color: #333333;
 
-            span {
-              display: inline-flex;
-              color: #a5a5a5;
-              font-size: 13px;
+    //         span {
+    //           display: inline-flex;
+    //           color: #a5a5a5;
+    //           font-size: 13px;
 
-              em {
-                font-size: 14px;
-                color: #0080ff;
-                display: inline-flex;
-                align-items: center;
-              }
-            }
+    //           em {
+    //             font-size: 14px;
+    //             color: #0080ff;
+    //             display: inline-flex;
+    //             align-items: center;
+    //           }
+    //         }
 
-            span:first-child {
-              padding-right: 25px;
-            }
-          }
+    //         span:first-child {
+    //           padding-right: 25px;
+    //         }
+    //       }
 
-          & > span {
-            background: url("../assets/imgs/i-next.png") 0 0 no-repeat;
-            background-size: 8px auto;
-            background-position: 0 26px;
-            display: inline-flex;
-            width: 30px;
-            flex-grow: 0;
-            height: 100%;
-          }
-        }
-      }
-    }
+    //       & > span {
+    //         background: url("../assets/imgs/i-next.png") 0 0 no-repeat;
+    //         background-size: 8px auto;
+    //         background-position: 0 26px;
+    //         display: inline-flex;
+    //         width: 30px;
+    //         flex-grow: 0;
+    //         height: 100%;
+    //       }
+    //     }
+    //   }
+    // }
   }
 
-  .btn {
-    position: fixed;
-    bottom: 0;
-    height: 53px;
-    width: 100%;
-    border-top: 1px solid #e5e5e5;
-    text-align: center;
-    z-index: 1000;
-    background-color: white;
+  // .btn {
+  //   position: fixed;
+  //   bottom: 0;
+  //   height: 53px;
+  //   width: 100%;
+  //   border-top: 1px solid #e5e5e5;
+  //   text-align: center;
+  //   z-index: 1000;
+  //   background-color: white;
 
-    span {
-      float: left;
-      width: 50%;
-      line-height: 53px;
-      height: 53px;
-      color: #333333;
-      font-size: 18px;
-    }
+  //   span {
+  //     float: left;
+  //     width: 50%;
+  //     line-height: 53px;
+  //     height: 53px;
+  //     color: #333333;
+  //     font-size: 18px;
+  //   }
 
-    span:first-child {
-      border-right: 1px solid #e5e5e5;
-    }
-  }
+  //   span:first-child {
+  //     border-right: 1px solid #e5e5e5;
+  //   }
+  // }
 
   .modal-zoom {
     position: fixed;

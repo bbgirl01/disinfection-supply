@@ -3,20 +3,35 @@ page-sterilization-list {
 
   .c-content {
     background-color: white;
-    padding-top: 92px;
+    padding-top: 8.6rem;
     height: 100%;
 
     .c-zoom {
-      .c-list {
+      .c-list:last-child .item:after{
+        left: 0;
+      }
+      .c-list .item{
+        position: relative;
         display: flex;
         align-items: center;
-        height: 65px;
-        margin-left: 10px;
-        border-bottom: 1px solid #e5e5e5;
+        height: 6.5rem;
+        padding-left: 1.5rem;
         justify-content: space-between;
-
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          left: 1.5rem;
+          right: 0;
+          bottom: 0;
+          height: 1px;
+          background-color: #e5e5e5;
+        }
+        
         .l-times {
-          font-size: 13px;
+          margin-top: .4rem;
+          font-size: 1.3rem;
+          line-height: 1.8rem;
           color: #a5a5a5;
 
           span {
@@ -24,32 +39,38 @@ page-sterilization-list {
           }
 
           em {
-            font-size: 14px;
+            font-size: 1.4rem;
             color: #0080ff;
+            font-weight: bold;
+            font-style: normal;
           }
         }
 
         .l-name {
           color: #333333;
-          font-size: 16px;
+          font-size: 1.6rem;
+          line-height: 2.2rem;
           display: inline-flex;
           flex-direction: column;
         }
 
         .r-zoom {
+          position: absolute;
+          top: 1rem;
+          right: 1.5rem;
           display: flex;
           flex-direction: column;
-          margin-right: 10px;
           align-items: flex-end;
 
           .r-tips {
             display: inline-flex;
-            border-radius: 100px;
+            border-radius: 2.4rem;
             background-color: blue;
             justify-content: center;
             align-items: center;
-            height: 24px;
-            width: 60px;
+            height: 2.4rem;
+            width: 6rem;
+            font-size: 1.2rem;
             color: white;
           }
 
@@ -70,9 +91,10 @@ page-sterilization-list {
           }
 
           .r-times {
-            font-size: 12px;
-            padding-right: 2px;
-            padding-top: 5px;
+            min-width: 5.8rem;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            margin-top: .4rem;
             display: inline-flex;
           }
 
@@ -81,9 +103,9 @@ page-sterilization-list {
           }
 
           .rr-1 {
-            background: url("../assets/imgs/i-time.png") 0 3px no-repeat;
-            padding-left: 22px;
-            background-size: 16px auto;
+            background: url("../assets/imgs/i-time.png") left center no-repeat;
+            padding-left: 2.4rem;
+            background-size: 1.6rem;
             color: #f5a623;
           }
 
@@ -97,10 +119,10 @@ page-sterilization-list {
         }
       }
 
-      .c-list:last-child {
-        margin-left: 0;
-        padding-left: 10px;
-      }
+      // .c-list:last-child {
+      //   margin-left: 0;
+      //   padding-left: 10px;
+      // }
     }
   }
 }

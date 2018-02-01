@@ -1,10 +1,16 @@
 page-sterilization-statistics {
   background-color: white;
-
+  .list-item{
+    padding-left: 1.5rem;
+  }
+  .custom-item .label{
+    display: flex;
+  }
   .w-statistics {
     background-color: white;
     height: 100%;
-    padding-top: 92px;
+    padding-top: 8.6rem;
+    overflow-y: scroll;
 
     .w-sum {
       height: 80px;
@@ -28,17 +34,17 @@ page-sterilization-statistics {
       }
     }
 
-    .w-header {
-      display: flex;
-      justify-content: flex-start;
-      border-bottom: 1px solid #d2d2d2;
+    // .w-header {
+    //   display: flex;
+    //   justify-content: flex-start;
+    //   border-bottom: 1px solid #d2d2d2;
 
-      div.w-sel {
-        display: inline-flex;
-        flex-grow: 1;
-        position: relative;
-      }
-    }
+    //   div.w-sel {
+    //     display: inline-flex;
+    //     flex-grow: 1;
+    //     position: relative;
+    //   }
+    // }
 
     .down-zoom {
       margin-top: 10px;

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SterilizationLinePage } from '../sterilization-line';
-import { SterilizationDetailListPage } from "../sterilization-detail-list";
+import { PackageDetailPage } from "../../package-detail";
 /**
  * Generated class for the SterilizationStartPage page.
  *
@@ -17,10 +17,10 @@ import { SterilizationDetailListPage } from "../sterilization-detail-list";
 export class SterilizationStartPage {
   times: number = 0;
   dayTime: string = '2017-09-01 12:11:10';
-  sterilizationDetailListPage: any;
+  packageDetailPage: any;
   sterilizationLinePage: any
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.sterilizationDetailListPage = SterilizationDetailListPage
+    this.packageDetailPage = PackageDetailPage
     this.sterilizationLinePage = SterilizationLinePage
   }
 

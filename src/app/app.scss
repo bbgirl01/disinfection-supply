@@ -629,3 +629,17 @@ button.item-ios:not([detail-none]) .item-inner{
 		}
 	}
 }
+
+// 弹窗popup
+@keyframes popup{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+.animate-up{
+	animation: popup .3s ease-out;
+  animation-fill-mode: forwards;
+}

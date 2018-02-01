@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PackageDetailPage } from '../../package-detail';
 
 /**
  * Generated class for the SterilizationDetailListPage page.
@@ -23,7 +24,9 @@ export class SterilizationDetailListPage {
   { name: '车盘', id: '348575564', sum: '122' },
   { name: '箭头', id: '248575564', sum: '92' },
   { name: '铜臭', id: '908575564', sum: '221' }];
+  packageDetailPage: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.packageDetailPage = PackageDetailPage;
   }
 
   ionViewDidLoad() {

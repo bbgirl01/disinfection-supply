@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { SterilizationFreePage } from '../sterilization-free';
+import { SterilizationDetailListPage } from '../sterilization-detail-list';
 /**
  * Generated class for the SterilizationCheckPage page.
  *
@@ -18,35 +19,71 @@ export class SterilizationCheckPage {
   public pans: Array<any> = [{ name: '清洗时间不足', choose: true }, { name: '清洗操作错误', choose: false }, { name: '清洗机故障', choose: false }, { name: '清洗设置出错', choose: false }]
   public machs: Array<any> = [{ name: '减压沸腾清洗机', choose: true }, { name: '手工清洗2', choose: false }, { name: '手工清洗4', choose: false }]
   public checking: boolean = false;
-  public list: Array<any> = [{ name: '插值针', id: '19484743484', sum: '99' },
-  { name: '小针头', id: '22443743484', sum: '199' },
-  { name: '巴蜀', id: '9084743484', sum: '9' },
-  { name: '投蜜', id: '9048484', sum: '39' },
-  { name: '云盘', id: '89344009', sum: '3' },
-  { name: '针线', id: '98744244', sum: '12' }];
+  public list: Array<any> = [{ name: '清洗盘', id: '19484743484', sum: '9', psum: 21 },
+  { name: '清洗盘', id: '19484743484', sum: '1', psum: 52 },
+  { name: '清洗盘', id: '19484743484', sum: '9', psum: 15 },
+  { name: '清洗盘', id: '19484743484', sum: '3', psum: 13 },
+  { name: '清洗盘', id: '19484743484', sum: '3', psum: 11 },
+  { name: '清洗盘', id: '19484743484', sum: '1', psum: 37 }]
   public lineChartData: Array<any> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: '摄氏度' }
   ];
   public lineChartLabels: Array<any> = ['12:52:12', '12:54:20', '12:55:01', '12:55:25', '12:56:20', '12:58:01', '12:59:09'];
   public lineChartOptions: any = {
-    responsive: true
+    responsive: true,
+    layout: {
+      padding: {
+        left: 12,
+        right: 0,
+        top: 15,
+        bottom: 10
+      }
+    },
+    scales: {
+      xAxes: [{
+        ticks: {
+          fontSize: 12,
+          fontColor: '#a5a5a5'
+        },
+
+      }],
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 100,
+          fontSize: 12,
+          fontColor: '#a5a5a5',
+          callback: function (value, index, values) {
+            return value + '℃';
+          }
+        },
+        gridLines: {
+          color: '#e5e5e5',
+          zeroLineColor: '#e5e5e5' // 线条颜色
+        }
+      }]
+
+    }
   };
   public lineChartColors: Array<any> = [
     { // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
+      backgroundColor: 'rgba(148,159,177,0)',
+      borderColor: '#FA6865',
+      pointWidth: 10,
+      pointBackgroundColor: '#FA6865',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      pointHoverBorderColor: '#FA6865'
     }
 
   ];
-  public lineChartLegend: boolean = true;
+  public lineChartLegend: boolean = false;
   public lineChartType: string = 'line';
   public sterilizationFreePage: any;
+  public sterilizationDetailListPage: any;
   constructor(private toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams) {
     this.sterilizationFreePage = SterilizationFreePage
+    this.sterilizationDetailListPage = SterilizationDetailListPage;
   }
   checkNow(flag) {
     if (this.checking) return;

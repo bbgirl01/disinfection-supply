@@ -1,10 +1,4 @@
-<!--
-  Generated template for the SterilizationFreePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar>
     <ion-title>减压沸腾清洗机</ion-title>
@@ -14,18 +8,23 @@
     <span>002233</span>
     <span>供应室</span>
   </div>
-</ion-header>
-
+</ion-header> -->
+<div class="m-title">
+  <custom-header [tabs]="['等离子灭菌机']" tabindex="0"></custom-header>
+  <login-info></login-info>
+  <div class="right-input"></div>
+</div>
 
 <ion-content no-padding>
   <div class="up-zoom">
-    <ion-list style="margin-bottom:10px;">
+    <ion-list style="margin-bottom:0">
       <div class="list-zoom">
         <div class="name">
           日锅次
         </div>
         <div class="counters">
-          <span>{{times}}</span><span (click)="addTimes()"></span>
+          <span>{{times}}</span>
+          <span (click)="addTimes()"></span>
         </div>
       </div>
 
@@ -34,39 +33,53 @@
           开始时间
         </div>
         <div class="days">
-          <ion-datetime placeholder="选择时间" displayFormat="YYYY-MM-DD HH:mm:ss" pickerFormat="YYYY MM DD HH mm ss" [(ngModel)]="dayTime" style="padding-top:16px;"></ion-datetime><span (click)="addTimes()"></span>
+          <ion-datetime placeholder="选择时间" displayFormat="YYYY-MM-DD HH:mm:ss" pickerFormat="YYYY MM DD HH mm ss" [(ngModel)]="dayTime"
+            style="padding-top:16px;"></ion-datetime>
+          <span (click)="addTimes()"></span>
         </div>
       </div>
     </ion-list>
     <div class="btn-zoom" #tapZoom>
-      <div class="run-zoom" (click)="chooseTime(1,$event,tapZoom)">
-        <span>机械类</span><span>40分</span>
+      <div class="run-zoom  tapped-zoom" (click)="chooseTime(1,$event,tapZoom)">
+        <span>INSTR</span>
+        <span>40分</span>
       </div>
       <div class="run-zoom" (click)="chooseTime(2,$event,tapZoom)">
-        <span>敷科类</span><span>20分</span>
+        <span>DECONTAM</span>
+        <span>20分</span>
       </div>
       <div class="run-zoom" (click)="chooseTime(3,$event,tapZoom)">
-        <span>橡胶类</span><span>10分</span>
+        <span>PRIME</span>
+        <span>10分</span>
       </div>
       <div class="run-zoom" (click)="chooseTime(4,$event,tapZoom)">
-        <span>升温和测漏</span><span>50分</span>
+        <span>UTENSILS</span>
+        <span>50分</span>
       </div>
       <div class="run-zoom" (click)="chooseTime(5,$event,tapZoom)">
-        <span>B/D测试</span><span>15分</span>
+        <span>PLASTIC</span>
+        <span>15分</span>
       </div>
       <div class="run-zoom" (click)="chooseTime(6,$event,tapZoom)">
-        <span>重载器械</span><span>40分</span>
+        <span>ANES/RESP</span>
+        <span>40分</span>
       </div>
     </div>
   </div>
-
-  <div class="down-zoom">
-    <div class="" [navPush]="sterilizationStartPage">
-
+  <div class="u-space-line"></div>
+  <div class="m-scan" [navPush]="sterilizationStartPage">
+    <div class="img">
+      <img alt="" src="assets/imgs/scan-pcode.png">
     </div>
-    <div class="">
-      请扫描消毒盘条码
-    </div>
+    <p>请扫描包条码</p>
   </div>
+  <!-- <div class="down-zoom">
+      <div class="" [navPush]="washingListPage">
+  
+      </div>
+      <div class="">
+        请扫描清洗盘条码
+      </div>
+    </div> -->
 
 </ion-content>

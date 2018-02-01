@@ -1,18 +1,15 @@
-<!--
-  Generated template for the SterilizationCheckPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar>
     <ion-title>检查</ion-title>
   </ion-navbar>
   <login-info></login-info>
 
-</ion-header>
-
+</ion-header> -->
+<div class="m-title">
+  <custom-header [tabs]="['等离子灭菌机1（1/45）']" tabindex="0"></custom-header>
+  <login-info></login-info>
+</div>
 <ion-content no-padding>
   <div class="" style="background-color:#f3f3f3">
 
@@ -23,40 +20,81 @@
           <span>INSTR 40分钟</span>
         </div>
         <!-- <div class="">
-          <span>23:12</span>
-        </div> -->
+            <span>23:12</span>
+          </div> -->
       </div>
       <div class="chart-line">
-        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartClick)="chartClicked($event)"></canvas>
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors"
+          [legend]="lineChartLegend" [chartType]="lineChartType" (chartClick)="chartClicked($event)"></canvas>
       </div>
     </div>
     <div class="down-zoom">
       <div class="sum-num">
-        <span>包总数:<em>55</em></span>
-        <span>器械总数:<em>88</em></span>
+        <span>包总数:
+          <em>55</em>
+        </span>
+        <span>器械总数:
+          <em>88</em>
+        </span>
       </div>
       <div class="sum-list">
-        <ion-list>
-
-          <div class="list-zoom">
-            <div class="list-block" *ngFor="let item of list ;let index=index">
-              <img src="assets/imgs/item.jpg" alt="">
-              <div class="">
-                <div>{{item.name}}</div>
-                <div><span>{{item.id}}</span><span>机械数量：<em>{{item.sum}}</em></span></div>
+        <ion-list class="custom-list">
+          <div class="custom-item" *ngFor="let item of list;let index = index">
+            <button ion-item [navPush]="sterilizationDetailListPage">
+              <div class="list-item">
+                <div class="info">
+                  <h2>{{item.name}}&ensp;
+                    <span class="text-muted"></span>
+                  </h2>
+                  <p>{{item.id}}&emsp;&emsp;包数量：
+                    <span class="text-primary fw700">{{item.sum}}</span>&emsp;&emsp;机械总数量：
+                    <span class="text-primary fw700">{{item.psum}}</span>
+                  </p>
+                </div>
               </div>
-              <span [navPush]="sortingDetailPage"></span>
-            </div>
+              <div class="right">
+                <span class="arrow-right"></span>
+              </div>
+            </button>
 
           </div>
         </ion-list>
+        <!-- <ion-list>
+  
+            <div class="list-zoom">
+              <div class="list-block" *ngFor="let item of list ;let index=index">
+                <img src="assets/imgs/item.jpg" alt="">
+                <div class="">
+                  <div>{{item.name}}</div>
+                  <div>
+                    <span>{{item.id}}</span>
+                    <span>机械数量：
+                      <em>{{item.sum}}</em>
+                    </span>
+                  </div>
+                </div>
+                <span [navPush]="sortingDetailPage"></span>
+              </div>
+  
+            </div>
+          </ion-list> -->
       </div>
     </div>
   </div>
 </ion-content>
-<div class="btn">
-  <span (click)="checkNow(false)">不合格</span>
-  <span (click)="checkNow(true)">合格</span>
+<!-- <div class="btn">
+    <span (click)="checkNow(false)">不合格</span>
+    <span (click)="checkNow(true)">合格</span>
+  </div> -->
+<div class="g-footer">
+  <div class="flex-wrap">
+    <div class="flex-item">
+      <button class="u-button red" (click)="checkNow(false)">不合格</button>
+    </div>
+    <div class="flex-item">
+      <button class="u-button blue" (click)="checkNow(true)">合格</button>
+    </div>
+  </div>
 </div>
 <div class="modal-zoom" *ngIf="modalDoor">
   <div class="m-content">
@@ -68,40 +106,23 @@
       <div class="m-til">
         原因
       </div>
-      <div class="m-dts">
-        <label for="">温度</label><input type="text" name="" value="">
+      <div class="m-list mb-{{item.choose}}" *ngFor="let item of pans;let index=index" (click)="checkedPan(index)">
+        <span>{{item.name}}</span>
+        <span class="m-{{item.choose}}"></span>
       </div>
-      <div class="m-dts">
-        <label for="">压力</label><input type="text" name="" value="">
+    </div>
+    <div class="m-b">
+      <div class="m-til">
+        清洗机
       </div>
-      <div class="m-dts">
-        <div class="m-check">
-          <div>物理检测</div>
-          <div class="">
-            <span class="ff check">合格</span><span class="uf">不合格</span>
-          </div>
-        </div>
-      </div>
-      <div class="m-dts">
-        <div class="m-check">
-          <div>化学检测</div>
-          <div class="">
-            <span class="ff">合格</span><span class="uf check">不合格</span>
-          </div>
-        </div>
-      </div>
-      <div class="m-dts">
-        <div class="m-check">
-          <div>生物检测</div>
-          <div class="">
-            <span class="ff">合格</span><span class="uf check">不合格</span>
-            <span>检定中</span>
-          </div>
-        </div>
+      <div class="m-list mb-{{item.choose}}" *ngFor="let item of machs;let index=index" (click)="checkedMach(index)">
+        <span>{{item.name}}</span>
+        <span class="m-{{item.choose}}"></span>
       </div>
     </div>
     <div class="sures">
-      <span (click)="showModal(true)">确定</span>
+      <!-- <span (click)="showModal(true)">确定</span> -->
+      <button class="u-button white" (click)="showModal(true)">确定</button>
     </div>
   </div>
 </div>
