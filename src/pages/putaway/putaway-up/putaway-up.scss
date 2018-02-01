@@ -1,24 +1,90 @@
 page-putaway-up {
-  background-color: white;
 
-  .p-content {
-    height: 100%;
-    padding-top: 92px;
+  // .p-content {
+  //   height: 100%;
+  //   padding-top: 92px;
 
-    .p-scan {
-      display: flex;
-      background-color: #a5a5a5;
-      justify-content: center;
-      height: 200px;
-      flex-grow: 1;
+  //   .p-scan {
+  //     display: flex;
+  //     background-color: #a5a5a5;
+  //     justify-content: center;
+  //     height: 200px;
+  //     flex-grow: 1;
+  //   }
+
+  //   .p-camera {
+  //     display: flex;
+  //     background-color: #a5a5a5;
+  //     justify-content: center;
+  //     height: 200px;
+  //     background: transparent !important;
+  //   }
+  // }
+  .g-content{
+    padding-top: 8.6rem;
+    padding-bottom: 5.2rem;
+  }
+  .scroll-list{
+    position: absolute;
+    top: 0;
+    bottom: 6.2rem;
+    left: 0;
+    padding-top: 8.6rem;
+    padding-bottom: 3.9rem;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    .list-item img{
+      width: 5.5rem;
+      height: 6.5rem;
     }
-
-    .p-camera {
-      display: flex;
-      background-color: #a5a5a5;
-      justify-content: center;
-      height: 200px;
-      background: transparent !important;
+    .info{
+      min-height: 6.5rem;
     }
   }
+  .check-all {
+    position: absolute;
+    bottom: 6.2rem;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    padding-left: 1.5rem;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    align-content: center;
+
+    .u-radio-box {
+      flex: 1;
+      padding-top: 0.8rem;
+    }
+
+    .right-input {
+      width: 5.6rem;
+      height: 100%;
+      border-left: 1px solid #e5e5e5;
+      background-image: url("../assets/imgs/i-keyboad.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 2.4rem;
+    }
+  }
+  .g-footer{
+    .flex-wrap{
+      align-items: center;
+    }
+    .info{
+      padding-left: 1.5rem;
+      h2{
+        font-size: 1.6rem;
+        font-weight: normal;
+        line-height: 2.2rem;
+      }
+      p{
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        color: #a5a5a5;
+      }
+    }
+  } 
 }

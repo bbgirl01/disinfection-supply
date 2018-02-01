@@ -1,10 +1,69 @@
-<!--
-  Generated template for the PutawayChangePage page.
+<scan scanType="4" *ngIf="!showPage" (click)="showIndexPage($event)"></scan>
+<div class="g-content" *ngIf="showPage">
+  <div class="scroll-list">
+    <ion-list class="custom-list">
+      <div class="custom-item">
+        <button ion-item>
+          <div class="list-item">
+            <input type="radio" class="u-radio" />
+            <img src="assets/imgs/item.jpg" />
+            <div class="info">
+              <h2>插值针</h2>
+              <p>16091015487&emsp;保质期6个月</p>
+              <p>2017-09-18 11:12:14</p>
+            </div>
+          </div>
+        </button>
+        <div class="right" [navPush]="packageDetailPage">
+          <span class="arrow-right"></span>
+        </div>
+      </div>
+      <div class="custom-item">
+        <button ion-item>
+          <div class="list-item">
+            <input type="radio" class="u-radio" />
+            <img src="assets/imgs/item.jpg" />
+            <div class="info">
+              <h2>插值针</h2>
+              <p>16091015487&emsp;保质期6个月</p>
+              <p>2017-09-18 11:12:14</p>
+            </div>
+          </div>
+        </button>
+        <div class="right" [navPush]="packageDetailPage">
+          <span class="arrow-right"></span>
+        </div>
+      </div>
+      <div class="custom-item">
+        <button ion-item>
+          <div class="list-item">
+            <input type="radio" class="u-radio" />
+            <img src="assets/imgs/item.jpg" />
+            <div class="info">
+              <h2>插值针</h2>
+              <p>16091015487&emsp;保质期6个月</p>
+              <p>2017-09-18 11:12:14</p>
+            </div>
+          </div>
+        </button>
+        <div class="right" [navPush]="packageDetailPage">
+          <span class="arrow-right"></span>
+        </div>
+      </div>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<div class="p-content">
+    </ion-list>
+  </div>
+
+  <div class="check-all">
+    <div class="u-radio-box">
+      <input class="u-radio" type="radio" />
+      <span>全选(16)</span>
+    </div>
+    <div class="right-input"></div>
+  </div>
+
+</div>
+<!-- <div class="p-content">
   <div class="up-zoom">
     <div class="p-list">
       <ion-list>
@@ -28,15 +87,8 @@
       </ion-list>
     </div>
   </div>
-</div>
-<div class="g-footer">
-  <div class="check-all">
-    <div class="u-radio-box" (click)="toggleCheck($event, tt)" #tt>
-      <input class="u-radio" type="radio" [checked]="checkAll" />
-      <span>全选(16)</span>
-    </div>
-    <div class="right-input"></div>
-  </div>
+</div> -->
+<!-- <div class="g-footer">
   <div class="flex-wrap">
     <div class="info">
       <p class="name">存储架</p>
@@ -44,6 +96,18 @@
     </div>
     <div class="btn">
       <button ion-button block [navPush]="loginPage">{{showInfo == 0?'上架':'换架'}}</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="g-footer" *ngIf="showPage">
+  <div class="flex-wrap">
+    <div class="flex-item info">
+      <h2>存储架A</h2>
+      <p>56241478</p>
+    </div>
+    <div class="right-button">
+      <button class="u-button blue">确认换架(2)</button>
     </div>
   </div>
 </div>

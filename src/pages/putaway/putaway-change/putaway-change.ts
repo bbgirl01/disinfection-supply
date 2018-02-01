@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PackageDetailPage } from '../../package-detail';
 
 /**
  * Generated class for the PutawayChangePage page.
@@ -49,9 +50,11 @@ export class PutawayChangePage {
     "status": 3
   }];
   checkAll: Boolean = false;
-
+  showPage: Boolean = false;
+  packageDetailPage: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     console.log(this.navParams)
+    this.packageDetailPage = PackageDetailPage;
   }
 
   toggleCheck(id) {
@@ -73,5 +76,7 @@ export class PutawayChangePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad PutawayChangePage');
   }
-
+  showIndexPage() {
+    this.showPage = true;
+  }
 }

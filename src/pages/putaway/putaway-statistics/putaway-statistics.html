@@ -5,11 +5,22 @@
   Ionic pages and navigation.
 -->
 <div class="w-statistics">
-  <div class="w-sum">
+  <!-- <div class="w-sum">
     <span>今日库存量<em>33</em></span>
     <span>总库存量<em>6</em></span>
+  </div> -->
+  <div class="m-statistics">
+    <div class="item">
+      <strong class="text-warning">20</strong>
+      <p>今日库存量</p>
+    </div>
+    <div class="item">
+      <strong class="text-danger">512</strong>
+      <p>总库存量</p>
+    </div>
   </div>
-  <div class="w-header">
+  <div class="u-space-line"></div>
+  <div class="w-header clearfix">
 
     <div class="w-sel">
       <ion-select interface="popover" [(ngModel)]="dayZoom">
@@ -24,22 +35,26 @@
       <div class="list-name">
         存储架128447
       </div>
-      <ion-list>
+      <ion-list class="custom-list">
+        <div class="custom-item" *ngFor="let item of list;let index = index">
+          <button ion-item (click)="goAhead(index)">
+            <div class="list-item">
+              <img src="assets/imgs/item.jpg" />
+              <div class="info">
+                <h2>{{item.name}}&ensp;
+                  <span class="text-muted">({{item.finish}}/{{item.sum}})</span>
+                </h2>
+                <p>{{item.time}}
+                </p>
+              </div>
+              <span class="status normal" *ngIf="item.status===0">合格</span>
+              <span class="status unqualified" *ngIf="item.status===1">不合格</span>
 
-        <div class="list-zoom">
-          <div class="list-block" *ngFor="let item of list ;let index=index">
-            <img src="assets/imgs/item.jpg" alt="">
-            <div class="names">
-              <div>{{item.name}}<em>({{item.finish}}/{{item.sum}})</em></div>
-              <div>{{item.time}}</div>
             </div>
-            <div class="qua">
-              质检： <span class="dot-{{item.status}}"><ng-container *ngIf="item.status==0">合格</ng-container>
-              <ng-container *ngIf="item.status==1">不合格</ng-container></span>
-
+            <div class="right">
+              <span class="arrow-right"></span>
             </div>
-            <span (click)="goAhead(index)"></span>
-          </div>
+          </button>
 
         </div>
       </ion-list>

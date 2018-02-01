@@ -1,10 +1,16 @@
 page-putaway-statistics {
   background-color: white;
-
+  .list-item{
+    padding-left: 1.5rem;
+  }
+  .custom-item .label{
+    display: flex;
+  }
   .w-statistics {
     background-color: white;
     height: 100%;
-    padding-top: 92px;
+    padding-top: 8.6rem;
+    overflow-y: scroll;
 
     .w-sum {
       height: 80px;
@@ -29,14 +35,39 @@ page-putaway-statistics {
     }
 
     .w-header {
-      display: flex;
-      justify-content: flex-start;
-      border-bottom: 1px solid #d2d2d2;
-
+      border-bottom: none;
+      padding: 0 1.5rem;
       div.w-sel {
-        display: inline-flex;
-        flex-grow: 1;
+        float: left;
+        width: 33.33%;
         position: relative;
+        overflow: hidden;
+        height: 4rem;
+        &:nth-child(2){
+          text-align: center;
+        }
+        &:nth-child(3){
+          text-align: right;
+        }
+        .select{
+          display: inline-block;
+          padding: 0;
+          padding-right: 1.5rem;
+          background-image: url(../assets/imgs/i-down1.png);
+          background-position: right center;
+          background-repeat: no-repeat;
+          background-size: .9rem;
+          max-width: 100%;
+        }
+        .select-text{
+          height: 4rem;
+          line-height: 4rem;
+          font-size: 1.4rem;
+          color: #666;
+        }
+        .select-icon{
+          display: none;
+        }
       }
     }
 
@@ -45,12 +76,12 @@ page-putaway-statistics {
 
       .sum-list {
         .list-name {
-          height: 40px;
-          background-color: #e5e5e5;
-          font-size: 16px;
-          color: #333;
-          line-height: 40px;
-          padding: 0 10px;
+          height: 3rem;
+          line-height: 3rem;
+          background-color: #f3f3f3;
+          font-size: 1.4rem;
+          color: #666;
+          padding: 0 1.5rem;
         }
 
         .list-zoom {
