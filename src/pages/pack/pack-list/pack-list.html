@@ -1,4 +1,10 @@
-<div class="g-content">
+<!-- 扫描打包人 -->
+<scan scanType="2" (click)="changeScanStep($event)" *ngIf="!showPage&&scanStep==1"></scan>
+
+<!-- 扫描包条码 -->
+<scan scanType="3" (click)="showIndexPage($event)" *ngIf="!showPage&&scanStep==2"></scan>
+
+<div class="g-content" *ngIf="showPage">
   <ion-list>
     <div class="custom-list">
       <div class="custom-item" [navPush]="packageDetailPage">
@@ -69,14 +75,26 @@
     </div>
   </ion-list>
 </div>
-<div class="g-footer">
+
+<!-- <div class="g-footer">
+    <div class="flex-wrap">
+      <div class="flex-item info">
+        <p class="name">徐光强</p>
+        <p>E888301&emsp;|&emsp;耳鼻咽喉科</p>
+      </div>
+      <div class="right-button">
+        <button class="u-button blue" disabled>确认回收(2)</button>
+      </div>
+    </div>
+  </div> -->
+<div class="g-footer" *ngIf="scanStep==2">
   <div class="flex-wrap">
     <div class="flex-item info">
       <p class="name">徐光强</p>
       <p>E888301&emsp;|&emsp;耳鼻咽喉科</p>
     </div>
     <div class="right-button">
-      <button class="u-button blue">确认回收(2)</button>
+      <button class="u-button blue" [disabled]="!showPage" (click)="presentToast($event)">确认</button>
     </div>
   </div>
 </div>

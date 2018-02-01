@@ -16,9 +16,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class UseIndexPage {
   tabs: Object = ['使用', '统计'];
   tabIndex: Number = 0;
-  scanStep: Number = 1; // 1,扫描病人条码 2,扫描包条码
-  showPage: Boolean = false;
-  modalShow: Boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -30,18 +27,5 @@ export class UseIndexPage {
     this.tabIndex = index;
   }
 
-  showIndexPage() {
-    this.showPage = true;
-  }
 
-  changeScanStep() {
-    this.scanStep = 2;
-  }
-
-  showModal() {
-    this.modalShow = true;
-  }
-  hideModal() {
-    this.modalShow = false;
-  }
 }

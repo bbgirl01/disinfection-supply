@@ -1,20 +1,5 @@
 page-recycle-index {
-  .m-title .right {
-    position: absolute;
-    top: 50%;
-    right: 1.5rem;
-    padding-right: 1.4rem;
-    color: #fff;
-    transform: translateY(-50%);
-  }
-
-  .department {
-    padding-right: 1.4rem;
-    background-image: url("../assets/imgs/i-down.png");
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: 0.9rem;
-  }
+  
 
   .top-bar {
     height: 4rem;
@@ -23,7 +8,6 @@ page-recycle-index {
     color: #666;
     border-bottom: 1px solid #e5e5e5;
   }
-}
 
 .custom-list {
   margin-top: 0;
@@ -45,3 +29,4 @@ page-recycle-index {
   
 }
 
+}

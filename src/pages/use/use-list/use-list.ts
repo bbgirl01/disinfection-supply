@@ -16,8 +16,9 @@ import { PackageDetailPage } from '../../package-detail/package-detail';
 })
 export class UseListPage {
   packageDetailPage: any;
+  scanStep: Number = 1; // 1,扫描病人条码 2,扫描包条码
+  showPage: Boolean = false;
   modalShow: Boolean = false;
-  @Output() showModal = new EventEmitter<any>();
   // @Output() hideModal = new EventEmitter<any>();
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.packageDetailPage = PackageDetailPage;
@@ -28,10 +29,18 @@ export class UseListPage {
 
   }
 
-  showModalFn() {
-    this.showModal.emit();
+  showIndexPage() {
+    this.showPage = true;
   }
-  // hideModalFn() {
-  //   this.hideModal.emit();
-  // }
+
+  changeScanStep() {
+    this.scanStep = 2;
+  }
+
+  showModal() {
+    this.modalShow = true;
+  }
+  hideModal() {
+    this.modalShow = false;
+  }
 }

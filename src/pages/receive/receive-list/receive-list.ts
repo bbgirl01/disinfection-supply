@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { PackageDetailPage } from '../../package-detail';
 
 @IonicPage()
@@ -10,7 +10,7 @@ import { PackageDetailPage } from '../../package-detail';
 export class ReceiveListPage {
   packageDetailPage: any;
   popupShow: Boolean = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController) {
     this.packageDetailPage = PackageDetailPage;
   }
 
@@ -23,5 +23,20 @@ export class ReceiveListPage {
   }
   hidePopup() {
     this.popupShow = false;
+  }
+
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: '接收成功！',
+      duration: 1000,
+      position: 'middle',
+      cssClass: 'custom-toast'
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
   }
 }

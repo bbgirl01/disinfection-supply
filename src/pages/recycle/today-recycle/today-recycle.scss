@@ -1,8 +1,12 @@
 page-today-recycle {
   .g-content{
     padding-top: 8.6rem;
+    background-color: #fff;
   }
   .list-item{
     padding-left: 1.5rem;
+  }
+  .custom-item .label{
+    display: flex;
   }
 }

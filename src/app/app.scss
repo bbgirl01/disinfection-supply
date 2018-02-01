@@ -332,11 +332,20 @@ html {
 		}
 		.item{
 			flex: 1;
+			padding-left: 0;
+		}
+		.item-inner{
+			padding: 0;
+			border:none;
 		}
 		.right{
 			position: relative;
 			display: block;
 			width: 3.6rem;
+		}
+		.label{
+			margin: 0;
+			padding: 0;
 		}
 		.arrow-right{
 			position: absolute;
@@ -380,8 +389,10 @@ button.item-ios:not([detail-none]) .item-inner{
 			height: 4.5rem;
 			margin-right: 1rem;
 			border-radius: .4rem;
+			&+.info{
+				min-height: 4.5rem;
+			}
 		}
-
 		h2 {
 			font-size: 1.6rem;
 			line-height: 2.2rem;
@@ -526,6 +537,7 @@ button.item-ios:not([detail-none]) .item-inner{
 
 .flex-wrap{
 	display: flex;
+	align-items: center;
 	.flex-item{
 		flex: 1;
 	}
@@ -642,4 +654,22 @@ button.item-ios:not([detail-none]) .item-inner{
 .animate-up{
 	animation: popup .3s ease-out;
   animation-fill-mode: forwards;
+}
+
+// 自定义toast样式
+.custom-toast .toast-wrapper{
+	display: inline-block;
+	left: 50%;
+	right: auto;
+	top: 30% !important;
+	width: auto;
+	height: 4.2rem;
+	line-height: 4.2rem;
+	font-size: 1.4rem;
+	transform: translateX(-50%);
+	text-align: center;
+	border-radius: .4rem;
+	.toast-message{
+		padding: 0 1.5rem;
+	}
 }

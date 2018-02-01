@@ -51,4 +51,8 @@ export class HomePage {
   toggleMoreMenus() {
     this.moreMenusShow = !this.moreMenusShow;
   }
+
+  clickHandle() {
+    this.moreMenusShow = false;
+  }
 }

@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'index-list',
   templateUrl: 'index-list.html'
 })
-export class IndexListComponent implements OnInit{
+export class IndexListComponent implements OnInit {
   listData = [
     {
       "name": "★Hot City",
@@ -52,7 +52,7 @@ export class IndexListComponent implements OnInit{
 
   touchNavFn() {
     let nav = document.getElementById('nav');
-    
+
     nav.ontouchmove = function (event) {
       console.log(event.changedTouches[0]);
     }

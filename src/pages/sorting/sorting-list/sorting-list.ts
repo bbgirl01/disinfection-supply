@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { SortingDetailPage } from '../sorting-detail';
 /**
  * Generated class for the SortingListPage page.
@@ -15,7 +15,7 @@ import { SortingDetailPage } from '../sorting-detail';
 })
 export class SortingListPage {
   sortingDetailPage: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController) {
     this.sortingDetailPage = SortingDetailPage
   }
 
@@ -23,4 +23,18 @@ export class SortingListPage {
     console.log('ionViewDidLoad SortingListPage');
   }
 
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: '分拣成功！',
+      duration: 1000,
+      position: 'middle',
+      cssClass: 'custom-toast'
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
+  }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { PackageDetailPage } from '../../package-detail';
 
 /**
@@ -15,16 +15,38 @@ import { PackageDetailPage } from '../../package-detail';
   templateUrl: 'pack-list.html',
 })
 export class PackListPage {
-  
+
   packageDetailPage: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  showPage: Boolean = false;
+  scanStep: Number = 1; // 1,请扫描打包人, 2-请扫描包条码
+  constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController) {
     this.packageDetailPage = PackageDetailPage;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PackListPage');
-    
+
   }
 
-  
+  changeScanStep() {
+    this.scanStep = 2;
+  }
+  showIndexPage() {
+    this.showPage = true;
+  }
+
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: '复核成功！',
+      duration: 1000,
+      position: 'middle',
+      cssClass: 'custom-toast'
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
+  }
 }

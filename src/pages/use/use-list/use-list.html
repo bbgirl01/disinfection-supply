@@ -1,4 +1,10 @@
-<div class="g-content">
+<div class="right-input"></div>
+<!-- 扫描病人条码 -->
+<scan scanType="5" *ngIf="!showPage&&scanStep==1" (click)="changeScanStep($event)"></scan>
+<!-- 扫描包条码 -->
+<scan scanType="3" *ngIf="!showPage&&scanStep==2" (click)="showIndexPage($event)"></scan>
+
+<div class="g-content" *ngIf="showPage">
   <ion-list class="custom-list">
     <div class="custom-item" [navPush]="packageDetailPage">
       <button ion-item>
@@ -64,19 +70,30 @@
   </ion-list>
 </div>
 
-<div class="g-footer">
+<!-- <div class="g-footer">
   <div class="flex-wrap">
-    <div class="flex-item info" (click)="showModalFn($event)">
+    <div class="flex-item info" (click)="showModal($event)">
       <p>10床&emsp;李达</p>
       <p>男&ensp;|&ensp;53岁</p>
     </div>
     <div class="right-button">
-      <button class="u-button blue">确认使用(3)</button>
+      <button class="u-button blue" disabled>确认使用(3)</button>
+    </div>
+  </div>
+</div> -->
+<div class="g-footer" *ngIf="scanStep==2">
+  <div class="flex-wrap">
+    <div class="flex-item info" (click)="showModal($event)">
+      <p>10床&emsp;李达</p>
+      <p>男&ensp;|&ensp;53岁</p>
+    </div>
+    <div class="right-button">
+      <button class="u-button blue" [disabled]="!showPage">确认使用(3)</button>
     </div>
   </div>
 </div>
 
-<!-- <div class="modal-info" [ngClass]="{show: modalShow}">
+<div class="modal-info" [ngClass]="{show: modalShow}">
   <div class="item top">
     <span class="bed-no">10床</span>
     &emsp;李达&emsp;男&emsp;53岁
@@ -98,4 +115,4 @@
     <span>使用时间</span>
     <span>2017-11-24 10:34:49</span>
   </div>
-</div> -->
+</div>

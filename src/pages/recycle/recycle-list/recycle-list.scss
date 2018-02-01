@@ -1,4 +1,23 @@
 page-recycle-list {
+  .head-right-icon{
+    position: absolute;
+    top: 2.8rem;
+    right: 1.5rem;
+    padding-right: 1.4rem;
+    color: #fff;
+    transform: translateY(-50%);
+    z-index: 11;
+  }
+  .department {
+    padding-right: 1.4rem;
+    background-image: url("../assets/imgs/i-down.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 0.9rem;
+  }
+  .g-header{
+    top: 8.6rem;
+  }
   .g-content{
     
     .scroll-list{
@@ -34,7 +53,7 @@ page-recycle-list {
       width: 5.6rem;
       height: 100%;
       border-left: 1px solid #e5e5e5;
-      background-image: url("../assets/imgs/i-keyboad.png");
+      background-image: url(../assets/imgs/i-keyboad.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 2.4rem;
@@ -46,14 +65,70 @@ page-recycle-list {
       padding-left: 1.5rem;
       color: #a5a5a5;
       font-size: 1.2rem;
-      padding-top: 0.8rem;
   
       .name {
         font-size: 1.6rem;
         line-height: 2.2rem;
         color: #333;
       }
+      .scan{
+        padding-left: 2.8rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        background-image: url(../assets/imgs/i-scanning1.png);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 1.9rem;
+      }
     }
+  }
+  .search-wrap{
+    display: flex;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    .search-input{
+      display: flex;
+      flex: 1;
+      padding-left: 1.5rem;
+      height: 3.6rem;
+      border: 1px solid #e5e5e5;
+      border-radius: .6rem;
+      overflow: hidden;
+      input{
+        flex: 1;
+        &:focus + button{
+          background-image: url(../assets/imgs/i-search1-hover.png);
+        }
+      }
+      button{
+        width: 4rem;
+        height: 100%;
+        background-image: url(../assets/imgs/i-search1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 2rem;
+        text-indent: -9999em;
+      }
+    }
+    .search-clear{
+      margin-left: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-image: url(../assets/imgs/i-close1.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+  .popup-choose{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 111;
+    transform: translateY(100%);
   }
 }
 

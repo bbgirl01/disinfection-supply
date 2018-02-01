@@ -16,8 +16,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class PackIndexPage {
   tabs: Object = ['打包/复核', '统计'];
   tabIndex: Number = 0;
-  showPage: Boolean = false;
-  scanStep: Number = 1; // 1,请扫描打包人, 2-请扫描包条码
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -29,10 +27,5 @@ export class PackIndexPage {
     console.log(index);
     this.tabIndex = index;
   }
-  changeScanStep() {
-    this.scanStep = 2;
-  }
-  showIndexPage() {
-    this.showPage = true;
-  }
+
 }

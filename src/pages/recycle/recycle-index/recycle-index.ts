@@ -12,7 +12,6 @@ export class RecycleIndexPage {
   loginPage: Object;
   tabs: Object = ['回收', '统计'];
   tabIndex: Number = 0;
-  showPage: Boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.loginPage = LoginPage;
   }
@@ -26,7 +25,4 @@ export class RecycleIndexPage {
     this.tabIndex = index;
   }
 
-  showIndexPage() {
-    this.showPage = true;
-  }
 }

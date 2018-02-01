@@ -6,23 +6,5 @@
   <login-info></login-info>
 </div>
 
-<scan scanType="2" (click)="changeScanStep($event)" *ngIf="!showPage&&scanStep==1"></scan>
-
-<!-- 扫描包条码 -->
-<div *ngIf="!showPage&&scanStep==2">
-  <scan scanType="3" (click)="showIndexPage($event)"></scan>
-  <div class="g-footer">
-    <div class="flex-wrap">
-      <div class="flex-item info">
-        <p class="name">徐光强</p>
-        <p>E888301&emsp;|&emsp;耳鼻咽喉科</p>
-      </div>
-      <div class="right-button">
-        <button class="u-button blue" disabled>确认回收(2)</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<page-pack-list *ngIf="showPage&&tabIndex===0"></page-pack-list>
-<page-pack-statistics *ngIf="showPage&&tabIndex===1"></page-pack-statistics>
+<page-pack-list *ngIf="tabIndex===0"></page-pack-list>
+<page-pack-statistics *ngIf="tabIndex===1"></page-pack-statistics>

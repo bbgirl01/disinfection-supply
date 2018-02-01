@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -8,7 +8,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GrantApplyDepartmentPage {
   tabs: Array<any> = ['骨科'];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -16,5 +16,19 @@ export class GrantApplyDepartmentPage {
   }
   tabChange(index) {
 
+  }
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: '发放成功！',
+      duration: 1000,
+      position: 'middle',
+      cssClass: 'custom-toast'
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
   }
 }

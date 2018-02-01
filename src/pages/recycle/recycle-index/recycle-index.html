@@ -1,9 +1,7 @@
 <div class="m-title">
   <custom-header [tabs]="tabs" (tabChange)="tabChange($event)"></custom-header>
-  <span class="right department" *ngIf="tabIndex==0&&showPage">手术室</span>
+  <login-info></login-info>
 </div>
 
-
-<scan *ngIf="!showPage" scanType="1" (click)="showIndexPage($event)"></scan>
-<page-recycle-list *ngIf="tabIndex==0&&showPage"></page-recycle-list>
-<page-recycle-statistics *ngIf="tabIndex==1&&showPage"></page-recycle-statistics>
+<page-recycle-list *ngIf="tabIndex==0"></page-recycle-list>
+<page-recycle-statistics *ngIf="tabIndex==1"></page-recycle-statistics>

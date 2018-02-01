@@ -1,13 +1,17 @@
+<!-- 扫描科室 -->
+<scan *ngIf="!showPage" scanType="1" (click)="showIndexPage($event)"></scan>
+
+<span class="head-right-icon department" *ngIf="showPage" (click)="chooseDepartment($event)">手术室</span>
+
 <div class="g-header">
-  <login-info></login-info>
-  <div class="top-bar">
+  <div class="top-bar" *ngIf="showPage">
     <div class="u-select">
       <span>全部状态</span>
     </div>
     <span class="fr text-primary" [navPush]="todayRecyclePage">今日回收(2)</span>
   </div>
 </div>
-<div class="g-content">
+<div class="g-content" *ngIf="showPage">
   <div class="scroll-list">
     <ion-list class="custom-list">
       <div class="custom-item" *ngFor="let item of list;let index = index">
@@ -42,14 +46,29 @@
   </div>
 </div>
 
-<div class="g-footer">
+<div class="g-footer" *ngIf="showPage">
   <div class="flex-wrap">
-    <div class="flex-item info">
+    <div class="flex-item info" *ngIf="!recipientScan" (click)="recipientScanFn($event)">
+      <p class="scan">请扫描下收人信息</p>
+    </div>
+    <div class="flex-item info" *ngIf="recipientScan">
       <p class="name">徐光强</p>
       <p>E888301&emsp;|&emsp;耳鼻咽喉科</p>
     </div>
     <div class="right-button">
-      <button class="u-button blue" [navPush]="loginPage">确认回收(2)</button>
+      <button class="u-button blue" [disabled]="!recipientScan" [navPush]="loginPage" (click)="presentToast($event)">确认回收(2)</button>
     </div>
   </div>
+</div>
+
+<!-- 选择科室 -->
+<div class="popup-choose" [ngClass]="{'animate-up': showPopup}">
+  <div class="search-wrap">
+    <div class="search-input">
+      <input placeholder="输入科室简拼搜索" type="text">
+      <button>搜索</button>
+    </div>
+    <div class="search-clear" (click)="hidePopup($event)"></div>
+  </div>
+  <index-list></index-list>
 </div>

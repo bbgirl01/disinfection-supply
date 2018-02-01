@@ -27,7 +27,7 @@
 
       </div>
       <ul class="list" [ngClass]="{show: moreMenusShow}">
-        <li [navPush]="personalIndexPage">
+        <li [navPush]="personalIndexPage" (click)="clickHandle($event)">
           <i class="icon icon-personal"></i>
           个人信息
         </li>
@@ -35,7 +35,7 @@
           <i class="icon icon-mobile-nursing"></i>
           移动护理
         </li>
-        <li [navPush]="loginPage">
+        <li [navPush]="loginPage" (click)="clickHandle($event)">
           <i class="icon icon-logout"></i>
           退出帐号
         </li>
@@ -43,41 +43,41 @@
     </div>
   </div>
   <div class="menus clearfix">
-    <div class="item" [navPush]="recyclePage">
+    <div class="item" [navPush]="recyclePage" (click)="clickHandle($event)">
       <img src="assets/imgs/i-reclaim.png" alt="">
       <span>回收</span>
     </div>
-    <div class="item" [navPush]="sortingScanPage" [navParams]="params">
+    <div class="item" [navPush]="sortingScanPage" [navParams]="params" (click)="clickHandle($event)">
       <img src="assets/imgs/i-sorting.png" alt="">
       <span>分拣</span>
     </div>
-    <div class="item" [navPush]="washingHomePage">
+    <div class="item" [navPush]="washingHomePage" (click)="clickHandle($event)">
       <img src="assets/imgs/i-purging.png" alt="">
       <span>清洗</span>
     </div>
 
-    <div class="item" [navPush]="packIndexPage">
+    <div class="item" [navPush]="packIndexPage" (click)="clickHandle($event)">
       <img src="assets/imgs/i-pack2.png" alt="">
       <span>打包/复核</span>
     </div>
-    <div class="item" [navPush]="sterilizationHomePage">
+    <div class="item" [navPush]="sterilizationHomePage" (click)="clickHandle($event)">
       <img src="assets/imgs/i-sterilization.png" alt="">
       <span>灭菌</span>
     </div>
-    <div class="item" [navPush]="putawayHomePage">
+    <div class="item" [navPush]="putawayHomePage" (click)="clickHandle($event)">
       <img src="assets/imgs/i-shelves.png">
       <span>上架</span>
     </div>
 
-    <div class="item" [navPush]="grantIndexPage">
+    <div class="item" [navPush]="grantIndexPage" (click)="clickHandle($event)">
       <img src="assets/imgs/i-issue.png" alt="">
       <span>发放</span>
     </div>
-    <div class="item" [navPush]="receiveIndexPage">
+    <div class="item" [navPush]="receiveIndexPage" (click)="clickHandle($event)">
       <img src="assets/imgs/i-reception.png" alt="">
       <span>接收</span>
     </div>
-    <div class="item" [navPush]="useIndexPage">
+    <div class="item" [navPush]="useIndexPage" (click)="clickHandle($event)">
       <img src="assets/imgs/i-use.png" alt="">
       <span>使用</span>
     </div>
@@ -88,11 +88,11 @@
   </div>
 
   <div class="menus clearfix">
-    <div class="item" [navPush]="recyclePage">
+    <div class="item">
       <img src="assets/imgs/i-loss.png" alt="">
       <span>损耗登记</span>
     </div>
-    <div class="item" [navPush]="sortingScanPage">
+    <div class="item">
       <img src="assets/imgs/i-boxsearch.png" alt="">
       <span>包内容查询</span>
     </div>
@@ -101,7 +101,7 @@
       <span>条码失效</span>
     </div>
 
-    <div class="item" [navPush]="recyclePage">
+    <div class="item">
       <img src="assets/imgs/i-claims2.png" alt="">
       <span>申领</span>
     </div>
@@ -114,7 +114,7 @@
       <span>外来包</span>
     </div>
 
-    <div class="item" [navPush]="recyclePage">
+    <div class="item">
       <img src="assets/imgs/i-package-borrowed.png" alt="">
       <span>科室间借还包</span>
     </div>

@@ -121,6 +121,9 @@ page-sorting-list {
   .list-item{
     padding-left: 1.5rem;
   }
+  .custom-item .label{
+    display: flex;
+  }
   .g-footer{
     .flex-wrap{
       align-items: center;
