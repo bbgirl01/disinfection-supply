@@ -1,7 +1,7 @@
 page-sterilization-check {
   .scroll-content{
     padding-top: 8.6rem !important;
-    padding-bottom: 5.2rem !important;
+    padding-bottom: 7.2rem !important;
   }
   .g-footer{
     z-index: 1;
@@ -9,12 +9,15 @@ page-sterilization-check {
   .list-item{
     padding-left: 1.5rem;
   }
+  .custom-item:last-child:after{
+    display: none;
+  }
   .custom-item .label{
     display: flex;
   }
   .up-zoom {
     background-color: white;
-
+    padding-bottom: 1.5rem;
     .time-line {
       font-size: 1.6rem;
       display: flex;
@@ -49,10 +52,29 @@ page-sterilization-check {
       height: 200px;
       flex-grow: 1;
     }
+    .spread-line{
+      margin: .8rem auto 0;
+      width: 6.6rem;
+      height: 2.4rem;
+      line-height: 2.4rem;
+      padding-left: 1.4rem;
+      border: 1px solid #d2d2d2;
+      border-radius: .4rem;
+      
+      background-repeat: no-repeat;
+      background-position: 4.6rem center;
+      background-size: .9rem;
+      &.down{
+        background-image: url(../assets/imgs/i-down1.png);
+      }
+      &.up{
+        background-image: url(../assets/imgs/i-up1.png);
+      }
+    }
+    
   }
 
   .down-zoom {
-    margin-top: 10px;
     background-color: white;
 
     .sum-num {
@@ -81,214 +103,113 @@ page-sterilization-check {
       }
     }
 
-    .sum-list {
-      .list-zoom {
-        .list-block:last-child {
-          margin-left: 0;
-          padding-left: 10px;
-          background-position: 94.5% 26px;
-          margin-bottom: 80px;
-        }
 
-        .list-block {
-          display: flex;
-          justify-content: flex-start;
-          height: 65px;
-          align-items: center;
-          margin-left: 10px;
-          border-bottom: 1px solid #E5E5E5;
+    // .sum-list {
+    //   .list-zoom {
+    //     .list-block:last-child {
+    //       margin-left: 0;
+    //       padding-left: 10px;
+    //       background-position: 94.5% 26px;
+    //       margin-bottom: 80px;
+    //     }
 
-          & > img {
-            width: 45px;
-            height: 45px;
-            display: inline-flex;
-            flex-grow: 0;
-          }
+    //     .list-block {
+    //       display: flex;
+    //       justify-content: flex-start;
+    //       height: 65px;
+    //       align-items: center;
+    //       margin-left: 10px;
+    //       border-bottom: 1px solid #E5E5E5;
 
-          & > div {
-            display: inline-flex;
-            flex-grow: 1;
-            flex-direction: column;
-            padding-left: 10px;
-            color: #333333;
+    //       & > img {
+    //         width: 45px;
+    //         height: 45px;
+    //         display: inline-flex;
+    //         flex-grow: 0;
+    //       }
 
-            span {
-              display: inline-flex;
-              color: #a5a5a5;
-              font-size: 13px;
+    //       & > div {
+    //         display: inline-flex;
+    //         flex-grow: 1;
+    //         flex-direction: column;
+    //         padding-left: 10px;
+    //         color: #333333;
 
-              em {
-                font-size: 14px;
-                color: #0080ff;
-                display: inline-flex;
-                align-items: center;
-              }
-            }
+    //         span {
+    //           display: inline-flex;
+    //           color: #a5a5a5;
+    //           font-size: 13px;
 
-            span:first-child {
-              padding-right: 25px;
-            }
-          }
+    //           em {
+    //             font-size: 14px;
+    //             color: #0080ff;
+    //             display: inline-flex;
+    //             align-items: center;
+    //           }
+    //         }
 
-          & > span {
-            background: url("../assets/imgs/i-next.png") 0 0 no-repeat;
-            background-size: 8px auto;
-            background-position: 0 26px;
-            display: inline-flex;
-            width: 30px;
-            flex-grow: 0;
-            height: 100%;
-          }
-        }
-      }
-    }
+    //         span:first-child {
+    //           padding-right: 25px;
+    //         }
+    //       }
+
+    //       & > span {
+    //         background: url("../assets/imgs/i-next.png") 0 0 no-repeat;
+    //         background-size: 8px auto;
+    //         background-position: 0 26px;
+    //         display: inline-flex;
+    //         width: 30px;
+    //         flex-grow: 0;
+    //         height: 100%;
+    //       }
+    //     }
+    //   }
+    // }
   }
-
-  .btn {
-    position: fixed;
-    bottom: 0;
-    height: 53px;
-    width: 100%;
-    border-top: 1px solid #e5e5e5;
-    text-align: center;
-    z-index: 1000;
-    background-color: #0080ff;
-
-    span {
-      float: left;
-      width: 50%;
-      line-height: 53px;
-      height: 53px;
-      color: #333333;
-      color: white;
-      font-size: 18px;
-    }
-
-    span:first-child {
-      background-color: #FA6865;
-    }
-  }
-  @keyframes popup{
-    0%{
-      transform: translateY(100%);
-    }
-    100%{
-      transform: translateY(0);
-    }
-  }
-  .modal-zoom {
-    position: fixed;
-    // top: px;
-    z-index: 10000000;
-    background: rgba(0,0,0,.5);
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    display: flex;
-    align-items: flex-end;
-    min-height: 0;
-
-    .m-content {
-      flex-grow: 1;
+  .m-forms{
+    background-color: #fff;
+    .item{
       display: flex;
-      justify-content: end;
-      flex-direction: column;
-      transform: translateY(100%);
-      animation: popup .3s ease-out;
-      animation-fill-mode:forwards;
-      .m-header {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 1.5rem;
-        height: 4rem;
-        line-height: 4rem;
-        background-color: white;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+      margin-left: 1.5rem;
+      padding-right: 1.5rem;
+      height: 4.4rem;
+      line-height: 4.4rem;
+      border-bottom: 1px solid #e5e5e5;
+      &:last-child{
+        // margin-left: 0;
+        // padding-left: 1.5rem;
+        border: none;
+      }
+      span{
+        display: block;
         color: #a5a5a5;
-        font-size: 1.4rem;
-
-        span {
-          display: inline-flex;
-        }
-
-        span:last-child {
-          background: url("../assets/imgs/i-close2.png") center no-repeat;
-          background-size: 100% auto;
-          width: 1.5rem;
-          height: 100%;
+        &.unit{
+          width: 3.6rem;
+          text-align: right;
         }
       }
-
-      .sures {
-        background-color: white;
-        .u-button{
-          height: 5.2rem;
-          line-height: 5.2rem;
-          border-radius: 0;
-          border-width: 1px 0 0 0 ;
-        }
-
-        span {
-          height: 42px;
-          border: 1px solid #E5E5E5;
-          border-radius: 6px;
-          font-size: 18px;
-          color: #333333;
+      .input{
+        flex: 1;
+        text-align: right;
+        input{
+          display: block;
           width: 100%;
-          display: inline-block;
-          text-align: center;
-          line-height: 42px;
+          text-align: right;
         }
       }
-
-      .m-b {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-
-        .m-til {
-          height: 3rem;
-          line-height: 3rem;
-          padding-left: 1.5rem;
-          background-color: #f3f3f3;
-          color: #666666;
-          font-size: 1.4rem;
-          display: inline-flex;
-        }
-
-        .m-list {
-          display: inline-flex;
-          height: 4.4rem;
-          line-height: 4.4rem;
-          font-size: 1.6rem;
-          color: #333333;
-          margin: 0 0 0 1.5rem;
-          justify-content: space-between;
-          align-items: center;
-          border-bottom: 1px solid #e5e5e5;
-        }
-
-        .m-list:last-child {
-          border-bottom: 0;
-          // margin: 0;
-          //padding-left: 16px;
-        }
-
-        .mb-true {
-          color: #0080ff;
-
-          .m-true {
-            display: inline-flex;
-            background: url("../assets/imgs/i-Check.png") 0 0 no-repeat;
-            width: 18px;
-            height: 12px;
-            margin-right: 16px;
-            background-size: 18px auto;
-            display: inline-block;
-          }
-        }
+      .segment-box{
+        display: inline-block;
       }
+    }
+
+  }
+  .g-footer{
+    height: 7.2rem;
+    padding: 1.5rem;
+    .u-button{
+      height: 4.2rem;
+      line-height: 4.2rem;
+      border-radius: .6rem;
     }
   }
 }

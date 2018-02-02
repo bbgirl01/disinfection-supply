@@ -48,6 +48,7 @@ export class RecycleListPage implements OnInit {
   packageDetailPage: Object;
   showPage: Boolean = false;
   showPopup: Boolean = false;
+  showPopupPcode: Boolean = false;
   recipientScan: Boolean = false; // 是否扫描过收人信息
   constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController) {
     this.todayRecyclePage = TodayRecyclePage;
@@ -97,7 +98,16 @@ export class RecycleListPage implements OnInit {
   recipientScanFn() {
     this.recipientScan = true;
   }
+  showPopupPcodeFn() {
+    this.showPopupPcode = true;
+    setTimeout(function () {
+      document.getElementById('input').focus();
+    }, 50)
 
+  }
+  hidePopupPcodeFn() {
+    this.showPopupPcode = false;
+  }
   /**
    * 回收成功
    */

@@ -10,7 +10,7 @@
   </ion-navbar>
 </ion-header> -->
 <header>
-  <span class="back" (click)="goPrevPage()"></span>
+  <span class="back" (click)="goPrevPage()">{{back}}</span>
   <div class="tabs">
     <span *ngFor="let tab of tabs;let index = index" [ngClass]="{tab: true, active: index==0, 'tab-only': tabs.length===1}" (click)="tabChangeFn($event, index)">
       {{tab}}

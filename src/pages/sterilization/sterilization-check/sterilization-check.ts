@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import { SterilizationFreePage } from '../sterilization-free';
-import { SterilizationDetailListPage } from '../sterilization-detail-list';
+import { PackageDetailPage } from '../../package-detail';
 /**
  * Generated class for the SterilizationCheckPage page.
  *
@@ -19,12 +19,13 @@ export class SterilizationCheckPage {
   public pans: Array<any> = [{ name: '清洗时间不足', choose: true }, { name: '清洗操作错误', choose: false }, { name: '清洗机故障', choose: false }, { name: '清洗设置出错', choose: false }]
   public machs: Array<any> = [{ name: '减压沸腾清洗机', choose: true }, { name: '手工清洗2', choose: false }, { name: '手工清洗4', choose: false }]
   public checking: boolean = false;
-  public list: Array<any> = [{ name: '清洗盘', id: '19484743484', sum: '9', psum: 21 },
-  { name: '清洗盘', id: '19484743484', sum: '1', psum: 52 },
-  { name: '清洗盘', id: '19484743484', sum: '9', psum: 15 },
-  { name: '清洗盘', id: '19484743484', sum: '3', psum: 13 },
-  { name: '清洗盘', id: '19484743484', sum: '3', psum: 11 },
-  { name: '清洗盘', id: '19484743484', sum: '1', psum: 37 }]
+  public spreadOut: Boolean = false;
+  public list: Array<any> = [{ name: '膀胱冲洗包', id: '19484743484', sum: '9', psum: 21 },
+  { name: '膀胱冲洗包', id: '19484743484', sum: '1', psum: 52 },
+  { name: '膀胱冲洗包', id: '19484743484', sum: '9', psum: 15 },
+  { name: '膀胱冲洗包', id: '19484743484', sum: '3', psum: 13 },
+  { name: '膀胱冲洗包', id: '19484743484', sum: '3', psum: 11 },
+  { name: '膀胱冲洗包', id: '19484743484', sum: '1', psum: 37 }]
   public lineChartData: Array<any> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: '摄氏度' }
   ];
@@ -80,10 +81,14 @@ export class SterilizationCheckPage {
   public lineChartLegend: boolean = false;
   public lineChartType: string = 'line';
   public sterilizationFreePage: any;
-  public sterilizationDetailListPage: any;
-  constructor(private toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams) {
+  public packageDetailPage: any;
+  constructor(
+    private toastCtrl: ToastController,
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public alertCtrl: AlertController) {
     this.sterilizationFreePage = SterilizationFreePage
-    this.sterilizationDetailListPage = SterilizationDetailListPage;
+    this.packageDetailPage = PackageDetailPage;
   }
   checkNow(flag) {
     if (this.checking) return;
@@ -155,4 +160,30 @@ export class SterilizationCheckPage {
     console.log(e);
   }
 
+  toggleSpread() {
+    this.spreadOut = !this.spreadOut;
+  }
+
+  confirmCancel() {
+    let confirm = this.alertCtrl.create({
+      title: '确认换锅',
+      message: '是否换锅操作?',
+      cssClass: 'custom-confirm',
+      buttons: [
+        {
+          text: '否',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: '是',
+          handler: () => {
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
 }

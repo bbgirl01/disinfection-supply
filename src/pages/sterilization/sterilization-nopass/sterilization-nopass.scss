@@ -28,10 +28,13 @@ page-sterilization-nopass {
         box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,0.10);
         border-radius: .4rem;
         text-align: center;
-
+        background-image: url(../assets/imgs/check-bg.png);
+        background-position: center .4rem;
+        background-repeat: no-repeat;
+        background-size: 87.8%;
         span {
           display: inline-block;
-          width: 15.5rem;
+          width: 15rem;
           color: #f4333c;
           font-size: 2rem;
           text-align: right;

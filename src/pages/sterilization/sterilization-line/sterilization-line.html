@@ -16,7 +16,7 @@
 <div class="m-title">
   <custom-header [tabs]="['等离子灭菌机1（1/45）']" tabindex="0"></custom-header>
   <login-info></login-info>
-  <div class="right-input"></div>
+  <div class="right-input" (click)="showModal($event)">换锅</div>
 </div>
 <ion-content no-padding>
   <div class="" style="background-color:#f3f3f3">
@@ -25,7 +25,7 @@
       <div class="time-line">
         <div class="">
           <span>12:10</span>
-          <span>INSTR 40分钟</span>
+          <span>机械类&ensp;40分钟</span>
         </div>
         <div class="">
           <span>23:12</span>
@@ -97,7 +97,7 @@
 <div class="g-footer">
   <div class="flex-wrap">
     <div class="flex-item">
-      <button class="u-button white" [navPush]="washingListPage">修改</button>
+      <button class="u-button white" [navPush]="sterilizationStartPage">修改</button>
     </div>
     <div class="flex-item">
       <button class="u-button white" (click)="showAlert()">作废</button>
@@ -105,25 +105,29 @@
   </div>
 </div>
 <div class="modal-zoom" *ngIf="modalDoor">
-  <div class="m-b">
-    <div class="m-til">
-      请选择换锅原因
+  <div class="modal-zoom-content animate-down">
+    <div class="m-b">
+      <div class="m-til">
+        请选择换锅原因
+      </div>
+      <div class="m-list mb-{{item.choose}}" *ngFor="let item of pans;let index=index" (click)="checkedPan(index)">
+        <span>{{item.name}}</span>
+        <span class="m-{{item.choose}}"></span>
+      </div>
     </div>
-    <div class="m-list mb-{{item.choose}}" *ngFor="let item of pans;let index=index" (click)="checkedPan(index)">
-      <span>{{item.name}}</span>
-      <span class="m-{{item.choose}}"></span>
+    <div class="m-b">
+      <div class="m-til">
+        请选择清洗机
+      </div>
+      <div class="m-list mb-{{item.choose}}" *ngFor="let item of machs;let index=index" (click)="checkedMach(index)">
+        <span>{{item.name}}</span>
+        <span class="m-{{item.choose}}"></span>
+      </div>
     </div>
-  </div>
-  <div class="m-b">
-    <div class="m-til">
-      请选择清洗机
+
+    <div class="sures">
+      <!-- <span (click)="showModal()">确定</span> -->
+      <button class="u-button white" (click)="hideModal($event)">确定</button>
     </div>
-    <div class="m-list mb-{{item.choose}}" *ngFor="let item of machs;let index=index" (click)="checkedMach(index)">
-      <span>{{item.name}}</span>
-      <span class="m-{{item.choose}}"></span>
-    </div>
-  </div>
-  <div class="sures">
-    <span (click)="showModal()">确定</span>
   </div>
 </div>

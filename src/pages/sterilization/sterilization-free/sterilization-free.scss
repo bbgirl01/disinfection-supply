@@ -68,7 +68,7 @@ page-sterilization-free {
       justify-content: flex-start;
       flex-wrap: wrap;
       padding: 1.5rem;
-
+      width: 100%;
       .run-zoom {
         display: inline-flex;
         width: 31.333%;
@@ -85,12 +85,12 @@ page-sterilization-free {
           margin-top: 3%;
         }
         span:first-child {
-          font-size: 14px;
+          font-size: 1.4rem;
           color: #333333;
         }
 
         span:last-child {
-          font-size: 12px;
+          font-size: 1.2rem;
           color: #a5a5a5;
         }
       }

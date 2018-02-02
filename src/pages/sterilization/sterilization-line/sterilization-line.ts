@@ -89,7 +89,9 @@ export class SterilizationLinePage {
   public showModal() {
     this.modalDoor = !this.modalDoor;
   }
-
+  public hideModal() {
+    this.modalDoor = false;
+  }
   public showAlert() {
     let alert = this.alertCtrl.create({
       title: '确认作废',

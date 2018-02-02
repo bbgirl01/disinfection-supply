@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the GrantDirectPage page.
@@ -14,12 +14,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'grant-direct.html',
 })
 export class GrantDirectPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  scanStep: Number = 1;
+  showPage: Boolean = false;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GrantDirectPage');
   }
+  changScanStep() {
+    this.scanStep = 2;
+  }
+  showIndexPage() {
+    this.showPage = true;
+  }
 
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: '发放成功！',
+      duration: 1000,
+      position: 'middle',
+      cssClass: 'custom-toast'
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
+  }
 }

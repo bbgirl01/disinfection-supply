@@ -105,9 +105,10 @@ export class WashingCheckPage {
   presentToast() {
     this.checking = true;
     let toast = this.toastCtrl.create({
-      message: '产品检定合格',
-      duration: 2000,
-      position: 'top'
+      message: '产品检定合格!',
+      duration: 1000,
+      position: 'middle',
+      cssClass: 'custom-toast'
     });
 
     toast.onDidDismiss(() => {

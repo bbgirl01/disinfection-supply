@@ -5,10 +5,11 @@ import { App } from 'ionic-angular';
   selector: 'custom-header',
   templateUrl: 'custom-header.html'
 })
-export class CustomHeaderComponent implements  OnInit{
+export class CustomHeaderComponent implements OnInit {
 
-  @Input() tabs = []; 
-  @Output() tabChange = new EventEmitter<any>(); 
+  @Input() tabs = [];
+  @Input() back = '';
+  @Output() tabChange = new EventEmitter<any>();
   offsetLeft: String = '';
 
   constructor(public appCtrl: App) {
@@ -32,10 +33,10 @@ export class CustomHeaderComponent implements  OnInit{
   }
 
   lightActive(event, index) {
-    
+
     let tabs = event.target.parentNode.querySelectorAll('.tab'),
-        activeLine = document.querySelectorAll('.line'),
-        offsetLeft = 0;
+      activeLine = document.querySelectorAll('.line'),
+      offsetLeft = 0;
 
     // for (let i = 0; i <= index; i++) {
     //   if (i == index) {
@@ -48,9 +49,9 @@ export class CustomHeaderComponent implements  OnInit{
     // this.offsetLeft = offsetLeft + 'px';
 
     for (let i = 0, len = tabs.length; i < len; i++) {
-      tabs[i].classList.remove('active');    
+      tabs[i].classList.remove('active');
     }
-    tabs[index].classList.add('active');   
+    tabs[index].classList.add('active');
   }
 
   /**

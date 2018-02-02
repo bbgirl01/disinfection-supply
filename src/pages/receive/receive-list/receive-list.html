@@ -121,16 +121,14 @@
 </div>
 
 <div class="popup" [ngClass]="{show: popupShow}">
-  <div class="mask"></div>
+  <div class="mask" (click)="hidePopup($event)"></div>
   <div class="popup-content">
     <h2>不合格原因</h2>
     <span class="close" (click)="hidePopup($event)"></span>
     <div class="group">
       <div class="group-name">原因</div>
       <ul class="group-items">
-        <li class="checked">脏包</li>
-        <li>湿包</li>
-        <li>破损</li>
+        <li [ngClass]="{checked: unqualifiedCausesIndex==index}" *ngFor="let item of unqualifiedCauses;let index = index" (click)="changeUnqualifiedCause(index)">{{item}}</li>
       </ul>
     </div>
     <button class="u-button white" (click)="hidePopup($event)">确定</button>

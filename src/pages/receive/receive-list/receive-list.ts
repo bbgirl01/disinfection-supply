@@ -10,6 +10,8 @@ import { PackageDetailPage } from '../../package-detail';
 export class ReceiveListPage {
   packageDetailPage: any;
   popupShow: Boolean = false;
+  unqualifiedCauses: Array<any> = ['脏包', '湿包', '破损'];
+  unqualifiedCausesIndex: Number = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController) {
     this.packageDetailPage = PackageDetailPage;
   }
@@ -38,5 +40,9 @@ export class ReceiveListPage {
     });
 
     toast.present();
+  }
+
+  changeUnqualifiedCause(index) {
+    this.unqualifiedCausesIndex = index;
   }
 }

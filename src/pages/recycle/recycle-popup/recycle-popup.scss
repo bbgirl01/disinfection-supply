@@ -3,7 +3,7 @@ page-recycle-popup {
     top: 5.6rem;
     bottom: 5rem;
     height: auto;
-    transform: translateY(-100%);
+    transform: translateY(-120%);
     transition: .3s all ease-out;
     background-color: rgba(0,0,0,0);
     &.show{

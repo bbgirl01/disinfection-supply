@@ -35,7 +35,7 @@
 </div>
 
 <div class="m-popup" [ngClass]="{show: popShow}">
-  <div class="mask"></div>
+  <div class="mask" (click)="hidePopup($event)"></div>
   <div class="popup-box">
     <h2>设置 ： V3.1.0_88</h2>
     <div class="item">

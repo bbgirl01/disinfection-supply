@@ -4,6 +4,14 @@ page-sterilization-line {
     font-size: 14px;
     margin: 0 20px;
   }
+  .right-input{
+    position: absolute;
+    top: 2.8rem;
+    right: 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    transform: translateY(-50%);
+  }
   .g-footer{
     z-index: 1;
     .u-button:last-child{
@@ -195,16 +203,19 @@ page-sterilization-line {
 
   .modal-zoom {
     position: fixed;
-    top: 46px;
+    top: 5.6rem;
     z-index: 10000000;
     background: rgba(0,0,0,.5);
     width: 100%;
     height: 100%;
-
+    //
+    .modal-zoom-content{
+      //transform: translateY(-120%);
+    }
     .sures {
       background-color: white;
-      padding: 10px;
-
+      padding: 1.5rem;
+      border-top: 1px solid #e5e5e5;
       span {
         height: 42px;
         border: 1px solid #E5E5E5;
@@ -224,31 +235,31 @@ page-sterilization-line {
       flex-direction: column;
 
       .m-til {
-        height: 30px;
-        line-height: 30px;
-        padding-left: 16px;
+        height: 3rem;
+        line-height: 3rem;
+        padding-left: 1.5rem;
         background-color: #f3f3f3;
         color: #666666;
-        font-size: 14px;
+        font-size: 1.4rem;
         display: inline-flex;
       }
 
       .m-list {
         display: inline-flex;
-        height: 45px;
-        line-height: 45px;
-        font-size: 16px;
+        height: 4.4rem;
+        line-height: 4.4rem;
+        font-size: 1.6rem;
         color: #333333;
-        margin: 0 0 0 16px;
+        margin: 0 0 0 1.5rem;
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #e5e5e5;
       }
 
       .m-list:last-child {
-        // border-bottom: 0;
-        margin: 0;
-        padding-left: 16px;
+        border-bottom: 0;
+        // margin: 0;
+        // padding-left: 16px;
       }
 
       .mb-true {
@@ -256,11 +267,11 @@ page-sterilization-line {
 
         .m-true {
           display: inline-flex;
-          background: url("../assets/imgs/i-Check.png") 0 0 no-repeat;
-          width: 18px;
-          height: 12px;
-          margin-right: 16px;
-          background-size: 18px auto;
+          background: url("../assets/imgs/i-Check.png") center no-repeat;
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-right: 1.5rem;
+          background-size: 100%;
           display: inline-block;
         }
       }

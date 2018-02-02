@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { PackageDetailPage } from '../../package-detail';
 
 /**
@@ -52,7 +52,7 @@ export class PutawayChangePage {
   checkAll: Boolean = false;
   showPage: Boolean = false;
   packageDetailPage: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     console.log(this.navParams)
     this.packageDetailPage = PackageDetailPage;
   }
@@ -78,5 +78,34 @@ export class PutawayChangePage {
   }
   showIndexPage() {
     this.showPage = true;
+  }
+
+  presentPrompt() {
+    let alert = this.alertCtrl.create({
+      title: '',
+      cssClass: 'custom-prompt',
+      inputs: [
+        {
+          name: 'code',
+          placeholder: '输入存储架'
+        }
+      ],
+      buttons: [
+        {
+          text: '取消',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: '确定',
+          handler: data => {
+
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 }

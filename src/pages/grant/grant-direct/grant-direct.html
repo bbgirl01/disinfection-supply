@@ -1,4 +1,9 @@
-<div class="g-content">
+<scan scanType="1" *ngIf="!showPage&&scanStep==1" (click)="changScanStep($event)">
+</scan>
+<scan scanType="3" *ngIf="!showPage&&scanStep==2" (click)="showIndexPage($event)"></scan>
+
+
+<div class="g-content" *ngIf="showPage">
   <!-- <div class="statistics-tit">
       <h2>申领单1 </h2>
       <span class="datetime">09/08&ensp;15:14:41</span>
@@ -96,6 +101,6 @@
   </ion-list>
 </div>
 
-<div class="g-footer">
-  <button class="u-button blue">确认发放（1）</button>
+<div class="g-footer" *ngIf="showPage">
+  <button class="u-button blue" (click)="presentToast($event)">确认发放（1）</button>
 </div>

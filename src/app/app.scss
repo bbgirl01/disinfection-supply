@@ -312,6 +312,7 @@ html {
 	margin-top: 0;
 }
 .custom-list{
+	margin: 0;
 	.custom-item{
 		position: relative;
 		display: flex;
@@ -544,7 +545,20 @@ button.item-ios:not([detail-none]) .item-inner{
 }
 
 // 自定义confirm
-.custom-confirm{
+.custom-prompt{
+	.alert-wrapper{
+		position: absolute;
+		top: 50%;
+		//margin-top: -7.4rem;
+		margin-top: -8rem;
+	}
+	.alert-message{
+		display: none;
+	}
+} 
+.custom-confirm,
+.custom-prompt{
+	padding: 0 !important;
 	.alert-wrapper{
 		width: 78%;
 		min-width: 78%;
@@ -563,10 +577,26 @@ button.item-ios:not([detail-none]) .item-inner{
 	.alert-message{
 		padding: 0 2.5rem 2.5rem;
 		font-size: 1.6rem;
+		min-height: 2.8rem;
 		line-height: 2.8rem;
 		color: #999;
 		.fw{
 			font-weight: bold;
+		}
+	}
+	.alert-input-group{
+		height: 6.1rem;
+		padding: 0 1.5rem 2.5rem;
+	}
+	.alert-input{
+		margin: 0;
+		border-bottom: none;
+		height: 3.6rem;
+		line-height: 2rem;
+		padding: 0 0  0 1rem;
+		border: 1px solid #e5e5e5 !important;
+		&:focus{
+			border-color: #0080FF !important;
 		}
 	}
 	.alert-button-group{
@@ -655,7 +685,18 @@ button.item-ios:not([detail-none]) .item-inner{
 	animation: popup .3s ease-out;
   animation-fill-mode: forwards;
 }
-
+@keyframes popdown{
+	0%{
+		transform: translateY(-120%);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+.animate-down{
+	animation: popdown .3s ease-out;
+  animation-fill-mode: forwards;
+}
 // 自定义toast样式
 .custom-toast .toast-wrapper{
 	display: inline-block;

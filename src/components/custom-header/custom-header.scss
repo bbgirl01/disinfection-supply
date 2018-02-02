@@ -8,10 +8,13 @@ custom-header {
       position: absolute;
       top: 50%;
       left: 0;
-      width: 5.6rem;
+      min-width: 5.6rem;
+      padding-left: 4.3rem;
       height: 3.2rem;
+      line-height: 3.2rem;
+      font-size: 1.6rem;
       background-image: url('../assets/imgs/i-back.png');
-      background-position: center;
+      background-position: 2.2rem center;
       background-repeat: no-repeat;
       background-size: 1.2rem;
       transform: translateY(-50%);

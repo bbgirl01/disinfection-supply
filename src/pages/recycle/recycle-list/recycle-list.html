@@ -1,6 +1,6 @@
 <!-- 扫描科室 -->
 <scan *ngIf="!showPage" scanType="1" (click)="showIndexPage($event)"></scan>
-
+<span class="head-right-icon department" *ngIf="!showPage" (click)="chooseDepartment($event)">科室</span>
 <span class="head-right-icon department" *ngIf="showPage" (click)="chooseDepartment($event)">手术室</span>
 
 <div class="g-header">
@@ -42,7 +42,7 @@
       <input class="u-radio" type="radio" [checked]="checkAll" />
       <span>全选(16)</span>
     </div>
-    <div class="right-input"></div>
+    <div class="right-input" (click)="showPopupPcodeFn($event)"></div>
   </div>
 </div>
 
@@ -71,4 +71,10 @@
     <div class="search-clear" (click)="hidePopup($event)"></div>
   </div>
   <index-list></index-list>
+</div>
+
+<!-- 输入包条码 -->
+<div class="popup-input" *ngIf="showPopupPcode">
+  <div class="mask" (click)="hidePopupPcodeFn($event)"></div>
+  <input type="text" id="input" placeholder="请输入包条码" />
 </div>

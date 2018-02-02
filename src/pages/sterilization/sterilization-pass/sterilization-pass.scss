@@ -30,15 +30,18 @@ page-sterilization-pass {
         box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,0.10);
         border-radius: .4rem;
         text-align: center;
-
+        background-image: url(../assets/imgs/check-bg.png);
+        background-position: center .4rem;
+        background-repeat: no-repeat;
+        background-size: 87.8%;
         span {
           display: inline-block;
-          width: 15.5rem;
+          width: 14rem;
           color: #0080ff;
           font-size: 2rem;
           text-align: right;
           background-image: url("../assets/imgs/image-qualified.png");
-          background-position: left .4rem;
+          background-position: left .3rem;
           background-repeat: no-repeat;
           background-size: 7rem;
         }
