@@ -313,6 +313,9 @@ html {
 }
 .custom-list{
 	margin: 0;
+	&.list-ios .item-block .item-inner{
+		border-bottom: none;
+	}
 	.custom-item{
 		position: relative;
 		display: flex;
@@ -330,6 +333,9 @@ html {
 		&:last-child:after{
 			// display: none;
 			left: 0;
+		}
+		.item-ios .item-inner{
+			padding-right: 0;
 		}
 		.item{
 			flex: 1;

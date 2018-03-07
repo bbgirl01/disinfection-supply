@@ -2,41 +2,60 @@
   <div class="m-scan" *ngIf="scanType==1">
     <div class="img">
       <img src="assets/imgs/scan-department.png" alt="">
+      <div class="scan-animate-area">
+        <img src="assets/imgs/scan-line.png" alt="">
+      </div>
     </div>
     <p>请扫描科室</p>
+
   </div>
 
-  <div class="m-scan" *ngIf="scanType==2">
+  <div class="m-scan scan-packer" *ngIf="scanType==2">
     <div class="img">
       <img src="assets/imgs/scan-packer.png" alt="">
+      <div class="scan-animate-area">
+        <img src="assets/imgs/scan-line.png" alt="">
+      </div>
     </div>
     <p>请扫描打包人</p>
   </div>
 
-  <div class="m-scan" *ngIf="scanType==3">
-    <div class="img">
+  <div class="m-scan scan-pcode" *ngIf="scanType==3">
+    <div class="img ">
       <img src="assets/imgs/scan-pcode.png" alt="">
+      <div class="scan-animate-area">
+        <img src="assets/imgs/scan-line.png" alt="">
+      </div>
     </div>
     <p>请扫描包条码</p>
   </div>
 
-  <div class="m-scan" *ngIf="scanType==4">
+  <div class="m-scan scan-shelf" *ngIf="scanType==4">
     <div class="img">
       <img src="assets/imgs/scan-shelf.png" alt="">
+      <div class="scan-animate-area">
+        <img src="assets/imgs/scan-line.png" alt="">
+      </div>
     </div>
     <p>请扫描存储架</p>
   </div>
 
-  <div class="m-scan" *ngIf="scanType==5">
+  <div class="m-scan scan-patientcode" *ngIf="scanType==5">
     <div class="img">
       <img src="assets/imgs/scan-patientcode.png" alt="">
+      <div class="scan-animate-area">
+        <img src="assets/imgs/scan-line.png" alt="">
+      </div>
     </div>
     <p>请扫描病人条码</p>
   </div>
 
-  <div class="m-scan" *ngIf="scanType==6">
+  <div class="m-scan scan-plate" *ngIf="scanType==6">
     <div class="img">
       <img src="assets/imgs/scan-plate.png" alt="">
+      <div class="scan-animate-area">
+        <img src="assets/imgs/scan-line.png" alt="">
+      </div>
     </div>
     <p>请扫清洗盘</p>
   </div>

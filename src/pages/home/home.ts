@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { RecycleIndexPage } from '../recycle/recycle-index/recycle-index';
@@ -18,7 +18,7 @@ import { LoginPage } from '../login/login'
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomePage implements OnInit {
   recyclePage: Object;
   sortingScanPage: any;
   washingHomePage: any;
@@ -31,8 +31,10 @@ export class HomePage {
   personalIndexPage: any;
   messageIndexPage: any;
   loginPage: any;
-
+  wWidth: any;
+  fontSize: any;
   moreMenusShow: Boolean = false; // 右上角显示更多
+
   constructor(public navCtrl: NavController) {
     this.recyclePage = RecycleIndexPage;
     this.sortingScanPage = SortingScanPage;
@@ -47,7 +49,11 @@ export class HomePage {
     this.messageIndexPage = MessageIndexPage;
     this.loginPage = LoginPage;
   }
-
+  ngOnInit() {
+    this.wWidth = window.innerWidth;
+    var style = window.getComputedStyle(document.documentElement, null);
+    this.fontSize = style.fontSize;
+  }
   toggleMoreMenus() {
     this.moreMenusShow = !this.moreMenusShow;
   }

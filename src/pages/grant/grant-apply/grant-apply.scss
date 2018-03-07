@@ -1,11 +1,16 @@
 page-grant-apply {
+  .g-content{
+    background-color: #fff;
+  }
   .list{
+    background-color: #fff;
     .item{
       display: flex;
       position: relative;
       height: 4.4rem;
       line-height: 4.4rem;
       padding: 0 1.5rem;
+      font-size: 1.6rem;
       align-items: center;
       span{
         display: block;

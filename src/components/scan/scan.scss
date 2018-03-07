@@ -1,10 +1,11 @@
 scan {
   .m-scan{
-    padding-top: 8rem;
+    margin-top: 8rem;
     .img{
+      position: relative;
       width: 62%;
       margin: 0 auto;
-      img{
+      >img{
         display: block;
         width: 100%;
       }
@@ -16,6 +17,46 @@ scan {
       font-size: 1.6rem;
       color: #a5a5a5;
       text-align: center;
+    }
+    .scan-animate-area{
+      position: absolute;
+      top: 12%;
+      right: 23%;
+      left: 23%;
+      height: 44.5%;
+      //background-color: rgba(0,0,0,.5);
+      animation: updown linear 1.6s infinite;
+      img{
+        display: block;
+        width: 100%;
+        
+      }
+
+    }
+    &.scan-shelf .scan-animate-area{
+      top: 22%;
+      height: 44%;
+    }
+    &.scan-patientcode .scan-animate-area{
+      top: 13.5%;
+      height: 48.5%;
+    }
+    &.scan-packer .scan-animate-area,
+    &.scan-pcode .scan-animate-area,
+    &.scan-plate .scan-animate-area{
+      top: 18%;
+      height: 46.5%;
+    }
+  }
+  @keyframes updown {
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(100%);
+    }
+    100%{
+      transform: translateY(0);
     }
   }
 }
