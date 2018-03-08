@@ -30,7 +30,7 @@ export class PutawayStatisticsPage {
     this.packageDetailPage = PackageDetailPage;
   }
   goAhead(index) {
-    let sta = this.list[index]['status'];
+    // let sta = this.list[index]['status'];
     // this.navCtrl.push(sta == 0 ? this.washingPassPage : this.washingNopassPage);
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import { NgModel } from '@angular/forms';
+// import { NgModel } from '@angular/forms';
 import { TodayRecyclePage } from '../today-recycle/today-recycle';
 import { PackageDetailPage } from '../../package-detail';
 

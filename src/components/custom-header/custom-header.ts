@@ -34,9 +34,9 @@ export class CustomHeaderComponent implements OnInit {
 
   lightActive(event, index) {
 
-    let tabs = event.target.parentNode.querySelectorAll('.tab'),
-      activeLine = document.querySelectorAll('.line'),
-      offsetLeft = 0;
+    let tabs = event.target.parentNode.querySelectorAll('.tab');
+    // activeLine = document.querySelectorAll('.line'),
+    // offsetLeft = 0;
 
     // for (let i = 0; i <= index; i++) {
     //   if (i == index) {
