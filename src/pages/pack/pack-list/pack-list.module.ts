@@ -4,10 +4,10 @@ import { PackListPage } from './pack-list';
 
 @NgModule({
   declarations: [
-    PackListPage,
+    // PackListPage,
   ],
   imports: [
     IonicPageModule.forChild(PackListPage),
   ],
 })
-export class PackListPageModule {}
+export class PackListPageModule { }

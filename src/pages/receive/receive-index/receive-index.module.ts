@@ -4,10 +4,10 @@ import { ReceiveIndexPage } from './receive-index';
 
 @NgModule({
   declarations: [
-    ReceiveIndexPage,
+    // ReceiveIndexPage,
   ],
   imports: [
     IonicPageModule.forChild(ReceiveIndexPage),
   ],
 })
-export class ReceiveIndexPageModule {}
+export class ReceiveIndexPageModule { }

@@ -4,10 +4,10 @@ import { PackIndexPage } from './pack-index';
 
 @NgModule({
   declarations: [
-    PackIndexPage,
+    // PackIndexPage,
   ],
   imports: [
     IonicPageModule.forChild(PackIndexPage),
   ],
 })
-export class PackIndexPageModule {}
+export class PackIndexPageModule { }

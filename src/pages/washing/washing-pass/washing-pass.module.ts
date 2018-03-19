@@ -4,10 +4,10 @@ import { WashingPassPage } from './washing-pass';
 
 @NgModule({
   declarations: [
-    WashingPassPage,
+    // WashingPassPage,
   ],
   imports: [
     IonicPageModule.forChild(WashingPassPage),
   ],
 })
-export class WashingPassPageModule {}
+export class WashingPassPageModule { }

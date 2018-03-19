@@ -4,10 +4,10 @@ import { PutawayStatisticsPage } from './putaway-statistics';
 
 @NgModule({
   declarations: [
-    PutawayStatisticsPage,
+    // PutawayStatisticsPage,
   ],
   imports: [
     IonicPageModule.forChild(PutawayStatisticsPage),
   ],
 })
-export class PutawayStatisticsPageModule {}
+export class PutawayStatisticsPageModule { }

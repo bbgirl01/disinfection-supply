@@ -4,10 +4,10 @@ import { UpdatePasswordPage } from './update-password';
 
 @NgModule({
   declarations: [
-    UpdatePasswordPage,
+    // UpdatePasswordPage,
   ],
   imports: [
     IonicPageModule.forChild(UpdatePasswordPage),
   ],
 })
-export class UpdatePasswordPageModule {}
+export class UpdatePasswordPageModule { }

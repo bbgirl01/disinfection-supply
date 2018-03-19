@@ -4,10 +4,10 @@ import { SendMessagePage } from './send-message';
 
 @NgModule({
   declarations: [
-    SendMessagePage,
+    // SendMessagePage,
   ],
   imports: [
     IonicPageModule.forChild(SendMessagePage),
   ],
 })
-export class SendMessagePageModule {}
+export class SendMessagePageModule { }

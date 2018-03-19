@@ -4,10 +4,10 @@ import { PackStatisticsPage } from './pack-statistics';
 
 @NgModule({
   declarations: [
-    PackStatisticsPage,
+    // PackStatisticsPage,
   ],
   imports: [
     IonicPageModule.forChild(PackStatisticsPage),
   ],
 })
-export class PackStatisticsPageModule {}
+export class PackStatisticsPageModule { }

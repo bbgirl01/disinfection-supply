@@ -4,10 +4,10 @@ import { WashingLinePage } from './washing-line';
 
 @NgModule({
   declarations: [
-    WashingLinePage,
+    // WashingLinePage,
   ],
   imports: [
     IonicPageModule.forChild(WashingLinePage),
   ],
 })
-export class WashingLinePageModule {}
+export class WashingLinePageModule { }

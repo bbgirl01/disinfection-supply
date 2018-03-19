@@ -4,10 +4,10 @@ import { UseIndexPage } from './use-index';
 
 @NgModule({
   declarations: [
-    UseIndexPage,
+    // UseIndexPage,
   ],
   imports: [
     IonicPageModule.forChild(UseIndexPage),
   ],
 })
-export class UseIndexPageModule {}
+export class UseIndexPageModule { }

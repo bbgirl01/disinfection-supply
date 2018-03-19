@@ -4,10 +4,10 @@ import { WashingQualityPage } from './washing-quality';
 
 @NgModule({
   declarations: [
-    WashingQualityPage,
+    // WashingQualityPage,
   ],
   imports: [
     IonicPageModule.forChild(WashingQualityPage),
   ],
 })
-export class WashingQualityPageModule {}
+export class WashingQualityPageModule { }

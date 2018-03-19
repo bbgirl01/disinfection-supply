@@ -4,10 +4,10 @@ import { GrantStatisticsPage } from './grant-statistics';
 
 @NgModule({
   declarations: [
-    GrantStatisticsPage,
+    // GrantStatisticsPage,
   ],
   imports: [
     IonicPageModule.forChild(GrantStatisticsPage),
   ],
 })
-export class GrantStatisticsPageModule {}
+export class GrantStatisticsPageModule { }

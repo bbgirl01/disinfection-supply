@@ -4,10 +4,10 @@ import { WashingFreePage } from './washing-free';
 
 @NgModule({
   declarations: [
-    WashingFreePage,
+    // WashingFreePage,
   ],
   imports: [
     IonicPageModule.forChild(WashingFreePage),
   ],
 })
-export class WashingFreePageModule {}
+export class WashingFreePageModule { }

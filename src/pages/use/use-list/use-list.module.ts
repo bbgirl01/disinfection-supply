@@ -4,10 +4,10 @@ import { UseListPage } from './use-list';
 
 @NgModule({
   declarations: [
-    UseListPage,
+    // UseListPage,
   ],
   imports: [
     IonicPageModule.forChild(UseListPage),
   ],
 })
-export class UseListPageModule {}
+export class UseListPageModule { }

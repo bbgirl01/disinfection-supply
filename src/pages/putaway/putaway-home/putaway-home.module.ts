@@ -4,10 +4,10 @@ import { PutawayHomePage } from './putaway-home';
 
 @NgModule({
   declarations: [
-    PutawayHomePage,
+    // PutawayHomePage,
   ],
   imports: [
     IonicPageModule.forChild(PutawayHomePage),
   ],
 })
-export class PutawayHomePageModule {}
+export class PutawayHomePageModule { }

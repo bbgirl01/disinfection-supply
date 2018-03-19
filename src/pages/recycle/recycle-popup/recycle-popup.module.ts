@@ -4,10 +4,10 @@ import { RecyclePopupPage } from './recycle-popup';
 
 @NgModule({
   declarations: [
-    RecyclePopupPage,
+    // RecyclePopupPage,
   ],
   imports: [
     IonicPageModule.forChild(RecyclePopupPage),
   ],
 })
-export class RecyclePopupPageModule {}
+export class RecyclePopupPageModule { }

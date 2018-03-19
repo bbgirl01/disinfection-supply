@@ -4,10 +4,10 @@ import { PutawayChangePage } from './putaway-change';
 
 @NgModule({
   declarations: [
-    PutawayChangePage,
+    // PutawayChangePage,
   ],
   imports: [
     IonicPageModule.forChild(PutawayChangePage),
   ],
 })
-export class PutawayChangePageModule {}
+export class PutawayChangePageModule { }

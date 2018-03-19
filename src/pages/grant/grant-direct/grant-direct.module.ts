@@ -4,10 +4,10 @@ import { GrantDirectPage } from './grant-direct';
 
 @NgModule({
   declarations: [
-    GrantDirectPage,
+    // GrantDirectPage,
   ],
   imports: [
     IonicPageModule.forChild(GrantDirectPage),
   ],
 })
-export class GrantDirectPageModule {}
+export class GrantDirectPageModule { }

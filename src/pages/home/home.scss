@@ -40,8 +40,8 @@ page-home {
     }
     .notice{
       position: relative;
-      display: inline-block;
-      margin-right: 3rem;
+      float: left;
+      margin-right: 3.2rem;
       width: 1.8rem;
       height: 1.8rem;
       background-image: url(../assets/imgs/i-notice.png);
@@ -65,7 +65,8 @@ page-home {
     }
     .more{
       position: relative;
-      display: inline-block;
+      float: left;
+      margin-top: -.1rem;
       width: 2rem;
       height: 2rem;
       background-image: url(../assets/imgs/i-more.png);

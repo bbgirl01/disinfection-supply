@@ -4,10 +4,10 @@ import { ReceiveStatisticsPage } from './receive-statistics';
 
 @NgModule({
   declarations: [
-    ReceiveStatisticsPage,
+    // ReceiveStatisticsPage,
   ],
   imports: [
     IonicPageModule.forChild(ReceiveStatisticsPage),
   ],
 })
-export class ReceiveStatisticsPageModule {}
+export class ReceiveStatisticsPageModule { }

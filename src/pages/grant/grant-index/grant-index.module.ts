@@ -4,10 +4,10 @@ import { GrantIndexPage } from './grant-index';
 
 @NgModule({
   declarations: [
-    GrantIndexPage,
+    // GrantIndexPage,
   ],
   imports: [
     IonicPageModule.forChild(GrantIndexPage),
   ],
 })
-export class GrantIndexPageModule {}
+export class GrantIndexPageModule { }

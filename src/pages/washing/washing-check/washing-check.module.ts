@@ -4,10 +4,10 @@ import { WashingCheckPage } from './washing-check';
 
 @NgModule({
   declarations: [
-    WashingCheckPage,
+    // WashingCheckPage,
   ],
   imports: [
     IonicPageModule.forChild(WashingCheckPage),
   ],
 })
-export class WashingCheckPageModule {}
+export class WashingCheckPageModule { }

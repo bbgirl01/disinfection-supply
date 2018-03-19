@@ -4,10 +4,10 @@ import { SterilizationPassPage } from './sterilization-pass';
 
 @NgModule({
   declarations: [
-    SterilizationPassPage,
+    // SterilizationPassPage,
   ],
   imports: [
     IonicPageModule.forChild(SterilizationPassPage),
   ],
 })
-export class SterilizationPassPageModule {}
+export class SterilizationPassPageModule { }

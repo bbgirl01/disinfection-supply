@@ -4,10 +4,10 @@ import { UseStatisticsPage } from './use-statistics';
 
 @NgModule({
   declarations: [
-    UseStatisticsPage,
+    // UseStatisticsPage,
   ],
   imports: [
     IonicPageModule.forChild(UseStatisticsPage),
   ],
 })
-export class UseStatisticsPageModule {}
+export class UseStatisticsPageModule { }

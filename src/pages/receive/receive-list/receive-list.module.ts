@@ -4,10 +4,10 @@ import { ReceiveListPage } from './receive-list';
 
 @NgModule({
   declarations: [
-    ReceiveListPage,
+    // ReceiveListPage,
   ],
   imports: [
     IonicPageModule.forChild(ReceiveListPage),
   ],
 })
-export class ReceiveListPageModule {}
+export class ReceiveListPageModule { }

@@ -4,10 +4,10 @@ import { PutawayUpPage } from './putaway-up';
 
 @NgModule({
   declarations: [
-    PutawayUpPage,
+    // PutawayUpPage,
   ],
   imports: [
     IonicPageModule.forChild(PutawayUpPage),
   ],
 })
-export class PutawayUpPageModule {}
+export class PutawayUpPageModule { }

@@ -4,10 +4,10 @@ import { WashingHomePage } from './washing-home';
 
 @NgModule({
   declarations: [
-    WashingHomePage,
+    // WashingHomePage,
   ],
   imports: [
     IonicPageModule.forChild(WashingHomePage),
   ],
 })
-export class WashingHomePageModule {}
+export class WashingHomePageModule { }

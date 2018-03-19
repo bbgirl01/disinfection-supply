@@ -5,11 +5,11 @@ import { ComponentsModule } from '../../../components/components.module';
 
 @NgModule({
   declarations: [
-    RecycleStatisticsPage,
+    // RecycleStatisticsPage,
   ],
   imports: [
     IonicPageModule.forChild(RecycleStatisticsPage),
     ComponentsModule
   ],
 })
-export class RecycleStatisticsPageModule {}
+export class RecycleStatisticsPageModule { }

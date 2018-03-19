@@ -4,10 +4,10 @@ import { SterilizationHomePage } from './sterilization-home';
 
 @NgModule({
   declarations: [
-    SterilizationHomePage,
+    // SterilizationHomePage,
   ],
   imports: [
     IonicPageModule.forChild(SterilizationHomePage),
   ],
 })
-export class SterilizationHomePageModule {}
+export class SterilizationHomePageModule { }

@@ -4,10 +4,10 @@ import { MessageDetailPage } from './message-detail';
 
 @NgModule({
   declarations: [
-    MessageDetailPage,
+    // MessageDetailPage,
   ],
   imports: [
     IonicPageModule.forChild(MessageDetailPage),
   ],
 })
-export class MessageDetailPageModule {}
+export class MessageDetailPageModule { }

@@ -4,10 +4,10 @@ import { PersonalIndexPage } from './personal-index';
 
 @NgModule({
   declarations: [
-    PersonalIndexPage,
+    // PersonalIndexPage,
   ],
   imports: [
     IonicPageModule.forChild(PersonalIndexPage),
   ],
 })
-export class PersonalIndexPageModule {}
+export class PersonalIndexPageModule { }

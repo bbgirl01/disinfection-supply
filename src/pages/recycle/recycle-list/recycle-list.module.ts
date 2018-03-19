@@ -4,10 +4,10 @@ import { RecycleListPage } from './recycle-list';
 
 @NgModule({
   declarations: [
-    RecycleListPage,
+    // RecycleListPage,
   ],
   imports: [
     IonicPageModule.forChild(RecycleListPage),
   ],
 })
-export class RecycleListPageModule {}
+export class RecycleListPageModule { }

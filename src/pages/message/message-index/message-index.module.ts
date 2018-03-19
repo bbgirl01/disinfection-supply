@@ -4,10 +4,10 @@ import { MessageIndexPage } from './message-index';
 
 @NgModule({
   declarations: [
-    MessageIndexPage,
+    // MessageIndexPage,
   ],
   imports: [
     IonicPageModule.forChild(MessageIndexPage),
   ],
 })
-export class MessageIndexPageModule {}
+export class MessageIndexPageModule { }

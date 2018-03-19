@@ -4,10 +4,10 @@ import { TodayRecyclePage } from './today-recycle';
 
 @NgModule({
   declarations: [
-    TodayRecyclePage,
+    // TodayRecyclePage,
   ],
   imports: [
     IonicPageModule.forChild(TodayRecyclePage),
   ],
 })
-export class TodayRecyclePageModule {}
+export class TodayRecyclePageModule { }

@@ -4,10 +4,10 @@ import { SortingListPage } from './sorting-list';
 
 @NgModule({
   declarations: [
-    SortingListPage,
+    // SortingListPage,
   ],
   imports: [
     IonicPageModule.forChild(SortingListPage),
   ],
 })
-export class SortingListPageModule {}
+export class SortingListPageModule { }

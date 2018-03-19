@@ -4,10 +4,10 @@ import { WashingListPage } from './washing-list';
 
 @NgModule({
   declarations: [
-    WashingListPage,
+    // WashingListPage,
   ],
   imports: [
     IonicPageModule.forChild(WashingListPage),
   ],
 })
-export class WashingListPageModule {}
+export class WashingListPageModule { }
